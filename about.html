@@ -26,6 +26,18 @@
   .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--yellow); }
   .nav-cta { background: var(--yellow); color: black !important; opacity: 1 !important; padding: 0.55rem 1.4rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); font-weight: 700; }
 
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 200; }
+  .hamburger span { display: block; width: 26px; height: 2px; background: var(--off-white); transition: all 0.3s ease; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.98); z-index: 150; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { color: var(--off-white); text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 0.08em; transition: color 0.2s; }
+  .mobile-menu a:hover { color: var(--yellow); }
+  .mobile-menu .mobile-cta { color: var(--yellow); }
+
   .page-hero { position: relative; background: var(--charcoal); padding: 6rem 3rem 4rem; border-bottom: 1px solid var(--light-grey); overflow: hidden; }
   .page-hero::before { content: 'FROM ZERO'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Bebas Neue', sans-serif; font-size: 12rem; color: rgba(255,247,0,0.03); white-space: nowrap; pointer-events: none; }
   .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
@@ -89,25 +101,14 @@
     footer { flex-direction: column; gap: 1.5rem; text-align: center; }
   }
   @media (max-width: 600px) {
-    .nav-links { display: none; } .hamburger { display: flex; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
     .team-grid { grid-template-columns: 1fr; }
   }
-
-  /* HAMBURGER */
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; z-index: 200; background: none; border: none; }
-  .hamburger span { display: block; width: 26px; height: 2px; background: var(--off-white); transition: all 0.3s ease; }
-  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.98); z-index: 150; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a { color: var(--off-white); text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 0.08em; transition: color 0.2s; }
-  .mobile-menu a:hover { color: var(--yellow); }
-  .mobile-menu .mobile-cta { color: var(--yellow); }
-
 </style>
 </head>
 <body>
+
 <div class="mobile-menu" id="mobileMenu">
   <a href="about.html" onclick="closeMenu()">About</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
@@ -116,10 +117,6 @@
   <a href="testing.html" onclick="closeMenu()">Testing</a>
   <a href="index.html#contact" class="mobile-cta" onclick="closeMenu()">Get Started</a>
 </div>
-
-
-<!-- MOBILE MENU -->
-
 
 <nav>
   <a href="index.html" class="nav-logo">FROM<span>ZERO</span></a>
@@ -131,9 +128,11 @@
     <li><a href="testing.html">Testing</a></li>
     <li><a href="index.html#contact" class="nav-cta">Get Started</a></li>
   </ul>
-  
-
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </nav>
 
 <div class="page-hero">
@@ -263,7 +262,6 @@
 </footer>
 <div class="footer-copy">© 2025 From Zero Athletic Performance · Keilor Park, VIC · All rights reserved</div>
 
-
 <script>
   function toggleMenu() {
     document.getElementById('hamburger').classList.toggle('open');
@@ -274,5 +272,6 @@
     document.getElementById('mobileMenu').classList.remove('open');
   }
 </script>
+
 </body>
 </html>
