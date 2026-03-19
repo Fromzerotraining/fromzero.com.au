@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Athletic Testing — From Zero</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #0a0a0a; --charcoal: #111111; --dark: #1a1a1a;
+    --yellow: #FFF700; --yellow-dark: #ccc200;
+    --off-white: #f0ede8; --grey: #888; --light-grey: #2a2a2a;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--off-white); font-family: 'Barlow', sans-serif; overflow-x: hidden; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--yellow); }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(10,10,10,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid #1a1a1a; }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.08em; color: var(--off-white); text-decoration: none; }
+  .nav-logo span { color: var(--yellow); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--off-white); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--yellow); }
+  .nav-cta { background: var(--yellow); color: black !important; opacity: 1 !important; padding: 0.55rem 1.4rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); font-weight: 700; }
+
+  /* PAGE HERO */
+  .page-hero { background: var(--charcoal); padding: 6rem 3rem 4rem; border-bottom: 1px solid var(--light-grey); }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
+  .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 0.92; }
+  .page-subtitle { margin-top: 1.2rem; font-size: 1.05rem; font-weight: 300; color: rgba(240,237,232,0.7); max-width: 600px; line-height: 1.6; }
+
+  /* VALD INTRO */
+  .vald-intro { padding: 5rem 3rem; background: var(--black); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .vald-badge { background: var(--yellow); color: black; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.2em; padding: 0.5rem 1.2rem; display: inline-block; margin-bottom: 1.5rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); }
+  .vald-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; margin-bottom: 1.5rem; }
+  .vald-desc { font-size: 1rem; font-weight: 300; line-height: 1.8; color: rgba(240,237,232,0.8); }
+  .vald-desc strong { color: var(--off-white); font-weight: 600; }
+  .trust-badges { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 0.8rem; }
+  .trust-badge { border: 1px solid var(--light-grey); padding: 0.5rem 1rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); }
+  .vald-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--light-grey); }
+  .vald-stat { background: var(--charcoal); padding: 2rem; }
+  .vald-stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--yellow); line-height: 1; }
+  .vald-stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); margin-top: 0.3rem; }
+
+  /* WHAT WE TEST */
+  .test-section { padding: 5rem 3rem; background: var(--charcoal); }
+  .test-section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 3rem; }
+  .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--light-grey); }
+  .test-card { background: var(--dark); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; }
+  .test-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--yellow); transition: width 0.4s; }
+  .test-card:hover { background: var(--black); }
+  .test-card:hover::before { width: 100%; }
+  .test-icon { font-family: 'Bebas Neue', sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--yellow); margin-bottom: 1rem; }
+  .test-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+  .test-desc { font-size: 0.88rem; font-weight: 300; line-height: 1.65; color: var(--grey); }
+
+  /* WHAT YOU'LL DISCOVER */
+  .discover-section { padding: 5rem 3rem; background: var(--black); }
+  .discover-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .discover-card { border: 1px solid var(--light-grey); padding: 2rem; transition: border-color 0.3s; }
+  .discover-card:hover { border-color: var(--yellow); }
+  .discover-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--yellow); margin-bottom: 0.6rem; }
+  .discover-desc { font-size: 0.88rem; font-weight: 300; line-height: 1.6; color: var(--grey); }
+
+  /* WHO IS THIS FOR */
+  .who-section { padding: 5rem 3rem; background: var(--charcoal); }
+  .who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--light-grey); margin-top: 3rem; }
+  .who-card { background: var(--dark); padding: 2rem; }
+  .who-type { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--off-white); margin-bottom: 0.5rem; }
+  .who-sports { font-size: 0.88rem; font-weight: 300; color: var(--grey); line-height: 1.5; }
+
+  /* CTA */
+  .cta-section { padding: 5rem 3rem; background: var(--yellow); text-align: center; }
+  .cta-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5rem); color: black; margin-bottom: 1rem; }
+  .cta-sub { font-size: 1rem; font-weight: 300; color: rgba(0,0,0,0.7); margin-bottom: 2rem; }
+  .btn-dark { background: black; color: var(--yellow); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); display: inline-block; transition: background 0.2s; }
+  .btn-dark:hover { background: #111; }
+
+  /* FOOTER */
+  footer { background: var(--charcoal); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--light-grey); }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--off-white); }
+  .footer-logo span { color: var(--yellow); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { color: var(--grey); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--yellow); }
+  .footer-copy { background: var(--charcoal); padding: 1rem 3rem; text-align: center; font-size: 0.78rem; color: rgba(136,136,136,0.5); border-top: 1px solid var(--light-grey); }
+
+  .{ opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .page-hero, .vald-intro, .test-section, .discover-section, .who-section, .cta-section { padding: 4rem 1.5rem; }
+    .vald-intro { grid-template-columns: 1fr; gap: 3rem; }
+    .test-grid, .discover-grid { grid-template-columns: 1fr; }
+    .who-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+  }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; z-index: 200; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--off-white); transition: all 0.3s ease; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.98); z-index: 150; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { color: var(--off-white); text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 0.08em; transition: color 0.2s; }
+  .mobile-menu a:hover { color: var(--yellow); }
+  .mobile-menu .mobile-cta { color: var(--yellow); }
+  @media (max-width: 600px) { .nav-links { display: none; } .hamburger { display: flex; } .hamburger { display: flex; } }
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="athletes.html" onclick="closeMenu()">Athletes</a>
+  <a href="physio.html" onclick="closeMenu()">Physio</a>
+  <a href="testing.html" onclick="closeMenu()">Testing</a>
+  <a href="index.html#contact" class="mobile-cta" onclick="closeMenu()">Get Started</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">FROM<span>ZERO</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="athletes.html">Athletes</a></li>
+    <li><a href="physio.html">Physio</a></li>
+    <li><a href="testing.html" class="active">Testing</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Get Started</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="section-label">Stop Guessing — Start Measuring</div>
+  <h1 class="page-title">Athletic<br><span style="color:var(--yellow)">Testing</span></h1>
+  <p class="page-subtitle">World-class VALD Performance technology trusted by the UFC Performance Institute, Premier League clubs, and NBA teams — now available to you.</p>
+</div>
+
+<div class="vald-intro">
+  <div>
+    <div class="vald-badge">VALD Performance Technology</div>
+    <h2 class="vald-title">Research-Grade Testing.<br>Real Results.</h2>
+    <p class="vald-desc">This isn't your average fitness assessment. We use the same technology trusted by the world's elite sporting organisations to <strong>exactly what's holding you back</strong> and how to fix it.</p>
+    <div class="trust-badges">
+      <div class="trust-badge">UFC Performance Institute</div>
+      <div class="trust-badge">Premier League Clubs</div>
+      <div class="trust-badge">NBA Teams</div>
+      <div class="trust-badge">Elite Sporting Orgs</div>
+    </div>
+  </div>
+  <div class="vald-stat-grid">>
+    <div class="vald-stat">
+      <div class="vald-stat-num">130+</div>
+      <div class="vald-stat-label">Exercises tested</div>
+    </div>
+    <div class="vald-stat">
+      <div class="vald-stat-num">35+</div>
+      <div class="vald-stat-label">Test positions</div>
+    </div>
+    <div class="vald-stat">
+      <div class="vald-stat-num">3</div>
+      <div class="vald-stat-label">VALD systems</div>
+    </div>
+    <div class="vald-stat">
+      <div class="vald-stat-num">100%</div>
+      <div class="vald-stat-label">Data-driven decisions</div>
+    </div>
+  </div>
+</div>
+
+<div class="test-section">
+  <div class="section-label">What We Test</div>
+  <h2 class="test-section-title">Our Equipment</h2>
+  <div class="test-grid">
+    <div class="test-card">>
+      <div class="test-icon">VALD · ForceDecks</div>
+      <div class="test-name">Dual Force Plate System</div>
+      <p class="test-desc">Measures explosive power, rate of force development, balance, and asymmetries that elevate injury risk. Jump tests, landing mechanics, and bilateral comparisons show exactly where you're strong and where you're vulnerable.</p>
+    </div>
+    <div class="test-card">>
+      <div class="test-icon">VALD · ForceFrame</div>
+      <div class="test-name">Strength Testing System</div>
+      <p class="test-desc">Assesses isometric muscle strength across 130+ exercises in 35+ positions. From neck strength (critical for combat athletes) to hip stability (essential for cutting sports), we test what matters for your sport.</p>
+    </div>
+    <div class="test-card">>
+      <div class="test-icon">VALD · DynaMo</div>
+      <div class="test-name">Dynamometer</div>
+      <p class="test-desc">Detailed analysis of force production and physical capabilities across multiple movement patterns. Identifies strength deficits and imbalances before they become injuries.</p>
+    </div>
+  </div>
+</div>
+
+<div class="discover-section">
+  <div class="section-label">What You'll Discover</div>
+  <h2 class="test-section-title">Your Data,<br><span style="color:var(--yellow)">Your Edge</span></h2>
+  <div class="discover-grid">
+    <div class="discover-card">>
+      <div class="discover-name">Bilateral Asymmetries</div>
+      <p class="discover-desc">Left-right imbalances that increase injury risk. Research shows over 10–15% asymmetry significantly elevates injury rates.</p>
+    </div>
+    <div class="discover-card">>
+      <div class="discover-name">Injury Risk Factors</div>
+      <p class="discover-desc">Weakness and instability in vulnerable areas — identified before they sideline you.</p>
+    </div>
+    <div class="discover-card">>
+      <div class="discover-name">Performance Benchmarks</div>
+      <p class="discover-desc">How you compare to sport-specific normative data from elite athletes around the world.</p>
+    </div>
+    <div class="discover-card">>
+      <div class="discover-name">Strength Gaps</div>
+      <p class="discover-desc">Specific muscle groups and movement patterns that are limiting your performance right now.</p>
+    </div>
+    <div class="discover-card">>
+      <div class="discover-name">Objective Progress</div>
+      <p class="discover-desc">Trackable metrics to measure real improvement over time — no guessing, just data.</p>
+    </div>
+    <div class="discover-card">>
+      <div class="discover-name">Return-to-Play Readiness</div>
+      <p class="discover-desc">Data-driven decisions on when you're truly ready to return after injury — safely and confidently.</p>
+    </div>
+  </div>
+</div>
+
+<div class="who-section">
+  <div class="section-label">Who Is This For?</div>
+  <h2 class="test-section-title">Built For<br><span style="color:var(--yellow)">Every Athlete</span></h2>
+  <div class="who-grid">
+    <div class="who-card">>
+      <div class="who-type">Team Sport Athletes</div>
+      <p class="who-sports">Football, basketball, netball, soccer, hockey. Identify asymmetries from repeated one-sided movements and cutting patterns.</p>
+    </div>
+    <div class="who-card">>
+      <div class="who-type">Combat Athletes</div>
+      <p class="who-sports">MMA, boxing, BJJ, Muay Thai. Assess striking power, neck strength, and asymmetries from stance-specific training.</p>
+    </div>
+    <div class="who-card">>
+      <div class="who-type">Individual Athletes</div>
+      <p class="who-sports">Track and field, tennis, golf, swimming. Benchmark against normative data and track real improvement.</p>
+    </div>
+    <div class="who-card">>
+      <div class="who-type">Injury Recovery</div>
+      <p class="who-sports">Objective metrics to guide rehabilitation and ensure safe, confident return to sport.</p>
+    </div>
+    <div class="who-card">>
+      <div class="who-type">Serious Trainers</div>
+      <p class="who-sports">Anyone who wants to train smarter, not just harder. Get the data to back every decision.</p>
+    </div>
+    <div class="who-card">>
+      <div class="who-type">Youth Athletes</div>
+      <p class="who-sports">Early identification of movement deficiencies to build better foundations and reduce long-term injury risk.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">>
+  <h2 class="cta-title">Ready to See Your Numbers?</h2>
+  <p class="cta-sub">Book your athletic testing session today and discover exactly what's holding you back.</p>
+  <a href="index.html#contact" class="btn-dark">Book a Session</a>
+</div>
+
+<footer>
+  <div class="footer-logo">FROM<span>ZERO</span></div>
+  <ul class="footer-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="athletes.html">Athletes</a></li>
+    <li><a href="physio.html">Physio</a></li>
+    <li><a href="testing.html">Testing</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</footer>
+<div class="footer-copy">© 2025 From Zero Athletic Performance · Keilor Park, VIC · All rights reserved</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("hamburger").classList.toggle("open");
+    document.getElementById("mobileMenu").classList.toggle("open");
+  }
+  function closeMenu() {
+    document.getElementById("hamburger").classList.remove("open");
+    document.getElementById("mobileMenu").classList.remove("open");
+  }
+</script>
+</body>
+</html>
