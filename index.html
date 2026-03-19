@@ -89,7 +89,8 @@
   .about-img-wrap::before { content: ''; position: absolute; top: -16px; left: -16px; width: 60%; height: 60%; border: 2px solid var(--yellow); opacity: 0.4; z-index: 0; }
   .about-img-wrap img { width: 100%; aspect-ratio: 4/5; object-fit: cover; position: relative; z-index: 1; filter: grayscale(30%) contrast(1.05); }
   .about-content p { font-size: 1.05rem; font-weight: 300; line-height: 1.8; color: rgba(240,237,232,0.8); margin-bottom: 1.2rem; }
-  .about-content a.btn-primary { color: black !important; text-decoration: none !important; }
+  .about-content a.btn-primary { background: var(--yellow) !important; color: black !important; text-decoration: none !important; display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); transition: background 0.2s; margin-top: 1rem; }
+  .about-content a.btn-primary:hover { background: var(--yellow-dark) !important; }
 
   #services { background: var(--black); }
   .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; }
