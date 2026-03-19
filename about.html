@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Us — From Zero</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;1,300&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #0a0a0a; --charcoal: #111111; --dark: #1a1a1a;
+    --yellow: #FFF700; --yellow-dark: #ccc200;
+    --off-white: #f0ede8; --grey: #888; --light-grey: #2a2a2a;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--off-white); font-family: 'Barlow', sans-serif; overflow-x: hidden; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--yellow); }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(10,10,10,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid #1a1a1a; }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.08em; color: var(--off-white); text-decoration: none; }
+  .nav-logo span { color: var(--yellow); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--off-white); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--yellow); }
+  .nav-cta { background: var(--yellow); color: black !important; opacity: 1 !important; padding: 0.55rem 1.4rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); font-weight: 700; }
+
+  /* PAGE HERO */
+  .page-hero {
+    position: relative;
+    background: var(--charcoal);
+    padding: 6rem 3rem 4rem;
+    border-bottom: 1px solid var(--light-grey);
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: 'FROM ZERO';
+    position: absolute;
+    right: -20px; top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12rem;
+    color: rgba(255,247,0,0.03);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
+  .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 0.92; }
+  .page-subtitle { margin-top: 1.2rem; font-size: 1.05rem; font-weight: 300; color: rgba(240,237,232,0.7); max-width: 560px; line-height: 1.6; }
+
+  /* OUR STORY */
+  .story-section { padding: 6rem 3rem; background: var(--black); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+  .story-label { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 0.95; margin-bottom: 2rem; }
+  .story-label span { color: var(--yellow); }
+  .story-text p { font-size: 1rem; font-weight: 300; line-height: 1.85; color: rgba(240,237,232,0.8); margin-bottom: 1.3rem; }
+  .story-text p strong { color: var(--off-white); font-weight: 600; }
+  .story-pull {
+    border-left: 2px solid var(--yellow);
+    padding-left: 1.5rem;
+    margin: 2.5rem 0;
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.6;
+  }
+  .btn-primary { background: var(--yellow); color: black; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); display: inline-block; transition: background 0.2s, transform 0.2s; margin-top: 1rem; }
+  .btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); }
+
+  /* STATS STRIP */
+  .stats-strip { background: var(--yellow); padding: 3rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; }
+  .stat-item { text-align: center; padding: 1rem; }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: black; line-height: 1; }
+  .stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(0,0,0,0.6); margin-top: 0.3rem; }
+
+  /* VALUES */
+  .values-section { padding: 6rem 3rem; background: var(--charcoal); }
+  .values-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 3rem; }
+  .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--light-grey); }
+  .value-card { background: var(--dark); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; }
+  .value-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--yellow); transition: width 0.4s; }
+  .value-card:hover { background: var(--black); }
+  .value-card:hover::after { width: 100%; }
+  .value-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--yellow); margin-bottom: 0.8rem; }
+  .value-desc { font-size: 0.9rem; font-weight: 300; line-height: 1.7; color: var(--grey); }
+
+  /* TEAM */
+  .team-section { padding: 6rem 3rem; background: var(--black); }
+  .team-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 1rem; }
+  .team-sub { font-size: 1rem; font-weight: 300; color: rgba(240,237,232,0.7); max-width: 600px; line-height: 1.6; margin-bottom: 3.5rem; }
+  .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+  .team-card { background: var(--charcoal); overflow: hidden; transition: transform 0.3s; }
+  .team-card:hover { transform: translateY(-4px); }
+  .team-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; filter: grayscale(20%) contrast(1.05); display: block; }
+  .team-info { padding: 1.5rem; border-top: 2px solid var(--yellow); }
+  .team-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--off-white); }
+  .team-role { font-size: 0.85rem; font-weight: 300; color: var(--grey); margin-top: 0.3rem; }
+
+  /* CTA */
+  .cta-section { padding: 5rem 3rem; background: var(--charcoal); text-align: center; }
+  .cta-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 1rem; }
+  .cta-sub { font-size: 1rem; font-weight: 300; color: rgba(240,237,232,0.7); margin-bottom: 2rem; }
+
+  /* FOOTER */
+  footer { background: var(--charcoal); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--light-grey); }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--off-white); }
+  .footer-logo span { color: var(--yellow); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { color: var(--grey); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--yellow); }
+  .footer-copy { background: var(--charcoal); padding: 1rem 3rem; text-align: center; font-size: 0.78rem; color: rgba(136,136,136,0.5); border-top: 1px solid var(--light-grey); }
+
+  .reveal { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .page-hero, .story-section, .values-section, .team-section, .cta-section { padding: 4rem 1.5rem; }
+    .story-section { grid-template-columns: 1fr; gap: 3rem; }
+    .stats-strip { grid-template-columns: repeat(2, 1fr); padding: 2rem 1.5rem; }
+    .values-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+  }
+  @media (max-width: 600px) { .nav-links { display: none; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">FROM<span>ZERO</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="athletes.html">Athletes</a></li>
+    <li><a href="physio.html">Physio</a></li>
+    <li><a href="testing.html">Testing</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="section-label">Our Story</div>
+  <h1 class="page-title">The Quiet<br><span style="color:var(--yellow)">Revolution</span></h1>
+  <p class="page-subtitle">While others chase the spotlight, we choose the shadows of the gym at 5 AM. This is where champions are truly made.</p>
+</div>
+
+<div class="story-section">
+  <div class="reveal">
+    <h2 class="story-label">From Zero<br><span>Isn't Just<br>Our Name</span></h2>
+    <div class="story-pull">"We see what others miss. That overlooked athlete with raw hunger in their eyes."</div>
+    <a href="index.html#contact" class="btn-primary">Start Your Journey</a>
+  </div>
+  <div class="story-text reveal">
+    <p>While others chase the spotlight, we choose the shadows of the gym at 5 AM. While they perfect their highlight reels, we perfect our fundamentals. This is where champions are truly made — not in the flash of cameras, but in the grind of countless hours when nobody's watching.</p>
+    <p><strong>From Zero isn't just our name — it's our philosophy.</strong></p>
+    <p>We see the diamond in the rough, and we have the tools to make it shine. Everyone talks about reaching the top. But when the alarm goes off at dawn, when the muscles ache and the mind wants to quit — that's when we separate the dreamers from the doers.</p>
+    <p>This is about more than training. It's about transformation. It's about taking someone who the world has written off and proving that with the right guidance, relentless work ethic, and unwavering belief, <strong>anything is possible.</strong></p>
+    <p>No shortcuts. No excuses. No camera crews. Just you, us, and the work that matters.</p>
+  </div>
+</div>
+
+<div class="stats-strip reveal">
+  <div class="stat-item">
+    <div class="stat-num">12+</div>
+    <div class="stat-label">Years Coaching</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">17+</div>
+    <div class="stat-label">Elite Athletes</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">6</div>
+    <div class="stat-label">Core Programs</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">VIC</div>
+    <div class="stat-label">Keilor Park, Melbourne</div>
+  </div>
+</div>
+
+<div class="values-section">
+  <div class="section-label">What We Stand For</div>
+  <h2 class="values-title">Our <span style="color:var(--yellow)">Values</span></h2>
+  <div class="values-grid">
+    <div class="value-card reveal">
+      <div class="value-name">Relentless Work Ethic</div>
+      <p class="value-desc">Success isn't built in moments of inspiration — it's forged in the daily grind when no one's watching.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-name">Authentic Grit</div>
+      <p class="value-desc">No shortcuts, no excuses, no fake motivation. We embrace the struggle because that's where real growth happens.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-name">Untapped Potential</div>
+      <p class="value-desc">We see diamonds in the rough where others see nothing. Every person has greatness within them.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-name">Transformative Growth</div>
+      <p class="value-desc">We don't just improve performance — we transform identity. The person who finishes isn't the same one who started.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-name">Earned Results</div>
+      <p class="value-desc">Every breakthrough is earned through dedication, consistency, and pushing past perceived limits.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-name">Quiet Confidence</div>
+      <p class="value-desc">We let our work speak louder than our words. True strength is demonstrated through action and results.</p>
+    </div>
+  </div>
+</div>
+
+<div class="team-section">
+  <div class="section-label">The People Behind It</div>
+  <h2 class="team-title">Meet The <span style="color:var(--yellow)">Team</span></h2>
+  <p class="team-sub">We're the coaches who see champions in the overlooked. Former athletes and dedicated coaches who've spent years transforming raw potential into unstoppable force.</p>
+  <div class="team-grid">
+    <div class="team-card reveal">
+      <img class="team-img" src="https://static.wixstatic.com/media/f5f324_97c1cc17269445179a19bc699b4fc297~mv2.jpeg" alt="Emmanuel Malou"/>
+      <div class="team-info">
+        <div class="team-name">Emmanuel Malou</div>
+        <div class="team-role">Head of Basketball Performance</div>
+      </div>
+    </div>
+    <div class="team-card reveal">
+      <img class="team-img" src="https://static.wixstatic.com/media/f5f324_d461a81307dd48d483559d8edcaeeeac~mv2.jpg" alt="Raphael Hadfield"/>
+      <div class="team-info">
+        <div class="team-name">Raphael Hadfield</div>
+        <div class="team-role">High Performance Coach</div>
+      </div>
+    </div>
+    <div class="team-card reveal">
+      <img class="team-img" src="https://static.wixstatic.com/media/f5f324_2774bbc19d3b4435be3558c4cb100ead~mv2.jpg" alt="Jimmy Mullins"/>
+      <div class="team-info">
+        <div class="team-name">Jimmy Mullins</div>
+        <div class="team-role">Director · High Performance Coach</div>
+      </div>
+    </div>
+    <div class="team-card reveal">
+      <img class="team-img" src="IMG_3700.jpg" alt="Ashton Ahluwalia"/>
+      <div class="team-info">
+        <div class="team-name">Ashton Ahluwalia</div>
+        <div class="team-role">Physiotherapist</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section reveal">
+  <div class="section-label">Ready?</div>
+  <h2 class="cta-title">Stop Talking.<br><span style="color:var(--yellow)">Start Becoming.</span></h2>
+  <p class="cta-sub">If you're ready to stop dreaming and start doing, we're ready to show you the way.</p>
+  <a href="index.html#contact" class="btn-primary">I'm Ready</a>
+</div>
+
+<footer>
+  <div class="footer-logo">FROM<span>ZERO</span></div>
+  <ul class="footer-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="athletes.html">Athletes</a></li>
+    <li><a href="physio.html">Physio</a></li>
+    <li><a href="testing.html">Testing</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</footer>
+<div class="footer-copy">© 2025 From Zero Athletic Performance · Keilor Park, VIC · All rights reserved</div>
+
+
+</body>
+</html>
