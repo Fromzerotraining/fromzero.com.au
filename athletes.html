@@ -55,7 +55,14 @@
     color: var(--off-white);
     font-family: 'Barlow', sans-serif;
     overflow-x: hidden;
-    background: #0a0a0a url('athletes-bg.png') center/cover fixed no-repeat;
+    background: #0a0a0a;
+  }
+
+  #fixed-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('athletes-bg.png') center/cover no-repeat;
+    z-index: -2;
   }
 
   /* Dark overlay */
@@ -64,7 +71,7 @@
     position: fixed;
     inset: 0;
     background: rgba(10,10,10,0.78);
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
   }
 
@@ -134,6 +141,7 @@
 </head>
 <body>
 
+<div id="fixed-bg"></div>
 <div class="mobile-menu" id="mobileMenu">
   <a href="about.html" onclick="closeMenu()">About</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
