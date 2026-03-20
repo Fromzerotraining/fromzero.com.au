@@ -3,53 +3,25 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Athletic Testing Melbourne — VALD Performance | From Zero</title>
+<title>Sports Physio Melbourne — From Zero Physiotherapy</title>
   <!-- SEO -->
-  <meta name="description" content="World-class VALD Performance athletic testing in Melbourne. Force plates, strength testing and dynamometer assessments trusted by NBA, UFC and Premier League teams."/>
-  <meta name="keywords" content="athletic testing Melbourne, VALD testing Melbourne, force plate testing, strength testing athletes, sports performance testing Melbourne, injury risk assessment Melbourne"/>
+  <meta name="description" content="Performance-focused sports physiotherapy in Melbourne. Injury prevention, rehabilitation and return to sport — integrated with strength and conditioning."/>
+  <meta name="keywords" content="sports physio Melbourne, sports physiotherapy Keilor Park, injury rehabilitation Melbourne, return to sport physio, athletic physio Melbourne, basketball physio Melbourne"/>
   <meta name="author" content="From Zero Athletic Performance"/>
   <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://www.fromzero.com.au/testing.html"/>
-  <!-- Open Graph -->
+  <link rel="canonical" href="https://www.fromzero.com.au/physio.html"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Athletic Testing Melbourne — VALD Performance | From Zero"/>
-  <meta property="og:description" content="World-class VALD Performance athletic testing in Melbourne. Force plates, strength testing and dynamometer assessments trusted by NBA, UFC and Premier League teams."/>
-  <meta property="og:url" content="https://www.fromzero.com.au/testing.html"/>
+  <meta property="og:title" content="Sports Physio Melbourne — From Zero Physiotherapy"/>
+  <meta property="og:description" content="Performance-focused sports physiotherapy in Melbourne. Injury prevention, rehabilitation and return to sport — integrated with strength and conditioning."/>
+  <meta property="og:url" content="https://www.fromzero.com.au/physio.html"/>
   <meta property="og:site_name" content="From Zero Athletic Performance"/>
-  <!-- Local Business -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "From Zero Athletic Performance",
-    "description": "Elite athletic performance centre offering basketball training, strength and conditioning, sports physio and athletic testing in Melbourne.",
-    "url": "https://www.fromzero.com.au",
-    "telephone": "",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Warehouse 73/2 Thomsons Road",
-      "addressLocality": "Keilor Park",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -37.7271,
-      "longitude": 144.8761
-    },
-    "openingHours": "Mo-Fr 06:00-20:00",
-    "sameAs": [
-      "https://www.instagram.com/fromzerosc/",
-      "https://www.facebook.com/share/16LwrSru3E/"
-    ]
-  }
-  </script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --black: #0a0a0a; --charcoal: #111111; --dark: #1a1a1a; --yellow: #FFF700; --yellow-dark: #ccc200; --off-white: #f0ede8; --grey: #888; --light-grey: #2a2a2a; }
   html { scroll-behavior: smooth; }
 
+  /* FIXED BACKGROUND IMAGE */
   body {
     color: var(--off-white);
     font-family: 'Barlow', sans-serif;
@@ -60,10 +32,11 @@
   #fixed-bg {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: url('testing-bg.png') center/cover no-repeat;
+    background: url('physio-bg.png') center/cover no-repeat;
     z-index: -2;
   }
 
+  /* Dark overlay over the entire page */
   body::before {
     content: '';
     position: fixed;
@@ -73,15 +46,17 @@
     pointer-events: none;
   }
 
-  nav, .mobile-menu, .page-hero, .vald-intro, .test-section, .discover-section, .who-section, .cta-section, footer, .footer-copy {
+  /* All content sits above the overlay */
+  nav, .mobile-menu, .page-hero, .physio-about, .physio-services, .booking-section, footer, .footer-copy {
     position: relative;
     z-index: 1;
   }
+
   ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: rgba(10,10,10,0.75); }
+  ::-webkit-scrollbar-track { background: #0a0a0a; }
   ::-webkit-scrollbar-thumb { background: var(--yellow); }
 
-  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(10,10,10,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid #1a1a1a; }
+  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(10,10,10,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid #1a1a1a; }
   .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.08em; color: var(--off-white); text-decoration: none; }
   .nav-logo span { color: var(--yellow); }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
@@ -99,67 +74,53 @@
   .mobile-menu a:hover { color: var(--yellow); }
   .mobile-menu .mobile-cta { color: var(--yellow); }
 
-  .page-hero { background: transparent; padding: 6rem 3rem 4rem; border-bottom: 1px solid var(--light-grey); }
   .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
   .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 0.92; }
-  .page-subtitle { margin-top: 1.2rem; font-size: 1.05rem; font-weight: 300; color: rgba(240,237,232,0.7); max-width: 600px; line-height: 1.6; }
-  .btn-dark { background: black; color: var(--yellow); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); display: inline-block; transition: background 0.2s; }
-  .btn-dark:hover { background: #111; }
+  .page-subtitle { margin-top: 1.2rem; font-size: 1.05rem; font-weight: 300; color: rgba(240,237,232,0.7); max-width: 560px; line-height: 1.6; }
+  .btn-primary { background: var(--yellow); color: black; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); display: inline-block; transition: background 0.2s; }
+  .btn-primary:hover { background: var(--yellow-dark); }
 
-  .vald-intro { padding: 5rem 3rem; background: rgba(10,10,10,0.75); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .vald-badge { background: var(--yellow); color: black; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.2em; padding: 0.5rem 1.2rem; display: inline-block; margin-bottom: 1.5rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); }
-  .vald-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; margin-bottom: 1.5rem; }
-  .vald-desc { font-size: 1rem; font-weight: 300; line-height: 1.8; color: rgba(240,237,232,0.8); }
-  .vald-desc strong { color: var(--off-white); font-weight: 600; }
-  .trust-badges { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 0.8rem; }
-  .trust-badge { border: 1px solid var(--light-grey); padding: 0.5rem 1rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); }
-  .vald-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(42,42,42,0.5); }
-  .vald-stat { background: rgba(17,17,17,0.75); padding: 2rem; }
-  .vald-stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--yellow); line-height: 1; }
-  .vald-stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); margin-top: 0.3rem; }
+  .page-hero { padding: 6rem 3rem 4rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
 
-  .test-section { padding: 5rem 3rem; background: rgba(17,17,17,0.75); }
-  .test-section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 3rem; }
-  .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(42,42,42,0.5); }
-  .test-card { background: rgba(26,26,26,0.75); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; }
-  .test-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--yellow); transition: width 0.4s; }
-  .test-card:hover { background: rgba(10,10,10,0.75); }
-  .test-card:hover::before { width: 100%; }
-  .test-icon { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--yellow); margin-bottom: 1rem; text-transform: uppercase; }
-  .test-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
-  .test-desc { font-size: 0.88rem; font-weight: 300; line-height: 1.65; color: var(--grey); }
+  .physio-about { padding: 5rem 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .physio-about-text h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; margin-bottom: 1.5rem; }
+  .physio-about-text p { font-size: 1rem; font-weight: 300; line-height: 1.8; color: rgba(240,237,232,0.85); margin-bottom: 1.2rem; }
+  .physio-about-text p strong { color: var(--off-white); font-weight: 600; }
+  .physio-highlights { display: flex; flex-direction: column; gap: 1px; background: rgba(255,255,255,0.05); }
+  .physio-highlight { background: rgba(10,10,10,0.6); padding: 1.5rem 2rem; border-left: 2px solid transparent; transition: border-color 0.3s, background 0.3s; backdrop-filter: blur(4px); }
+  .physio-highlight:hover { border-color: var(--yellow); background: rgba(10,10,10,0.8); }
+  .physio-highlight-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--off-white); margin-bottom: 0.3rem; }
+  .physio-highlight-desc { font-size: 0.88rem; font-weight: 300; color: var(--grey); line-height: 1.5; }
 
-  .discover-section { padding: 5rem 3rem; background: rgba(10,10,10,0.75); }
-  .discover-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-  .discover-card { border: 1px solid var(--light-grey); padding: 2rem; transition: border-color 0.3s; }
-  .discover-card:hover { border-color: var(--yellow); }
-  .discover-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--yellow); margin-bottom: 0.6rem; }
-  .discover-desc { font-size: 0.88rem; font-weight: 300; line-height: 1.6; color: var(--grey); }
+  .physio-services { padding: 5rem 3rem; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.05); margin-top: 3rem; }
+  .service-card { background: rgba(10,10,10,0.7); backdrop-filter: blur(4px); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; }
+  .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--yellow); transition: width 0.4s; }
+  .service-card:hover { background: rgba(10,10,10,0.9); }
+  .service-card:hover::before { width: 100%; }
+  .service-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: rgba(255,247,0,0.1); line-height: 1; margin-bottom: 1rem; }
+  .service-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; color: var(--off-white); }
+  .service-desc { font-size: 0.88rem; font-weight: 300; line-height: 1.65; color: var(--grey); }
 
-  .who-section { padding: 5rem 3rem; background: rgba(17,17,17,0.75); }
-  .who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(42,42,42,0.5); margin-top: 3rem; }
-  .who-card { background: rgba(26,26,26,0.75); padding: 2rem; }
-  .who-type { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--off-white); margin-bottom: 0.5rem; }
-  .who-sports { font-size: 0.88rem; font-weight: 300; color: var(--grey); line-height: 1.5; }
+  .booking-section { padding: 5rem 3rem; text-align: center; }
+  .booking-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 1rem; }
+  .booking-sub { font-size: 1rem; font-weight: 300; color: rgba(240,237,232,0.7); margin-bottom: 3rem; line-height: 1.6; }
+  .booking-frame { background: rgba(10,10,10,0.7); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.1); padding: 2rem; width: 100%; max-width: 900px; margin: 0 auto; display: block; }
+  .booking-placeholder { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey); margin-bottom: 1.5rem; }
 
-  .cta-section { padding: 5rem 3rem; background: var(--yellow); text-align: center; }
-  .cta-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5rem); color: black; margin-bottom: 1rem; }
-  .cta-sub { font-size: 1rem; font-weight: 300; color: rgba(0,0,0,0.7); margin-bottom: 2rem; }
-
-  footer { background: rgba(10,10,10,0.95); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--light-grey); }
+  footer { background: rgba(10,10,10,0.95); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.08); }
   .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--off-white); }
   .footer-logo span { color: var(--yellow); }
   .footer-links { display: flex; gap: 2rem; list-style: none; }
   .footer-links a { color: var(--grey); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
   .footer-links a:hover { color: var(--yellow); }
-  .footer-copy { background: rgba(10,10,10,0.95); padding: 1rem 3rem; text-align: center; font-size: 0.78rem; color: rgba(136,136,136,0.5); border-top: 1px solid var(--light-grey); }
+  .footer-copy { background: rgba(10,10,10,0.95); padding: 1rem 3rem; text-align: center; font-size: 0.78rem; color: rgba(136,136,136,0.5); border-top: 1px solid rgba(255,255,255,0.05); }
 
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
-    .page-hero, .vald-intro, .test-section, .discover-section, .who-section, .cta-section { padding: 4rem 1.5rem; }
-    .vald-intro { grid-template-columns: 1fr; gap: 3rem; }
-    .test-grid, .discover-grid { grid-template-columns: 1fr; }
-    .who-grid { grid-template-columns: 1fr; }
+    .page-hero, .physio-about, .physio-services, .booking-section { padding: 4rem 1.5rem; }
+    .physio-about { grid-template-columns: 1fr; gap: 3rem; }
+    .services-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 1.5rem; text-align: center; }
   }
   @media (max-width: 600px) {
@@ -187,8 +148,8 @@
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="athletes.html">Athletes</a></li>
-    <li><a href="physio.html">Physio</a></li>
-    <li><a href="testing.html" class="active">Testing</a></li>
+    <li><a href="physio.html" class="active">Physio</a></li>
+    <li><a href="testing.html">Testing</a></li>
     <li><a href="index.html#contact" class="nav-cta">Get Started</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -199,71 +160,60 @@
 </nav>
 
 <div class="page-hero">
-  <div class="section-label">Stop Guessing — Start Measuring</div>
-  <h1 class="page-title">Athletic<br><span style="color:var(--yellow)">Testing</span></h1>
-  <p class="page-subtitle">World-class VALD Performance technology trusted by the UFC Performance Institute, Premier League clubs, and NBA teams — now available to you.</p>
+  <div class="section-label">Sports Physiotherapy</div>
+  <h1 class="page-title">From Zero<br><span style="color:var(--yellow)">Physio</span></h1>
+  <p class="page-subtitle">Expert physiotherapy integrated with our strength and performance program. Stay in the game, recover faster, and perform at your best.</p>
 </div>
 
-<div class="vald-intro">
-  <div>
-    <div class="vald-badge">VALD Performance Technology</div>
-    <h2 class="vald-title">Research-Grade Testing.<br>Real Results.</h2>
-    <p class="vald-desc">This isn't your average fitness assessment. We use the same technology trusted by the world's elite sporting organisations to reveal <strong>exactly what's holding you back</strong> and how to fix it.</p>
-    <div class="trust-badges">
-      <div class="trust-badge">UFC Performance Institute</div>
-      <div class="trust-badge">Premier League Clubs</div>
-      <div class="trust-badge">NBA Teams</div>
-      <div class="trust-badge">Elite Sporting Orgs</div>
-    </div>
+<div class="physio-about">
+  <div class="physio-about-text">
+    <div class="section-label">Who We Are</div>
+    <h2>Performance-Focused<br>Physiotherapy</h2>
+    <p>At From Zero, our physio service is built differently. We don't just treat injuries — we <strong>integrate rehabilitation with performance training</strong> so you come back stronger than before.</p>
+    <p>Our physiotherapists work hand-in-hand with our strength and conditioning coaches to ensure every recovery plan is built around your sport, your body, and your goals.</p>
+    <p>Whether you're dealing with a fresh injury, managing a chronic issue, or looking to prevent problems before they start — <strong>we meet you where you are and build from there.</strong></p>
   </div>
-  <div class="vald-stat-grid">
-    <div class="vald-stat"><div class="vald-stat-num">130+</div><div class="vald-stat-label">Exercises tested</div></div>
-    <div class="vald-stat"><div class="vald-stat-num">35+</div><div class="vald-stat-label">Test positions</div></div>
-    <div class="vald-stat"><div class="vald-stat-num">3</div><div class="vald-stat-label">VALD systems</div></div>
-    <div class="vald-stat"><div class="vald-stat-num">100%</div><div class="vald-stat-label">Data-driven</div></div>
+  <div class="physio-highlights">
+    <div class="physio-highlight"><div class="physio-highlight-title">Injury Prevention</div><div class="physio-highlight-desc">Identify and address movement faults before they become injuries.</div></div>
+    <div class="physio-highlight"><div class="physio-highlight-title">Rehabilitation</div><div class="physio-highlight-desc">Structured, progressive recovery programs tailored to your sport.</div></div>
+    <div class="physio-highlight"><div class="physio-highlight-title">Performance Integration</div><div class="physio-highlight-desc">Physio and S&C working together — not in silos.</div></div>
+    <div class="physio-highlight"><div class="physio-highlight-title">Return to Sport</div><div class="physio-highlight-desc">Data-driven milestones so you return at full capacity, not just pain-free.</div></div>
+    <div class="physio-highlight"><div class="physio-highlight-title">Ongoing Management</div><div class="physio-highlight-desc">Long-term support to keep you performing at your highest level.</div></div>
   </div>
 </div>
 
-<div class="test-section">
-  <div class="section-label">What We Test</div>
-  <h2 class="test-section-title">Our Equipment</h2>
-  <div class="test-grid">
-    <div class="test-card"><div class="test-icon">VALD · ForceDecks</div><div class="test-name">Dual Force Plate System</div><p class="test-desc">Measures explosive power, rate of force development, balance, and asymmetries that elevate injury risk. Jump tests, landing mechanics, and bilateral comparisons.</p></div>
-    <div class="test-card"><div class="test-icon">VALD · ForceFrame</div><div class="test-name">Strength Testing System</div><p class="test-desc">Assesses isometric muscle strength across 130+ exercises in 35+ positions. From neck strength to hip stability — we test what matters for your sport.</p></div>
-    <div class="test-card"><div class="test-icon">VALD · DynaMo</div><div class="test-name">Dynamometer</div><p class="test-desc">Detailed analysis of force production and physical capabilities across multiple movement patterns. Identifies strength deficits before they become injuries.</p></div>
+<div class="physio-services">
+  <div class="section-label">What We Offer</div>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);">Our Physio Services</h2>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-num">01</div><div class="service-name">Initial Assessment</div><p class="service-desc">Comprehensive evaluation of your injury, movement patterns, and performance goals to build your personalised treatment plan.</p></div>
+    <div class="service-card"><div class="service-num">02</div><div class="service-name">Manual Therapy</div><p class="service-desc">Hands-on treatment including joint mobilisation, soft tissue therapy, and targeted techniques to restore movement and reduce pain.</p></div>
+    <div class="service-card"><div class="service-num">03</div><div class="service-name">Exercise Rehabilitation</div><p class="service-desc">Progressive exercise programs designed to rebuild strength, stability, and sport-specific movement patterns.</p></div>
+    <div class="service-card"><div class="service-num">04</div><div class="service-name">Sports Injury Management</div><p class="service-desc">Acute and chronic sports injury treatment for all levels — from weekend warriors to professional athletes.</p></div>
+    <div class="service-card"><div class="service-num">05</div><div class="service-name">Movement Screening</div><p class="service-desc">Identify movement deficiencies and asymmetries that elevate injury risk before they sideline you.</p></div>
+    <div class="service-card"><div class="service-num">06</div><div class="service-name">Return to Sport Testing</div><p class="service-desc">Objective criteria-based testing integrated with our VALD technology to confirm you're truly ready to return.</p></div>
   </div>
 </div>
 
-<div class="discover-section">
-  <div class="section-label">What You'll Discover</div>
-  <h2 class="test-section-title">Your Data,<br><span style="color:var(--yellow)">Your Edge</span></h2>
-  <div class="discover-grid">
-    <div class="discover-card"><div class="discover-name">Bilateral Asymmetries</div><p class="discover-desc">Left-right imbalances that increase injury risk. Research shows over 10–15% asymmetry significantly elevates injury rates.</p></div>
-    <div class="discover-card"><div class="discover-name">Injury Risk Factors</div><p class="discover-desc">Weakness and instability in vulnerable areas — identified before they sideline you.</p></div>
-    <div class="discover-card"><div class="discover-name">Performance Benchmarks</div><p class="discover-desc">How you compare to sport-specific normative data from elite athletes around the world.</p></div>
-    <div class="discover-card"><div class="discover-name">Strength Gaps</div><p class="discover-desc">Specific muscle groups and movement patterns that are limiting your performance right now.</p></div>
-    <div class="discover-card"><div class="discover-name">Objective Progress</div><p class="discover-desc">Trackable metrics to measure real improvement over time — no guessing, just data.</p></div>
-    <div class="discover-card"><div class="discover-name">Return-to-Play Readiness</div><p class="discover-desc">Data-driven decisions on when you're truly ready to return after injury.</p></div>
+<div class="booking-section">
+  <div class="section-label">Book Online</div>
+  <h2 class="booking-title">Ready to Book<br><span style="color:var(--yellow)">Your Session?</span></h2>
+  <p class="booking-sub">Use our online booking system to find a time that works for you.</p>
+  <div class="booking-frame">
+    <div class="booking-placeholder">Online Booking — Powered by Cliniko</div>
+    <iframe id='cliniko-90038707' src='https://from-zero.au5.cliniko.com/bookings?embedded=true' frameborder='0' scrolling='auto' width='100%' height='1000' style='pointer-events: auto;'></iframe>
+    <script type='text/javascript'>
+      window.addEventListener('message', function handleIFrameMessage (e) {
+        var clinikoBookings = document.getElementById('cliniko-90038707');
+        if (typeof e.data !== 'string') return;
+        if (e.data.search('cliniko-bookings-resize') > -1) {
+          var height = Number(e.data.split(':')[1]);
+          clinikoBookings.style.height = height + 'px';
+        }
+        e.data.search('cliniko-bookings-page') > -1 && clinikoBookings.scrollIntoView();
+      });
+    </script>
   </div>
-</div>
-
-<div class="who-section">
-  <div class="section-label">Who Is This For?</div>
-  <h2 class="test-section-title">Built For<br><span style="color:var(--yellow)">Every Athlete</span></h2>
-  <div class="who-grid">
-    <div class="who-card"><div class="who-type">Team Sport Athletes</div><p class="who-sports">Football, basketball, netball, soccer, hockey. Identify asymmetries from repeated one-sided movements and cutting patterns.</p></div>
-    <div class="who-card"><div class="who-type">Combat Athletes</div><p class="who-sports">MMA, boxing, BJJ, Muay Thai. Assess striking power, neck strength, and asymmetries from stance-specific training.</p></div>
-    <div class="who-card"><div class="who-type">Individual Athletes</div><p class="who-sports">Track and field, tennis, golf, swimming. Benchmark against normative data and track real improvement.</p></div>
-    <div class="who-card"><div class="who-type">Injury Recovery</div><p class="who-sports">Objective metrics to guide rehabilitation and ensure safe, confident return to sport.</p></div>
-    <div class="who-card"><div class="who-type">Serious Trainers</div><p class="who-sports">Anyone who wants to train smarter, not just harder. Get the data to back every decision.</p></div>
-    <div class="who-card"><div class="who-type">Youth Athletes</div><p class="who-sports">Early identification of movement deficiencies to build better foundations and reduce long-term injury risk.</p></div>
-  </div>
-</div>
-
-<div class="cta-section">
-  <h2 class="cta-title">Ready to See Your Numbers?</h2>
-  <p class="cta-sub">Book your athletic testing session today and discover exactly what's holding you back.</p>
-  <a href="index.html#contact" class="btn-dark">Book a Session</a>
 </div>
 
 <footer>
@@ -290,6 +240,19 @@
   }
 </script>
 
-
+<script>
+  // Parallax for mobile (since background-attachment: fixed doesn't work on iOS)
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+    document.body.style.backgroundAttachment = 'scroll';
+    var bg = document.createElement('div');
+    bg.id = 'parallax-bg';
+    bg.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:inherit;background-attachment:scroll;z-index:-2;transform:translateZ(0);';
+    document.body.appendChild(bg);
+    window.addEventListener('scroll', function() {
+      var scrolled = window.pageYOffset;
+      bg.style.transform = 'translateY(' + (scrolled * 0.4) + 'px)';
+    }, {passive: true});
+  }
+</script>
 </body>
 </html>
