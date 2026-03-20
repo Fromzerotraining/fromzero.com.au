@@ -284,13 +284,8 @@
 <script>
   if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
     document.body.style.backgroundAttachment = 'scroll';
-    var bg = document.createElement('div');
-    bg.id = 'parallax-bg';
-    bg.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:inherit;background-attachment:scroll;z-index:-2;transform:translateZ(0);';
-    document.body.appendChild(bg);
-    window.addEventListener('scroll', function() {
-      bg.style.transform = 'translateY(' + (window.pageYOffset * 0.4) + 'px)';
-    }, {passive: true});
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center center';
   }
 </script>
 </body>
