@@ -158,6 +158,7 @@
   @media (max-width: 600px) {
     .nav-links { display: none; }
     .hamburger { display: flex; }
+    body { background-attachment: fixed; background-size: cover; }
   }
 </style>
 </head>
@@ -281,12 +282,6 @@
   }
 </script>
 
-<script>
-  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-    document.body.style.backgroundAttachment = 'scroll';
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundPosition = 'center center';
-  }
-</script>
+
 </body>
 </html>
