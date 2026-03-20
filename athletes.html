@@ -127,7 +127,6 @@
   @media (max-width: 600px) {
     .nav-links { display: none; }
     .hamburger { display: flex; }
-    body { background-attachment: scroll; background-size: 250% auto; background-position: center top; }
     .athletes-grid { grid-template-columns: 1fr; }
   }
 </style>
@@ -211,6 +210,21 @@
   function closeMenu() {
     document.getElementById('hamburger').classList.remove('open');
     document.getElementById('mobileMenu').classList.remove('open');
+  }
+</script>
+
+<script>
+  // Parallax for mobile (since background-attachment: fixed doesn't work on iOS)
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+    document.body.style.backgroundAttachment = 'scroll';
+    var bg = document.createElement('div');
+    bg.id = 'parallax-bg';
+    bg.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:inherit;background-attachment:scroll;z-index:-2;transform:translateZ(0);';
+    document.body.appendChild(bg);
+    window.addEventListener('scroll', function() {
+      var scrolled = window.pageYOffset;
+      bg.style.transform = 'translateY(' + (scrolled * 0.4) + 'px)';
+    }, {passive: true});
   }
 </script>
 </body>
