@@ -250,6 +250,14 @@
     document.getElementById('hamburger').classList.remove('open');
     document.getElementById('mobileMenu').classList.remove('open');
   }
+  window.onload = function() {
+    var el = document.getElementById('fz-email');
+    if (el) {
+      var u = ['contact', 'fromzero.com.au'].join('@');
+      el.href = ['mailto', u].join(':');
+      el.textContent = u;
+    }
+  }
 </script>
 
 <section id="hero">
@@ -403,7 +411,7 @@
     <div class="contact-detail">
       <div class="contact-detail-row">
         <span class="label">Email</span>
-        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;contact&#64;fromzero&#46;com&#46;au" style="color:var(--yellow);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--yellow);padding-bottom:2px;">Send us an email</a>
+        <span>contact [at] fromzero.com.au</span>
       </div>
       <div class="contact-detail-row">
         <span class="label">Location</span>
