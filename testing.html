@@ -103,6 +103,8 @@
   .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
   .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 0.92; }
   .page-subtitle { margin-top: 1.2rem; font-size: 1.05rem; font-weight: 300; color: rgba(240,237,232,0.7); max-width: 600px; line-height: 1.6; }
+  .btn-primary { background: var(--yellow); color: black; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); display: inline-block; transition: background 0.2s; }
+  .btn-primary:hover { background: var(--yellow-dark); }
   .btn-dark { background: black; color: var(--yellow); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); display: inline-block; transition: background 0.2s; }
   .btn-dark:hover { background: #111; }
 
@@ -202,6 +204,8 @@
   <div class="section-label">Stop Guessing — Start Measuring</div>
   <h1 class="page-title">Athletic<br><span style="color:var(--yellow)">Testing</span></h1>
   <p class="page-subtitle">World-class VALD Performance technology trusted by the UFC Performance Institute, Premier League clubs, and NBA teams — now available to you.</p>
+  <br/>
+  <a href="#booking" class="btn-primary">Book Now</a>
 </div>
 
 <div class="vald-intro">
@@ -260,7 +264,7 @@
   </div>
 </div>
 
-<div class="cta-section">
+<div class="cta-section" id="booking">
   <h2 class="cta-title">Ready to See Your Numbers?</h2>
   <p class="cta-sub">Book your athletic testing session today and discover exactly what's holding you back.</p>
   <a href="index.html#contact" class="btn-dark">Book a Session</a>
