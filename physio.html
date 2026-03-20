@@ -19,14 +19,15 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --black: #0a0a0a; --charcoal: #111111; --dark: #1a1a1a; --yellow: #FFF700; --yellow-dark: #ccc200; --off-white: #f0ede8; --grey: #888; --light-grey: #2a2a2a; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; min-height: 100%; }
 
   /* FIXED BACKGROUND IMAGE */
   body {
     color: var(--off-white);
     font-family: 'Barlow', sans-serif;
     overflow-x: hidden;
-    background: transparent;
+    background: #0a0a0a;
+    min-height: 100%;
   }
 
   #fixed-bg {
