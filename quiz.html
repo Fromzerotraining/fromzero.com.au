@@ -618,86 +618,47 @@
   async function submitQuiz() {
     document.getElementById('step-8').classList.remove('active');
     document.getElementById('step-loading').classList.add('active');
-    setProgress(8);
+    setProgress(9);
 
-    const score  = calcScore();
-    const fname  = document.getElementById('fname').value.trim();
-    const email  = document.getElementById('email').value.trim();
-    const phone  = document.getElementById('phone').value.trim();
+    const score = calcScore();
+    const fname = document.getElementById('fname').value.trim();
 
-    let tier, tierSub, ringClass;
+    let tier, tierSub, ringClass, aiText;
+
     if (score >= 75) {
       tier = "College ready — let's go";
       tierSub = "You have a strong foundation. Time to maximise your exposure.";
       ringClass = 'green';
+      aiText = `${fname}, you're in a strong position. You're competing at a high level, you're serious about the goal, and you have the foundation that college programs are looking for. The athletes who make it to the US aren't necessarily the most talented — they're the ones who are most prepared, most visible, and most consistent. You're ticking a lot of those boxes already.
+
+The two areas that will make the biggest difference from here are your physical readiness and your visibility to overseas scouts. College coaches want athletes who can handle the demands of a US program — that means structured strength and conditioning, proper athletic testing, and a professional player profile that shows your measurables and highlights in one place.
+
+At From Zero, we can help you build and document that physical foundation through our S&C programs and VALD athletic testing, and create a player profile that gets you in front of the right people. The pathway to college is real for you — the next step is making sure the right coaches can see it. Book a consultation and let's map it out.`;
+
     } else if (score >= 45) {
       tier = "On the right track";
       tierSub = "You're building momentum. A few key areas need attention.";
       ringClass = 'amber';
+      aiText = `${fname}, you're heading in the right direction — the desire is there and you're putting in work. But desire alone won't get you to a US college. The athletes who make that jump are intentional about every part of their development, on and off the court. Right now there are a couple of gaps that, if addressed, will significantly improve your chances.
+
+The two biggest areas to focus on are your competition level and your physical preparation. College coaches need to see you performing against strong competition consistently, and they want athletes who are physically ready for the demands of a US program. Without a structured S&C program and documented athletic benchmarks, it's hard to prove your readiness to a coach who's never seen you play.
+
+From Zero can help you close both of those gaps. Our strength and conditioning programs are built specifically for basketball athletes, and our VALD testing gives you real data — force output, jump height, asymmetry — that you can put in front of any college coach. Come in, let's assess where you're at and build a plan.`;
+
     } else {
-      tier = "Early stage — huge upside";
-      tierSub = "The pathway is wide open. Now is the perfect time to start.";
+      tier = "Not ready yet — but you can be";
+      tierSub = "There's significant work to do. The good news? Now is the time to start.";
       ringClass = 'coral';
+      aiText = `${fname}, let's be straight with you — based on your answers, you're not ready for college basketball right now. That's not a knock on you, it's just the reality of where you're at. College programs in the US are recruiting athletes who are already competing at high levels, physically developed, and visible to scouts. You're not there yet, and pretending otherwise won't help you get there.
+
+The gaps are real: your competition level needs to rise, your body needs to be developed through a proper strength and conditioning program, and you need to start building a presence that coaches can find. These things take time and consistent work — there are no shortcuts. The players who make it don't get lucky. They outwork everyone around them for years before anyone notices.
+
+From Zero is where that work starts. Our S&C programs will build your athletic foundation, our VALD testing will show you exactly where you stand physically, and our coaching will give you honest feedback on what you need to improve. The pathway to college is still open for you — but you need to start now and you need to be serious about it. Book a consultation and let's get to work.`;
     }
 
-    const prompt = `You are a basketball college recruitment advisor at From Zero, a Melbourne-based performance and basketball development gym (fromzero.com.au).
-A player named ${fname} has completed a college readiness quiz. Here are their answers:
-- Age: ${answers['1']?.text || 'not specified'}
-- Position: ${answers['2']?.text || 'not specified'}
-- Competition level: ${answers['3']?.text || 'not specified'}
-- Seriousness about college: ${answers['4']?.text || 'not specified'}
-- Player profile/highlights status: ${answers['5']?.text || 'not specified'}
-- US/international exposure: ${answers['6']?.text || 'not specified'}
-- Strength & conditioning program: ${answers['7']?.text || 'not specified'}
-- Overall readiness score: ${score}/100
+    // Simulate loading
+    await new Promise(r => setTimeout(r, 2000));
 
-Write a personalised 3-paragraph response (no headings, plain paragraphs only) directly to ${fname}:
-1. Acknowledge where they are right now — direct, honest, and encouraging
-2. Identify their 2 biggest gaps or opportunities for getting to a US college
-3. Explain specifically how From Zero's services (Overseas Basketball Experiences, Player Profiles, Strength & Conditioning, Athletic Testing, Physio) can help them get there
-
-Keep it under 180 words. Be direct, specific, and motivating — like a real coach. No bullet points.`;
-
-    let aiText = '';
-    try {
-      const res  = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 1000,
-          messages: [{ role: 'user', content: prompt }]
-        })
-      });
-      const data = await res.json();
-      aiText = data.content?.map(i => i.text || '').join('') || '';
-    } catch (e) {
-      aiText = `Based on your answers, you're on a path toward college basketball. Reach out to the From Zero team for a personalised game plan.`;
-    }
-
-    // Send email notification
-    try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        to_email:     NOTIFY_EMAIL,
-        player_name:  fname,
-        player_email: email,
-        player_phone: phone || 'Not provided',
-        score:        score + '/100',
-        tier:         tier,
-        age:          answers['1']?.text || '—',
-        position:     answers['2']?.text || '—',
-        level:        answers['3']?.text || '—',
-        seriousness:  answers['4']?.text || '—',
-        profile:      answers['5']?.text || '—',
-        exposure:     answers['6']?.text || '—',
-        sc_program:   answers['7']?.text || '—',
-        ai_summary:   aiText
-      });
-    } catch (e) {
-      console.warn('Email notification failed:', e);
-    }
-
-    // Show result
     document.getElementById('step-loading').classList.remove('active');
     document.getElementById('step-result').classList.add('active');
 
@@ -706,7 +667,15 @@ Keep it under 180 words. Be direct, specific, and motivating — like a real coa
     ring.textContent = score + '%';
     document.getElementById('tier-label').textContent = tier;
     document.getElementById('tier-sub').textContent = tierSub;
-    document.getElementById('ai-text').textContent = aiText;
+
+    const aiDiv = document.getElementById('ai-text');
+    aiDiv.innerHTML = '';
+    aiText.split('\n\n').forEach(para => {
+      const p = document.createElement('p');
+      p.style.marginBottom = '1rem';
+      p.textContent = para;
+      aiDiv.appendChild(p);
+    });
   }
 </script>
 </body>
