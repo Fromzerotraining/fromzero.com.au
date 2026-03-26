@@ -150,9 +150,8 @@
       <h2 class="form-title">Download the<br>Free Guide</h2>
       <p class="form-sub">Enter your details below and we'll send you straight to the download.</p>
 
-      <form action="https://formspree.io/f/xvzwypyo" method="POST">
+      <form id="blueprint-form" action="https://formspree.io/f/xvzwypyo" method="POST" onsubmit="handleSubmit(event)">
         <input type="hidden" name="_subject" value="New Blueprint Download — From Zero"/>
-        <input type="hidden" name="_next" value="https://www.fromzero.com.au/basketball-performance-blueprint.pdf"/>
 
         <div class="form-group">
           <label>First Name *</label>
@@ -167,8 +166,16 @@
           <input type="text" name="role" placeholder="e.g. Player, Parent, Coach"/>
         </div>
 
-        <button type="submit" class="btn-submit">Download Free Blueprint →</button>
+        <button type="submit" class="btn-submit">Get Free Blueprint →</button>
       </form>
+
+      <!-- Download section — hidden until form submitted -->
+      <div id="download-section" style="display:none; margin-top:2rem; padding:1.5rem; background:var(--dark); border:1px solid var(--yellow); text-align:center;">
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--yellow); margin-bottom:0.8rem;">✓ You're all set!</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; margin-bottom:0.5rem;">Your Blueprint is Ready</div>
+        <p style="font-size:0.85rem; color:rgba(240,237,232,0.65); margin-bottom:1.5rem; font-weight:300;">Click below to download your free guide.</p>
+        <a href="basketball-performance-blueprint.pdf" download="Basketball-Performance-Blueprint-FromZero.pdf" style="background:var(--yellow); color:black; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:0.95rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; padding:0.9rem 2rem; clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); display:inline-block;">⬇ Download Now</a>
+      </div>
 
       <p class="form-privacy">No spam. Just basketball. You can unsubscribe any time.</p>
 
@@ -207,4 +214,24 @@
 </footer>
 
 </body>
+<script>
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('blueprint-form');
+    const data = new FormData(form);
+    try {
+      await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+    } catch(err) {
+      console.log('Form submission error:', err);
+    }
+    // Hide form, show download
+    form.style.display = 'none';
+    document.getElementById('download-section').style.display = 'block';
+    document.getElementById('download-section').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
 </html>
