@@ -24,33 +24,56 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="https://www.fromzero.com.au/og-image.png"/>
   <!-- Local Business -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "From Zero Athletic Performance",
-    "description": "Elite athletic performance centre offering basketball training, strength and conditioning, sports physio and athletic testing in Melbourne.",
-    "url": "https://www.fromzero.com.au",
-    "telephone": "",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Warehouse 73/2 Thomsons Road",
-      "addressLocality": "Keilor Park",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "SportsActivityLocation"],
+  "name": "From Zero Athletic Performance",
+  "description": "Melbourne's specialist basketball training, strength and conditioning, sports physio and athletic testing centre. Located in Keilor Park, serving Melbourne's north and west.",
+  "url": "https://www.fromzero.com.au",
+  "telephone": "+61473882514",
+  "email": "fromzerosc@gmail.com",
+  "image": "https://www.fromzero.com.au/og-image.png",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Warehouse 73/2 Thomsons Road",
+    "addressLocality": "Keilor Park",
+    "addressRegion": "VIC",
+    "postalCode": "3042",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -37.7271,
+    "longitude": 144.8761
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00",
+      "closes": "21:00"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -37.7271,
-      "longitude": 144.8761
-    },
-    "openingHours": "Mo-Fr 06:00-20:00",
-    "sameAs": [
-      "https://www.instagram.com/fromzerosc/",
-      "https://www.facebook.com/share/16LwrSru3E/"
-    ]
-  }
-  </script>
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "12:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/fromzerosc/",
+    "https://www.facebook.com/share/16LwrSru3E/"
+  ],
+  "hasMap": "https://maps.google.com/?q=Warehouse+73/2+Thomsons+Road+Keilor+Park+VIC+3042",
+  "areaServed": [
+    "Keilor Park", "Taylors Lakes", "Tullamarine", "Essendon",
+    "Moonee Ponds", "Airport West", "Maribyrnong", "Sunshine"
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
