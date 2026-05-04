@@ -96,6 +96,14 @@
   .nav-links a:hover { opacity: 1; color: var(--yellow); }
   .nav-cta { background: var(--yellow); color: black !important; opacity: 1 !important; padding: 0.55rem 1.4rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); font-weight: 700; }
   .nav-cta:hover { background: var(--yellow-dark) !important; }
+  /* SERVICES DROPDOWN */
+  .nav-dropdown { position: relative; }
+  .nav-dropdown > a::after { content: ' ▾'; font-size: 0.65rem; opacity: 0.6; }
+  .dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: rgba(10,10,10,0.98); border: 1px solid var(--light-grey); border-top: 2px solid var(--yellow); min-width: 220px; z-index: 200; }
+  .dropdown-menu a { display: block; padding: 0.85rem 1.4rem; color: var(--off-white) !important; font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, background 0.2s, color 0.2s; border-bottom: 1px solid var(--light-grey); text-decoration: none; }
+  .dropdown-menu a:last-child { border-bottom: none; }
+  .dropdown-menu a:hover { opacity: 1; color: var(--yellow) !important; background: rgba(255,247,0,0.05); }
+  .nav-dropdown:hover .dropdown-menu { display: block; }
 
   #hero { position: relative; height: 100vh; min-height: 650px; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 3rem 5rem; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; background: url('15-HJM00311.jpg') 70% center/cover no-repeat; animation: heroZoom 12s ease-out forwards; transform: scale(1.04); z-index: 0; }
