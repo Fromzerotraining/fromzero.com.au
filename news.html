@@ -27,6 +27,13 @@
   .nav-links a { color: var(--off-white); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
   .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--yellow); }
   .nav-cta { background: var(--yellow); color: black !important; opacity: 1 !important; padding: 0.55rem 1.4rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); font-weight: 700; }
+  .nav-dropdown { position: relative; }
+  .nav-dropdown > a::after { content: ' ▾'; font-size: 0.65rem; opacity: 0.6; }
+  .dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: rgba(10,10,10,0.98); border: 1px solid var(--light-grey); border-top: 2px solid var(--yellow); min-width: 220px; z-index: 200; }
+  .dropdown-menu a { display: block; padding: 0.85rem 1.4rem; color: var(--off-white) !important; font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, background 0.2s, color 0.2s; border-bottom: 1px solid var(--light-grey); text-decoration: none; }
+  .dropdown-menu a:last-child { border-bottom: none; }
+  .dropdown-menu a:hover { opacity: 1; color: var(--yellow) !important; background: rgba(255,247,0,0.05); }
+  .nav-dropdown:hover .dropdown-menu { display: block; }
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
   .hamburger span { display: block; width: 26px; height: 2px; background: var(--off-white); transition: all 0.3s ease; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -102,6 +109,7 @@
   <a href="about.html" onclick="closeMenu()">About</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="athletes.html" onclick="closeMenu()">Athletes</a>
+  <a href="strength-conditioning.html" onclick="closeMenu()">S&amp;C</a>
   <a href="physio.html" onclick="closeMenu()">Physio</a>
   <a href="testing.html" onclick="closeMenu()">Testing</a>
   <a href="news.html" onclick="closeMenu()">News</a>
@@ -113,7 +121,14 @@
   <a href="index.html" class="nav-logo">FROM<span>ZERO</span></a>
   <ul class="nav-links">
     <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
+    <li class="nav-dropdown">
+    <a href="services.html">Services</a>
+    <div class="dropdown-menu">
+      <a href="strength-conditioning.html">Strength &amp; Conditioning</a>
+      <a href="physio.html">Sports Physio</a>
+      <a href="testing.html">VALD Testing</a>
+    </div>
+  </li>
     <li><a href="athletes.html">Athletes</a></li>
     <li><a href="physio.html">Physio</a></li>
     <li><a href="testing.html">Testing</a></li>
@@ -222,7 +237,14 @@
   <div class="footer-logo">FROM<span>ZERO</span></div>
   <ul class="footer-links">
     <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
+    <li class="nav-dropdown">
+    <a href="services.html">Services</a>
+    <div class="dropdown-menu">
+      <a href="strength-conditioning.html">Strength &amp; Conditioning</a>
+      <a href="physio.html">Sports Physio</a>
+      <a href="testing.html">VALD Testing</a>
+    </div>
+  </li>
     <li><a href="athletes.html">Athletes</a></li>
     <li><a href="physio.html">Physio</a></li>
     <li><a href="testing.html">Testing</a></li>
