@@ -233,7 +233,48 @@
     <div class="service-card"><div class="service-num">06</div><div class="service-name">Return to Sport Testing</div><p class="service-desc">Objective criteria-based testing integrated with our VALD technology to confirm you're truly ready to return.</p></div>
   </div>
 </div>
+<div style="padding:5rem 3rem;background:rgba(10,10,10,0.75);">
+  <div class="section-label">Common Questions</div>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,5rem);line-height:0.95;margin-bottom:2rem;">FAQs</h2>
+  <div style="max-width:760px;">
 
+    <div class="faq-item" style="border-bottom:1px solid #2a2a2a;padding:1.8rem 0;border-top:1px solid #2a2a2a;">
+      <div class="faq-q" onclick="toggleFaq(this)" style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">Do I need a referral to see a sports physio?<span style="font-size:1.4rem;color:var(--yellow);flex-shrink:0;">+</span></div>
+      <div class="faq-a" style="display:none;font-size:0.95rem;font-weight:300;line-height:1.75;color:rgba(240,237,232,0.75);padding-top:1rem;">No referral needed — you can book directly. If you have private health insurance you may be able to claim on sessions. A GP referral is required for Medicare EPC plans only.</div>
+    </div>
+
+    <div class="faq-item" style="border-bottom:1px solid #2a2a2a;padding:1.8rem 0;">
+      <div class="faq-q" onclick="toggleFaq(this)" style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">What's the difference between sports physio and regular physio?<span style="font-size:1.4rem;color:var(--yellow);flex-shrink:0;">+</span></div>
+      <div class="faq-a" style="display:none;font-size:0.95rem;font-weight:300;line-height:1.75;color:rgba(240,237,232,0.75);padding-top:1rem;">Sports physio is focused on athletes and active people. At From Zero it's also integrated with S&C — your rehab and training work as one system, not in isolation from each other.</div>
+    </div>
+
+    <div class="faq-item" style="border-bottom:1px solid #2a2a2a;padding:1.8rem 0;">
+      <div class="faq-q" onclick="toggleFaq(this)" style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">Can I see a physio even if I'm not injured?<span style="font-size:1.4rem;color:var(--yellow);flex-shrink:0;">+</span></div>
+      <div class="faq-a" style="display:none;font-size:0.95rem;font-weight:300;line-height:1.75;color:rgba(240,237,232,0.75);padding-top:1rem;">Absolutely. Pre-season screening and movement assessments are some of the most valuable things an athlete can do — identifying weaknesses before they become injuries.</div>
+    </div>
+
+    <div class="faq-item" style="border-bottom:1px solid #2a2a2a;padding:1.8rem 0;">
+      <div class="faq-q" onclick="toggleFaq(this)" style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">Where is the physio located?<span style="font-size:1.4rem;color:var(--yellow);flex-shrink:0;">+</span></div>
+      <div class="faq-a" style="display:none;font-size:0.95rem;font-weight:300;line-height:1.75;color:rgba(240,237,232,0.75);padding-top:1rem;">Warehouse 73/2 Thomsons Road, Keilor Park VIC 3042 — same location as our S&C facility. Everything is under one roof.</div>
+    </div>
+
+    <div class="faq-item" style="border-bottom:1px solid #2a2a2a;padding:1.8rem 0;">
+      <div class="faq-q" onclick="toggleFaq(this)" style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">I've had this injury for months — is it too late?<span style="font-size:1.4rem;color:var(--yellow);flex-shrink:0;">+</span></div>
+      <div class="faq-a" style="display:none;font-size:0.95rem;font-weight:300;line-height:1.75;color:rgba(240,237,232,0.75);padding-top:1rem;">No. Chronic injuries often respond well to the right treatment — many athletes have dealt with something for months that resolves in a few targeted sessions. It's never too late to get it properly assessed.</div>
+    </div>
+
+  </div>
+</div>
+<script>
+function toggleFaq(el) {
+  var answer = el.nextElementSibling;
+  var plus = el.querySelector('span');
+  var isOpen = answer.style.display === 'block';
+  document.querySelectorAll('.faq-a').forEach(function(a){ a.style.display='none'; });
+  document.querySelectorAll('.faq-q span').forEach(function(s){ s.textContent='+'; });
+  if (!isOpen) { answer.style.display = 'block'; plus.textContent = '×'; }
+}
+</script>
 <div class="booking-section" id="booking">
   <div class="section-label">Book Online</div>
   <h2 class="booking-title">Ready to Book<br><span style="color:var(--yellow)">Your Session?</span></h2>
