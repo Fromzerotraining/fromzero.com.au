@@ -288,6 +288,48 @@
   </div>
 </div>
 
+  <div style="padding:5rem 3rem;background:rgba(10,10,10,0.75);">
+  <div class="section-label">Common Questions</div>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,5rem);line-height:0.95;margin-bottom:2rem;">FAQs</h2>
+  <div style="max-width:760px;">
+
+    <div class="faq-item" style="border-bottom:1px solid #2a2a2a;padding:1.8rem 0;border-top:1px solid #2a2a2a;">
+      <div class="faq-q" onclick="toggleFaq(this)" style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">What is VALD testing?<span style="font-size:1.4rem;color:var(--yellow);flex-shrink:0;">+</span></div>
+      <div class="faq-a" style="display:none;font-size:0.95rem;font-weight:300;line-height:1.75;color:rgba(240,237,232,0.75);padding-top:1rem;">VALD is a world-leading sports technology company whose force plate and strength testing systems are used by the NFL, NBA, Premier League clubs, and Olympic programs. At From Zero we use VALD ForceDecks (force plates), ForceFrame (strength testing), and DynaMo (dynamometer) to measure athletic performance with research-grade accuracy.</div>
+    </div>
+
+    <div class="faq-item" style="border-bottom:1px solid #2a2a2a;padding:1.8rem 0;">
+      <div class="faq-q" onclick="toggleFaq(this)" style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">Who is athletic testing for?<span style="font-size:1.4rem;color:var(--yellow);flex-shrink:0;">+</span></div>
+      <div class="faq-a" style="display:none;font-size:0.95rem;font-weight:300;line-height:1.75;color:rgba(240,237,232,0.75);padding-top:1rem;">Any athlete who wants objective data on their physical performance. We test junior basketball players, competitive club athletes, returning injury patients, and serious trainers who want to stop guessing and start measuring. You don't need to be elite — you just need to want to improve.</div>
+    </div>
+
+    <div class="faq-item" style="border-bottom:1px solid #2a2a2a;padding:1.8rem 0;">
+      <div class="faq-q" onclick="toggleFaq(this)" style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">What does a testing session involve?<span style="font-size:1.4rem;color:var(--yellow);flex-shrink:0;">+</span></div>
+      <div class="faq-a" style="display:none;font-size:0.95rem;font-weight:300;line-height:1.75;color:rgba(240,237,232,0.75);padding-top:1rem;">Depending on the protocol, a session typically includes countermovement jump testing on the ForceDecks, isometric strength testing on the ForceFrame, and where relevant, dynamometer assessments. Results are reviewed with you on the spot — you leave knowing your numbers and what they mean for your training.</div>
+    </div>
+
+    <div class="faq-item" style="border-bottom:1px solid #2a2a2a;padding:1.8rem 0;">
+      <div class="faq-q" onclick="toggleFaq(this)" style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">Where is VALD testing available in Melbourne?<span style="font-size:1.4rem;color:var(--yellow);flex-shrink:0;">+</span></div>
+      <div class="faq-a" style="display:none;font-size:0.95rem;font-weight:300;line-height:1.75;color:rgba(240,237,232,0.75);padding-top:1rem;">From Zero at Warehouse 73/2 Thomsons Road, Keilor Park VIC 3042 is one of the few facilities in Melbourne's north and west offering full VALD Performance technology including ForceDecks, ForceFrame, and DynaMo. We serve athletes from across Melbourne including Taylors Lakes, Tullamarine, Essendon, Airport West, and Moonee Ponds.</div>
+    </div>
+
+    <div class="faq-item" style="border-bottom:1px solid #2a2a2a;padding:1.8rem 0;">
+      <div class="faq-q" onclick="toggleFaq(this)" style="font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;">How often should I retest?<span style="font-size:1.4rem;color:var(--yellow);flex-shrink:0;">+</span></div>
+      <div class="faq-a" style="display:none;font-size:0.95rem;font-weight:300;line-height:1.75;color:rgba(240,237,232,0.75);padding-top:1rem;">For athletes on a training program, we recommend retesting every 6–8 weeks to track progress and adjust programming. For injury rehab, retesting is used as a return-to-sport milestone — you retest when you're close to clearance to confirm your numbers back it up.</div>
+    </div>
+
+  </div>
+</div>
+<script>
+function toggleFaq(el) {
+  var answer = el.nextElementSibling;
+  var plus = el.querySelector('span');
+  var isOpen = answer.style.display === 'block';
+  document.querySelectorAll('.faq-a').forEach(function(a){ a.style.display='none'; });
+  document.querySelectorAll('.faq-q span').forEach(function(s){ s.textContent='+'; });
+  if (!isOpen) { answer.style.display = 'block'; plus.textContent = '×'; }
+}
+</script>
 <div class="cta-section" id="booking">
   <h2 class="cta-title">Ready to See Your Numbers?</h2>
   <p class="cta-sub">Book your athletic testing session today and discover exactly what's holding you back.</p>
