@@ -23,8 +23,7 @@
   <meta property="og:image:height" content="630"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="https://www.fromzero.com.au/og-image.png"/>
-  <!-- Local Business -->
-<!-- Local Business Schema -->
+  <!-- Local Business Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -193,6 +192,7 @@ src="https://www.facebook.com/tr?id=26501845182827396&ev=PageView&noscript=1"
   .service-card:hover .service-num { color: rgba(255,247,0,0.12); }
   .service-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.8rem; color: var(--off-white); }
   .service-desc { font-size: 0.9rem; font-weight: 300; line-height: 1.65; color: var(--grey); }
+  .service-link { display: inline-block; margin-top: 1.2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow); text-decoration: none; }
 
   #testimonials { background: var(--charcoal); }
   .testi-header { margin-bottom: 4rem; }
@@ -228,6 +228,9 @@ src="https://www.facebook.com/tr?id=26501845182827396&ev=PageView&noscript=1"
   .social-link { width: 36px; height: 36px; border: 1px solid var(--light-grey); display: flex; align-items: center; justify-content: center; color: var(--grey); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; transition: border-color 0.2s, color 0.2s; }
   .social-link:hover { border-color: var(--yellow); color: var(--yellow); }
   .footer-copy { background: var(--charcoal); padding: 1rem 3rem; text-align: center; font-size: 0.78rem; color: rgba(136,136,136,0.5); letter-spacing: 0.1em; border-top: 1px solid var(--light-grey); }
+
+  .btn-primary { background: var(--yellow); color: black; text-decoration: none; display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); transition: background 0.2s; border: none; cursor: pointer; }
+  .btn-primary:hover { background: var(--yellow-dark); }
 
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
@@ -391,36 +394,46 @@ src="https://www.facebook.com/tr?id=26501845182827396&ev=PageView&noscript=1"
     <a href="services.html" class="btn-ghost">View All Services</a>
   </div>
   <div class="services-grid">
+
+    <!-- CARD 01 — FIXED -->
     <div class="service-card">
       <div class="service-num">01</div>
       <div class="service-name">Strength & Conditioning</div>
       <p class="service-desc">Build a solid foundation with focused strength training and conditioning sessions. Improve power, agility, and performance with every rep.</p>
-<a href="strength-conditioning.html" class="service-card" style="text-decoration:none;display:block;">
-  <div class="service-num">01</div>
-  <div class="service-name">Strength & Conditioning</div>
-  <p class="service-desc">Build a solid foundation with focused strength training and conditioning sessions. Improve power, agility, and performance with every rep.</p>
-  <div style="margin-top:1.2rem;font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--yellow);">Learn More →</div>
-</a>
+      <a href="strength-conditioning.html" class="service-link">Learn More →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-name">Basketball Training</div>
+      <p class="service-desc">Position-specific skill development and team-based training to take your game to the next level. For athletes serious about competing at the highest level.</p>
+      <a href="services.html" class="service-link">Learn More →</a>
+    </div>
+
     <div class="service-card">
       <div class="service-num">03</div>
       <div class="service-name">AAU Basketball Tours</div>
       <p class="service-desc">Take your game global. Compete at the highest level in the U.S., showcase your talent, and gain exposure. Select team only.</p>
     </div>
+
     <div class="service-card">
       <div class="service-num">04</div>
       <div class="service-name">Overseas Basketball</div>
       <p class="service-desc">Elevate your game internationally. Compete on global courts, experience different styles of play, and open doors to new opportunities.</p>
     </div>
+
     <div class="service-card">
       <div class="service-num">05</div>
       <div class="service-name">Injury Management</div>
       <p class="service-desc">Stay in the game, longer. Prevention, recovery, and rehabilitation combined with expert care and tailored recovery plans.</p>
     </div>
+
     <div class="service-card">
       <div class="service-num">06</div>
       <div class="service-name">Combine & Player Profiles</div>
       <p class="service-desc">A high-intensity combine and professionally crafted player profile to attract scouts and unlock new opportunities.</p>
     </div>
+
   </div>
 </section>
 
@@ -489,29 +502,29 @@ src="https://www.facebook.com/tr?id=26501845182827396&ev=PageView&noscript=1"
   </div>
   <div class="contact-form">
     <form action="https://formspree.io/f/xvzwypyo" method="POST">
-    <div class="form-row">
-      <div class="form-group">
-        <label>First Name *</label>
-        <input type="text" name="first_name" placeholder="John" required/>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name *</label>
+          <input type="text" name="first_name" placeholder="John" required/>
+        </div>
+        <div class="form-group">
+          <label>Last Name *</label>
+          <input type="text" name="last_name" placeholder="Smith" required/>
+        </div>
       </div>
       <div class="form-group">
-        <label>Last Name *</label>
-        <input type="text" name="last_name" placeholder="Smith" required/>
+        <label>Email *</label>
+        <input type="email" name="email" placeholder="john@email.com" required/>
       </div>
-    </div>
-    <div class="form-group">
-      <label>Email *</label>
-      <input type="email" name="email" placeholder="john@email.com" required/>
-    </div>
-    <div class="form-group">
-      <label>Phone</label>
-      <input type="tel" name="phone" placeholder="+61 4XX XXX XXX"/>
-    </div>
-    <div class="form-group">
-      <label>Message *</label>
-      <textarea name="message" placeholder="Tell us about your goals..." required></textarea>
-    </div>
-    <button type="submit" class="btn-primary">Submit Enquiry</button>
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" name="phone" placeholder="+61 4XX XXX XXX"/>
+      </div>
+      <div class="form-group">
+        <label>Message *</label>
+        <textarea name="message" placeholder="Tell us about your goals..." required></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Submit Enquiry</button>
     </form>
   </div>
 </section>
@@ -528,4 +541,11 @@ src="https://www.facebook.com/tr?id=26501845182827396&ev=PageView&noscript=1"
   </ul>
   <div class="footer-social">
     <a href="https://www.instagram.com/fromzerosc/" target="_blank" class="social-link">IG</a>
-    <a href="https://www.facebook.com/share/16LwrSru3E/" targ
+    <a href="https://www.facebook.com/share/16LwrSru3E/" target="_blank" class="social-link">FB</a>
+    <a href="https://www.tiktok.com/@fromzerosc" target="_blank" class="social-link">TK</a>
+  </div>
+</footer>
+<div class="footer-copy">© 2025 From Zero Athletic Performance. All rights reserved. Keilor Park, Melbourne VIC.</div>
+
+</body>
+</html>
