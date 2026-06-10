@@ -253,9 +253,34 @@ src="https://www.facebook.com/tr?id=26501845182827396&ev=PageView&noscript=1"
     .services-grid { grid-template-columns: 1fr; }
     .hamburger { display: flex; }
   }
+
+  /* ===== Scroll enhancements ===== */
+  /* Page scroll progress bar */
+  #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: var(--yellow); z-index: 300; pointer-events: none; box-shadow: 0 0 8px rgba(255,247,0,0.5); }
+
+  /* Nav tightens + lifts once scrolled */
+  nav { transition: padding 0.3s ease, box-shadow 0.3s ease; }
+  nav.nav--scrolled { padding-top: 0.8rem; padding-bottom: 0.8rem; box-shadow: 0 10px 30px rgba(0,0,0,0.45); }
+
+  /* Reveal-on-scroll: hidden state applied via JS only, so no-JS users see everything */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  .hero-logo-text { will-change: transform; }
+  .hero-bg { will-change: background-position; }
+
+  /* Respect reduced-motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .hero-bg { animation: none !important; transform: scale(1) !important; }
+    .marquee-track { animation: none !important; }
+  }
 </style>
 </head>
 <body>
+
+<div id="scroll-progress"></div>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
@@ -336,11 +361,11 @@ src="https://www.facebook.com/tr?id=26501845182827396&ev=PageView&noscript=1"
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="hero-stat-num">12+</div>
+      <div class="hero-stat-num" data-count="12" data-suffix="+">12+</div>
       <div class="hero-stat-label">Years coaching elite athletes</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-num">6</div>
+      <div class="hero-stat-num" data-count="6">6</div>
       <div class="hero-stat-label">Core performance programs</div>
     </div>
     <div class="hero-stat">
@@ -484,7 +509,7 @@ src="https://www.facebook.com/tr?id=26501845182827396&ev=PageView&noscript=1"
     <div class="contact-detail">
       <div class="contact-detail-row">
         <span class="label">Email</span>
-        <span>contact [at] fromzero.com.au</span>
+        <span><a id="fz-email" href="#">contact [at] fromzero.com.au</a></span>
       </div>
       <div class="contact-detail-row">
         <span class="label">Location</span>
@@ -546,6 +571,90 @@ src="https://www.facebook.com/tr?id=26501845182827396&ev=PageView&noscript=1"
   </div>
 </footer>
 <div class="footer-copy">© 2025 From Zero Athletic Performance. All rights reserved. Keilor Park, Melbourne VIC.</div>
+
+<!-- Scroll effects: progress bar, nav state, hero parallax, reveal-on-scroll, count-up stats -->
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var bar = document.getElementById('scroll-progress');
+  var navEl = document.querySelector('nav');
+  var heroBg = document.querySelector('.hero-bg');
+  var watermark = document.querySelector('.hero-logo-text');
+  var hero = document.getElementById('hero');
+  var ticking = false;
+
+  function onScroll() {
+    var y = window.scrollY || window.pageYOffset || 0;
+    var docH = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (docH > 0 ? (y / docH) * 100 : 0) + '%';
+    if (navEl) navEl.classList.toggle('nav--scrolled', y > 40);
+    if (!reduce && hero && y < hero.offsetHeight) {
+      if (heroBg) heroBg.style.backgroundPositionY = 'calc(50% + ' + (y * 0.25) + 'px)';
+      if (watermark) watermark.style.transform = 'translate(-50%, calc(-50% + ' + (y * 0.18) + 'px))';
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+  onScroll();
+
+  // Reveal-on-scroll (classes added here so content stays visible without JS)
+  if (!reduce && 'IntersectionObserver' in window) {
+    var targets = [];
+    function group(selector, stagger) {
+      Array.prototype.slice.call(document.querySelectorAll(selector)).forEach(function (el, i) {
+        el.classList.add('reveal');
+        if (stagger) el.style.transitionDelay = (i * 90) + 'ms';
+        targets.push(el);
+      });
+    }
+    group('.about-img-wrap', false);
+    group('#about .section-label, #about .section-title, #about .about-content p, #about .about-content a.btn-primary', false);
+    group('#services .services-header', false);
+    group('.service-card', true);
+    group('#testimonials .testi-header', false);
+    group('.testi-card', true);
+    group('#contact .contact-info > *', false);
+    group('.contact-form', false);
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  // Count-up stats
+  var counters = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+  function run(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (reduce) { el.textContent = target + suffix; return; }
+    var start = null, dur = 1200;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if (counters.length && 'IntersectionObserver' in window) {
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { run(e.target); cio.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (el) { cio.observe(el); });
+  } else {
+    counters.forEach(run);
+  }
+})();
+</script>
 
 </body>
 </html>
