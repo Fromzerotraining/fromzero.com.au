@@ -161,6 +161,17 @@
   .book-actions { display: flex; gap: 1.2rem; justify-content: center; align-items: center; flex-wrap: wrap; }
   .book-note { margin-top: 2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); }
   .book-note strong { color: var(--yellow); }
+  .book-form { text-align: left; margin: 0 auto 1.5rem; max-width: 640px; }
+  .form-row { display: flex; gap: 1.2rem; }
+  .form-row .form-field { flex: 1; }
+  .form-field { display: block; margin-bottom: 1.2rem; }
+  .form-field span { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(240,237,232,0.7); margin-bottom: 0.5rem; }
+  .form-field input, .form-field textarea { width: 100%; box-sizing: border-box; background: var(--charcoal); border: 1px solid var(--light-grey); border-radius: 4px; color: var(--off-white); font-family: 'Barlow', sans-serif; font-size: 1rem; padding: 0.85rem 1rem; transition: border-color 0.2s ease; }
+  .form-field input::placeholder, .form-field textarea::placeholder { color: var(--grey); }
+  .form-field input:focus, .form-field textarea:focus { outline: none; border-color: var(--yellow); }
+  .form-field textarea { resize: vertical; min-height: 100px; }
+  .book-submit { width: 100%; border: none; cursor: pointer; font-size: 1.05rem; margin-top: 0.5rem; }
+  @media (max-width: 600px) { .form-row { flex-direction: column; gap: 0; } }
 
   /* FOOTER */
   footer { background: var(--charcoal); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--light-grey); flex-wrap: wrap; gap: 1.5rem; }
@@ -181,8 +192,7 @@
 
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
+    .nav-links { gap: 1.2rem; }
     #hero { padding: 4rem 1.5rem; min-height: 84vh; }
     .hero-bg { top: 0; left: 0; right: 0; height: 100%; background-position: center center; transform: none; }
     .hero-overlay { background: linear-gradient(to bottom, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.6) 55%, rgba(10,10,10,0.9) 100%); }
@@ -196,26 +206,42 @@
     .sticky-cta { display: flex; }
     body { padding-bottom: 60px; }
   }
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+  }
 </style>
 </head>
 <body>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#how" onclick="closeMenu()">How It Works</a>
-  <a href="#pricing" onclick="closeMenu()">Pricing</a>
-  <a href="#why" onclick="closeMenu()">Why It Works</a>
-  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="athletes.html" onclick="closeMenu()">Athletes</a>
+  <a href="strength-conditioning.html" onclick="closeMenu()">S&amp;C</a>
+  <a href="college-pathway.html" onclick="closeMenu()">College</a>
+  <a href="physio.html" onclick="closeMenu()">Physio</a>
+  <a href="injury-rehab.html" onclick="closeMenu()">Injury Rehab</a>
+  <a href="testing.html" onclick="closeMenu()">Testing</a>
+  <a href="news.html" onclick="closeMenu()">News</a>
+  <a href="combine.html" onclick="closeMenu()" style="color:var(--yellow)">Combine</a>
   <a href="#book" onclick="closeMenu()" style="color:var(--yellow)">Book Assessment</a>
 </div>
 
 <nav aria-label="Primary">
   <a href="index.html" class="nav-logo">FROM<span>ZERO</span></a>
   <ul class="nav-links">
-    <li><a href="#how">How It Works</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#why">Why It Works</a></li>
-    <li><a href="#faq">FAQ</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="athletes.html">Athletes</a></li>
+    <li><a href="strength-conditioning.html">S&amp;C</a></li>
+    <li><a href="physio.html">Physio</a></li>
+    <li><a href="injury-rehab.html" class="active">Injury Rehab</a></li>
+    <li><a href="testing.html">Testing</a></li>
+    <li><a href="college-pathway.html">College</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="combine.html" style="color:var(--yellow)!important;opacity:1!important;">Combine</a></li>
     <li><a href="#book" class="nav-cta">Book Assessment</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
@@ -474,10 +500,36 @@
     <div class="section-label" style="text-align:center;">Take The First Step</div>
     <h2 class="section-title">Book An Injury <span>Assessment</span></h2>
     <p>One assessment tells you exactly what's going on, how long it'll take, and what it takes to get back — stronger. Bring your injury, your goals and your season, and we'll map the path back to sport.</p>
+    <form class="book-form" action="https://formspree.io/f/mzdqwbqb" method="POST">
+      <div class="form-row">
+        <label class="form-field">
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label class="form-field">
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@email.com" required>
+        </label>
+      </div>
+      <div class="form-row">
+        <label class="form-field">
+          <span>Phone</span>
+          <input type="tel" name="phone" placeholder="Mobile number">
+        </label>
+        <label class="form-field">
+          <span>Injury / Sport</span>
+          <input type="text" name="injury" placeholder="e.g. ACL, ankle, basketball">
+        </label>
+      </div>
+      <label class="form-field">
+        <span>Tell us about your injury &amp; goals</span>
+        <textarea name="message" rows="4" placeholder="What happened, how long ago, and what you're aiming to get back to..."></textarea>
+      </label>
+      <input type="hidden" name="_subject" value="New Injury Rehab Assessment Enquiry">
+      <button type="submit" class="btn-primary book-submit">Book An Injury Assessment</button>
+    </form>
     <div class="book-actions">
-      <!-- PLACEHOLDER: replace the href below with your live booking link (e.g. Calendly / HealthEngine / Cliniko) -->
-      <a href="https://YOUR-BOOKING-LINK-HERE" class="btn-primary">Book An Injury Assessment</a>
-      <a href="mailto:contact@fromzero.com.au?subject=Injury%20Rehab%20Assessment" class="btn-ghost">Or Email Us</a>
+      <a href="mailto:contact@fromzero.com.au?subject=Injury%20Rehab%20Assessment" class="btn-ghost">Or Email Us Directly</a>
     </div>
     <div class="book-note">Physio claimable on private health · <strong>Pay weekly, upfront or in 3</strong> · Limited assessment slots</div>
   </div>
@@ -486,11 +538,13 @@
 <footer>
   <div class="footer-logo">FROM<span>ZERO</span></div>
   <ul class="footer-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#how">How It Works</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#book">Book</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="athletes.html">Athletes</a></li>
+    <li><a href="physio.html">Physio</a></li>
+    <li><a href="injury-rehab.html">Injury Rehab</a></li>
+    <li><a href="testing.html">Testing</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
   </ul>
   <div class="footer-social">
     <a href="https://www.instagram.com/fromzerosc/" target="_blank" rel="noopener" class="social-link" aria-label="From Zero on Instagram">IG</a>
