@@ -121,6 +121,7 @@
   .price-weekly { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; line-height: 0.9; color: var(--off-white); }
   .price-weekly small { display: block; font-size: 0.95rem; color: var(--grey); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 0.3rem; }
   .price-total { font-size: 0.85rem; color: var(--grey); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem; }
+  .afterpay-msg { margin: 0.6rem 0 0.2rem; min-height: 1.1rem; }
   .price-claim { font-size: 0.78rem; font-weight: 300; color: rgba(240,237,232,0.55); margin: 0.8rem 0 1.5rem; line-height: 1.5; border-top: 1px solid rgba(42,42,42,0.8); padding-top: 0.8rem; }
   .price-sessions { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--off-white); margin-bottom: 1rem; }
   .price-features { list-style: none; margin-bottom: 2rem; flex-grow: 1; }
@@ -366,6 +367,17 @@
       <div class="price-name">Foundation</div>
       <div class="price-weekly">$1,860<small> / 12-week block</small></div>
       <div class="price-total">Approx. $155 per week · pay upfront or in 3</div>
+      <div class="afterpay-msg">
+        <square-placement
+          data-mpid="f43fba59-c1c4-4ee9-b0d6-2973d8e22f37"
+          data-placement-id="2a3fd278-091c-4276-9b4d-442f64e2e611"
+          data-page-type="product"
+          data-amount="1860.00"
+          data-currency="AUD"
+          data-consumer-locale="en_AU"
+          data-is-eligible="true">
+        </square-placement>
+      </div>
       <div class="price-claim">Includes your physio pathway — physio sessions billed separately so they're claimable on private health.</div>
       <div class="price-sessions">1 Supervised S&amp;C Session / Week</div>
       <ul class="price-features">
@@ -384,6 +396,17 @@
       <div class="price-name">Guided Rehab</div>
       <div class="price-weekly">$2,340<small> / 12-week block</small></div>
       <div class="price-total">Approx. $195 per week · pay upfront or in 3</div>
+      <div class="afterpay-msg">
+        <square-placement
+          data-mpid="f43fba59-c1c4-4ee9-b0d6-2973d8e22f37"
+          data-placement-id="2a3fd278-091c-4276-9b4d-442f64e2e611"
+          data-page-type="product"
+          data-amount="2340.00"
+          data-currency="AUD"
+          data-consumer-locale="en_AU"
+          data-is-eligible="true">
+        </square-placement>
+      </div>
       <div class="price-claim">Includes your physio pathway — physio sessions billed separately so they're claimable on private health.</div>
       <div class="price-sessions">2 Supervised S&amp;C Sessions / Week</div>
       <ul class="price-features">
@@ -401,6 +424,17 @@
       <div class="price-name">Return To Performance</div>
       <div class="price-weekly">$2,700<small> / 12-week block</small></div>
       <div class="price-total">Approx. $225 per week · pay upfront or in 3</div>
+      <div class="afterpay-msg">
+        <square-placement
+          data-mpid="f43fba59-c1c4-4ee9-b0d6-2973d8e22f37"
+          data-placement-id="2a3fd278-091c-4276-9b4d-442f64e2e611"
+          data-page-type="product"
+          data-amount="2700.00"
+          data-currency="AUD"
+          data-consumer-locale="en_AU"
+          data-is-eligible="true">
+        </square-placement>
+      </div>
       <div class="price-claim">Includes your physio pathway — physio sessions billed separately so they're claimable on private health.</div>
       <div class="price-sessions">3 Supervised S&amp;C Sessions / Week</div>
       <ul class="price-features">
@@ -603,6 +637,9 @@
     update();
   })();
 </script>
+
+<!-- Afterpay on-site messaging (served via Square CDN — Afterpay is owned by Block) -->
+<script src="https://js.squarecdn.com/square-marketplace.js" async></script>
 
 </body>
 </html>
