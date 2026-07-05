@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>From Zero — Private Training with Coach Manny | Elite Basketball Coaching Melbourne</title>
+<meta name="description" content="Private 1-on-1 basketball training with Coach Manny — #1 ranked JUCO player, NBA Draft, NBL1 MVP and former NBL pro. Learn from a player who's done it at the highest level. Keilor Park, Melbourne."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.fromzero.com.au/private-training.html"/>
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Private Training with Coach Manny — From Zero"/>
+<meta property="og:description" content="1-on-1 elite basketball coaching from a former NBL pro and NBL1 MVP. Limited spots in Keilor Park, Melbourne."/>
+<meta property="og:url" content="https://www.fromzero.com.au/private-training.html"/>
+<meta property="og:site_name" content="From Zero Athletic Performance"/>
+<meta property="og:image" content="https://www.fromzero.com.au/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.fromzero.com.au/og-image.png"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #0a0a0a; --charcoal: #111111; --dark: #1a1a1a;
+    --yellow: #FFF700; --yellow-dark: #ccc200;
+    --off-white: #f0ede8; --grey: #888; --light-grey: #2a2a2a;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--off-white); font-family: 'Barlow', sans-serif; overflow-x: hidden; margin: 0; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--yellow); }
+
+  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(10,10,10,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid #1a1a1a; }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.08em; color: var(--off-white); text-decoration: none; }
+  .nav-logo span { color: var(--yellow); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+  .nav-links a { color: var(--off-white); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
+  .nav-links a:hover { opacity: 1; color: var(--yellow); }
+  .nav-cta { background: var(--yellow); color: black !important; opacity: 1 !important; padding: 0.55rem 1.4rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); font-weight: 700; }
+  .nav-cta:hover { background: var(--yellow-dark) !important; }
+
+  .deadline-bar { background: var(--yellow); color: black; text-align: center; padding: 0.6rem 1.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .deadline-bar strong { font-weight: 900; }
+
+  /* HERO */
+  #hero { position: relative; min-height: 92vh; display: flex; flex-direction: column; justify-content: center; padding: 5rem 3rem; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: url('15-HJM00311.jpg') 60% center/cover no-repeat; transform: scale(1.04); animation: heroZoom 12s ease-out forwards; z-index: 0; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,10,10,0.93) 35%, rgba(10,10,10,0.5) 100%); z-index: 1; pointer-events: none; }
+  @keyframes heroZoom { from { transform: scale(1.04); } to { transform: scale(1.0); } }
+  .hero-inner { position: relative; z-index: 2; max-width: 820px; }
+  .hero-eyebrow { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: black; background: var(--yellow); padding: 0.4rem 1rem; margin-bottom: 1.5rem; font-weight: 700; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); }
+  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 10vw, 8rem); line-height: 0.9; color: var(--off-white); }
+  .hero-title .accent { color: var(--yellow); }
+  .hero-sub { margin-top: 1.5rem; font-size: 1.15rem; font-weight: 300; line-height: 1.6; max-width: 560px; color: rgba(240,237,232,0.85); }
+  .hero-actions { margin-top: 2.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .hero-meta { margin-top: 2.5rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+  .hero-meta-item { border-left: 2px solid var(--yellow); padding-left: 1rem; }
+  .hero-meta-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; line-height: 1; color: var(--off-white); }
+  .hero-meta-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); font-family: 'Barlow Condensed', sans-serif; margin-top: 0.2rem; }
+
+  .btn-primary { background: var(--yellow); color: black; text-decoration: none; display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1.1rem 2.6rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; }
+  .btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); }
+  .btn-ghost { color: var(--off-white); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid rgba(240,237,232,0.3); padding-bottom: 2px; transition: border-color 0.2s, color 0.2s; }
+  .btn-ghost:hover { border-color: var(--yellow); color: var(--yellow); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; z-index: 200; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--off-white); transition: all 0.3s ease; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.98); z-index: 150; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { color: var(--off-white); text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; letter-spacing: 0.08em; transition: color 0.2s; }
+  .mobile-menu a:hover { color: var(--yellow); }
+
+  .marquee-wrap { background: var(--yellow); overflow: hidden; padding: 0.75rem 0; white-space: nowrap; }
+  .marquee-track { display: inline-block; animation: marquee 22s linear infinite; }
+  .marquee-track span { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; color: black; margin: 0 2.5rem; font-weight: 700; }
+  .marquee-track span.dot { color: rgba(0,0,0,0.4); margin: 0 1rem; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  section { padding: 7rem 3rem; }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 0.95; }
+  .section-head { max-width: 740px; margin: 0 auto 4rem; text-align: center; }
+  .section-head .section-label { margin-bottom: 0.8rem; }
+  .section-head p { margin-top: 1.2rem; font-size: 1.05rem; font-weight: 300; line-height: 1.7; color: rgba(240,237,232,0.7); }
+
+  /* RESUME / CREDENTIALS */
+  #resume { background: var(--charcoal); }
+  .resume-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--light-grey); max-width: 1150px; margin: 0 auto; }
+  .resume-card { background: var(--charcoal); padding: 2.8rem 2.2rem; position: relative; overflow: hidden; transition: background 0.3s; }
+  .resume-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--yellow); transition: width 0.4s ease; }
+  .resume-card:hover { background: var(--dark); }
+  .resume-card:hover::before { width: 100%; }
+  .resume-big { font-family: 'Bebas Neue', sans-serif; font-size: 3.4rem; line-height: 0.9; color: var(--yellow); margin-bottom: 0.6rem; }
+  .resume-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--off-white); margin-bottom: 0.5rem; }
+  .resume-desc { font-size: 0.9rem; font-weight: 300; line-height: 1.6; color: var(--grey); }
+
+  /* ABOUT MANNY */
+  #about { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; background: var(--black); }
+  .about-img-wrap { position: relative; }
+  .about-img-wrap::before { content: ''; position: absolute; top: -16px; left: -16px; width: 60%; height: 60%; border: 2px solid var(--yellow); opacity: 0.4; z-index: 0; }
+  .about-img-wrap img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center center; position: relative; z-index: 1; filter: grayscale(20%) contrast(1.05); background: var(--dark); }
+  .about-content .section-title span { color: var(--yellow); }
+  .about-content p { font-size: 1.05rem; font-weight: 300; line-height: 1.8; color: rgba(240,237,232,0.8); margin-bottom: 1.2rem; margin-top: 1.5rem; }
+  .about-content p strong { color: var(--off-white); }
+
+  /* WHY 1-ON-1 */
+  #why { background: var(--charcoal); }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--light-grey); max-width: 1150px; margin: 0 auto; }
+  .why-card { background: var(--charcoal); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; }
+  .why-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--yellow); transition: width 0.4s ease; }
+  .why-card:hover { background: var(--dark); }
+  .why-card:hover::before { width: 100%; }
+  .why-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: rgba(255,247,0,0.12); line-height: 1; margin-bottom: 1rem; }
+  .why-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.8rem; color: var(--off-white); }
+  .why-desc { font-size: 0.92rem; font-weight: 300; line-height: 1.65; color: var(--grey); }
+
+  /* WHO IT'S FOR */
+  #who { background: var(--black); }
+  .who-wrap { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .who-item { background: var(--charcoal); padding: 1.5rem 1.8rem; display: flex; gap: 1rem; align-items: flex-start; border-left: 2px solid var(--yellow); }
+  .who-check { color: var(--yellow); font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; line-height: 1; flex-shrink: 0; }
+  .who-text { font-size: 0.95rem; font-weight: 300; color: rgba(240,237,232,0.85); line-height: 1.5; }
+
+  /* HOW */
+  #how { background: var(--charcoal); }
+  .steps { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--light-grey); align-items: start; }
+  .step:last-child { border-bottom: none; }
+  .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--yellow); line-height: 0.9; }
+  .step-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
+  .step-desc { font-size: 0.95rem; font-weight: 300; line-height: 1.7; color: rgba(240,237,232,0.7); }
+
+  /* PROOF */
+  #proof { background: var(--black); }
+  .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+  .proof-card { background: var(--dark); padding: 2rem; border-top: 2px solid transparent; transition: border-color 0.3s; }
+  .proof-card:hover { border-color: var(--yellow); }
+  .proof-quote { font-size: 2.5rem; color: var(--yellow); font-family: Georgia, serif; line-height: 1; margin-bottom: 0.5rem; }
+  .proof-text { font-size: 0.92rem; font-weight: 300; line-height: 1.7; color: rgba(240,237,232,0.85); margin-bottom: 1.5rem; font-style: italic; }
+  .proof-author { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--yellow); }
+
+  /* ENQUIRE */
+  #enquire { background: linear-gradient(135deg, var(--dark) 0%, var(--black) 100%); text-align: center; }
+  .enq-inner { max-width: 700px; margin: 0 auto; }
+  .enq-inner .section-title { margin-bottom: 1.5rem; }
+  .enq-inner .section-title span { color: var(--yellow); }
+  .enq-inner > p { font-size: 1.1rem; font-weight: 300; line-height: 1.7; color: rgba(240,237,232,0.8); margin-bottom: 2.5rem; }
+  .enq-form { text-align: left; display: flex; flex-direction: column; gap: 1.2rem; margin-top: 1rem; }
+  .enq-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .enq-form .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .enq-form label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey); }
+  .enq-form input, .enq-form textarea, .enq-form select { background: var(--charcoal); border: 1px solid var(--light-grey); border-bottom-color: var(--grey); color: var(--off-white); font-family: 'Barlow', sans-serif; font-size: 0.95rem; font-weight: 300; padding: 0.85rem 1rem; outline: none; transition: border-color 0.2s; resize: none; width: 100%; }
+  .enq-form input:focus, .enq-form textarea:focus, .enq-form select:focus { border-color: var(--yellow); }
+  .enq-form textarea { height: 110px; }
+  .enq-form select { appearance: none; -webkit-appearance: none; cursor: pointer; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M2 4l4 4 4-4' stroke='%23FFF700' stroke-width='1.5' fill='none'/></svg>"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+  .enq-form select option { background: var(--charcoal); color: var(--off-white); }
+  .enq-form button { margin-top: 0.5rem; align-self: flex-start; }
+  .enq-note { margin-top: 2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); }
+  .enq-note strong { color: var(--yellow); }
+
+  footer { background: var(--charcoal); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--light-grey); flex-wrap: wrap; gap: 1.5rem; }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--off-white); }
+  .footer-logo span { color: var(--yellow); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { color: var(--grey); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--yellow); }
+  .footer-social { display: flex; gap: 1rem; }
+  .social-link { width: 36px; height: 36px; border: 1px solid var(--light-grey); display: flex; align-items: center; justify-content: center; color: var(--grey); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; transition: border-color 0.2s, color 0.2s; }
+  .social-link:hover { border-color: var(--yellow); color: var(--yellow); }
+  .footer-copy { background: var(--charcoal); padding: 1rem 3rem; text-align: center; font-size: 0.78rem; color: rgba(136,136,136,0.5); letter-spacing: 0.1em; border-top: 1px solid var(--light-grey); }
+
+  .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 120; background: var(--yellow); padding: 0.9rem 1.5rem; align-items: center; justify-content: space-between; gap: 1rem; }
+  .sticky-cta span { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: black; font-size: 0.85rem; }
+  .sticky-cta a { background: black; color: var(--yellow); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.8rem; padding: 0.6rem 1.2rem; white-space: nowrap; }
+
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    #hero { padding: 4rem 1.5rem; min-height: 88vh; }
+    section { padding: 4.5rem 1.5rem; }
+    .resume-grid { grid-template-columns: 1fr; }
+    #about { grid-template-columns: 1fr; gap: 3rem; }
+    .why-grid { grid-template-columns: 1fr; }
+    .who-wrap { grid-template-columns: 1fr; }
+    .proof-grid { grid-template-columns: 1fr; }
+    .step { grid-template-columns: 56px 1fr; gap: 1.2rem; }
+    .enq-form .form-row { grid-template-columns: 1fr; }
+    .enq-form button { align-self: stretch; text-align: center; }
+    .hero-overlay { background: linear-gradient(to bottom, rgba(10,10,10,0.78) 0%, rgba(10,10,10,0.6) 100%); }
+    footer { flex-direction: column; text-align: center; }
+    .sticky-cta { display: flex; }
+    body { padding-bottom: 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#resume" onclick="closeMenu()">Résumé</a>
+  <a href="#about" onclick="closeMenu()">The Coach</a>
+  <a href="#why" onclick="closeMenu()">Why 1-on-1</a>
+  <a href="#how" onclick="closeMenu()">How It Works</a>
+  <a href="#enquire" onclick="closeMenu()" style="color:var(--yellow)">Enquire</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">FROM<span>ZERO</span></a>
+  <ul class="nav-links">
+    <li><a href="#resume">Résumé</a></li>
+    <li><a href="#about">The Coach</a></li>
+    <li><a href="#why">Why 1-on-1</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#enquire" class="nav-cta">Enquire Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- DEADLINE BAR -->
+<div class="deadline-bar">
+  🏀 Private 1-on-1 Training with Coach Manny · <strong>Limited Spots</strong> — Learn From A Former Pro
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">Private 1-on-1 Training · Keilor Park</span>
+    <h1 class="hero-title">Train With<br>Coach <span class="accent">Manny</span></h1>
+    <p class="hero-sub">Learn the game from a player who's lived it at the highest level — #1 ranked JUCO, NBA Draft, pro import across the world, and an NBL1 MVP. This is coaching you can't get anywhere else.</p>
+    <div class="hero-actions">
+      <a href="#enquire" class="btn-primary">Enquire Now</a>
+      <a href="#resume" class="btn-ghost">See His Résumé</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-num">#1</div>
+        <div class="hero-meta-label">Ranked JUCO player</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-num">NBL</div>
+        <div class="hero-meta-label">Pro experience</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-num">MVP</div>
+        <div class="hero-meta-label">NBL1 — Mackay</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>#1 Ranked JUCO</span><span class="dot">✦</span>
+    <span>NBA Draft</span><span class="dot">✦</span>
+    <span>NBL1 MVP</span><span class="dot">✦</span>
+    <span>NBL — Adelaide</span><span class="dot">✦</span>
+    <span>Pro Import Worldwide</span><span class="dot">✦</span>
+    <span>#1 Ranked JUCO</span><span class="dot">✦</span>
+    <span>NBA Draft</span><span class="dot">✦</span>
+    <span>NBL1 MVP</span><span class="dot">✦</span>
+    <span>NBL — Adelaide</span><span class="dot">✦</span>
+    <span>Pro Import Worldwide</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="section-head">
+    <div class="section-label">The Résumé</div>
+    <h2 class="section-title">Coaching From<br>The Top Of The Game</h2>
+    <p>Plenty of coaches talk the talk. Manny has actually done it — every level, all over the world. When he teaches your athlete a skill, it comes from real experience at the highest level.</p>
+  </div>
+  <div class="resume-grid">
+    <div class="resume-card">
+      <div class="resume-big">#1</div>
+      <div class="resume-name">Ranked JUCO Player</div>
+      <div class="resume-desc">Reached the top of the US junior college ranks — the number one player in the country at that level.</div>
+    </div>
+    <div class="resume-card">
+      <div class="resume-big">NBA</div>
+      <div class="resume-name">Draft</div>
+      <div class="resume-desc">Chased the game all the way to the NBA Draft — the dream almost every player has, that very few reach.</div>
+    </div>
+    <div class="resume-card">
+      <div class="resume-big">MVP</div>
+      <div class="resume-name">NBL1 — Mackay</div>
+      <div class="resume-desc">Named Most Valuable Player in NBL1 with the Mackay Meteors — the best player in a professional league.</div>
+    </div>
+    <div class="resume-card">
+      <div class="resume-big">NBL</div>
+      <div class="resume-name">Adelaide</div>
+      <div class="resume-desc">Competed at the top of Australian basketball in the NBL with Adelaide — against the best in the country.</div>
+    </div>
+    <div class="resume-card">
+      <div class="resume-big">🌍</div>
+      <div class="resume-name">Pro Import Worldwide</div>
+      <div class="resume-desc">Played professionally as an import across the globe — different leagues, styles and levels of the game.</div>
+    </div>
+    <div class="resume-card">
+      <div class="resume-big">1:1</div>
+      <div class="resume-name">Now Coaching You</div>
+      <div class="resume-desc">All of that experience, focused entirely on one athlete at a time — your game, your goals, his full attention.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT MANNY -->
+<section id="about">
+  <div class="about-img-wrap">
+    <img src="emmanuel-malou.jpg" alt="Coach Emmanuel 'Manny' Malou — From Zero private basketball training"/>
+  </div>
+  <div class="about-content">
+    <div class="section-label">The Coach</div>
+    <h2 class="section-title">Meet Coach<br><span>Manny</span></h2>
+    <p><strong>Emmanuel "Manny" Malou</strong> has played the game at a level most only dream about — the <strong>#1 ranked JUCO player</strong> in the US, a run at the <strong>NBA Draft</strong>, and a professional career as an import that took him around the world.</p>
+    <p>Back home, he was crowned <strong>NBL1 MVP with the Mackay Meteors</strong> and competed in the <strong>NBL with Adelaide</strong> — the top of Australian basketball.</p>
+    <p>Now he brings that experience to you. Every session is built on what actually works at the highest level — no fluff, no filler, just the details that separate good players from great ones.</p>
+    <a href="#enquire" class="btn-primary">Train With Manny</a>
+  </div>
+</section>
+
+<!-- WHY 1-ON-1 -->
+<section id="why">
+  <div class="section-head">
+    <div class="section-label">Why Private Training</div>
+    <h2 class="section-title">Every Rep.<br>Your Game.</h2>
+    <p>In a group, coaching is shared. One-on-one, it's all yours — every minute spent on exactly what your game needs most.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <div class="why-name">100% Of The Attention</div>
+      <div class="why-desc">No waiting in line, no splitting the coach's focus. Every drill, every correction and every rep is built around you.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <div class="why-name">Built For Your Goals</div>
+      <div class="why-desc">Whether it's your shot, your handle, your finishing or your IQ — sessions target the exact gaps holding your game back.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <div class="why-name">Pro-Level Detail</div>
+      <div class="why-desc">Learn the reads, footwork and habits Manny used to compete with the best — coached down to the finest detail.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">04</div>
+      <div class="why-name">Faster Progress</div>
+      <div class="why-desc">Focused, individual reps accelerate development far quicker than blending into a big group session ever will.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">05</div>
+      <div class="why-name">Real Accountability</div>
+      <div class="why-desc">Manny sees everything and holds you to a professional standard — you leave every session knowing exactly what to work on.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">06</div>
+      <div class="why-name">Confidence That Carries</div>
+      <div class="why-desc">Master skills in training and they show up in games — walk onto the court knowing your work has put you ahead.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section id="who">
+  <div class="section-head">
+    <div class="section-label">Who It's For</div>
+    <h2 class="section-title">Serious About<br>Getting Better?</h2>
+  </div>
+  <div class="who-wrap">
+    <div class="who-item">
+      <div class="who-check">✦</div>
+      <div class="who-text">Junior players who want a genuine edge on their competition</div>
+    </div>
+    <div class="who-item">
+      <div class="who-check">✦</div>
+      <div class="who-text">Rep &amp; representative athletes chasing the next level</div>
+    </div>
+    <div class="who-item">
+      <div class="who-check">✦</div>
+      <div class="who-text">Players eyeing college, scholarship or pro pathways</div>
+    </div>
+    <div class="who-item">
+      <div class="who-check">✦</div>
+      <div class="who-text">Anyone who wants to fix a specific weakness, fast</div>
+    </div>
+    <div class="who-item">
+      <div class="who-check">✦</div>
+      <div class="who-text">Athletes who learn best with focused, individual attention</div>
+    </div>
+    <div class="who-item">
+      <div class="who-check">✦</div>
+      <div class="who-text">Committed players ready to put the work in</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="section-head">
+    <div class="section-label">Simple To Start</div>
+    <h2 class="section-title">How It Works</h2>
+    <p>From enquiry to your first session — here's how you get on the court with Manny.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div>
+        <div class="step-title">Send An Enquiry</div>
+        <p class="step-desc">Fill in the quick form below with your goals and availability. Takes a couple of minutes.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div>
+        <div class="step-title">We Get In Touch</div>
+        <p class="step-desc">Our team reaches out to confirm availability, rates and the best times to train around your schedule.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div>
+        <div class="step-title">Lock In Your Sessions</div>
+        <p class="step-desc">Book a one-off session or an ongoing block. Spots with Manny are limited, so earlier is better.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div>
+        <div class="step-title">Get To Work</div>
+        <p class="step-desc">Hit the court and start building the game you're capable of — one focused session at a time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof">
+  <div class="section-head">
+    <div class="section-label">Straight From The Athletes</div>
+    <h2 class="section-title">Real Results,<br>Real People</h2>
+  </div>
+  <div class="proof-grid">
+    <div class="proof-card">
+      <div class="proof-quote">"</div>
+      <p class="proof-text">I played 7 games over the weekend and my knees weren't in any pain. I feel more explosive and controlled — I was dunking without pain. You made basketball fun again for me.</p>
+      <div class="proof-author">Sunday M — VIC</div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-quote">"</div>
+      <p class="proof-text">I've been working with the team for 3 years. The attention to detail in the programming has allowed me to overcome various injuries. Could not recommend more.</p>
+      <div class="proof-author">Abdi H — VIC</div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-quote">"</div>
+      <p class="proof-text">Jack had his State netball training today and the parents were commenting on how high he could jump. He is really getting some height!</p>
+      <div class="proof-author">Joanne D</div>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRE -->
+<section id="enquire">
+  <div class="enq-inner">
+    <div class="section-label" style="text-align:center;">Enquire Now</div>
+    <h2 class="section-title">Train With<br>A <span>Pro</span></h2>
+    <p>Spots with Coach Manny are limited. Send an enquiry and our team will be in touch with availability and rates to get you started.</p>
+    <form class="enq-form" action="https://formspree.io/f/xbdvwjpl" method="POST">
+      <input type="hidden" name="_subject" value="Private Training Enquiry — Coach Manny"/>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Athlete First Name *</label>
+          <input type="text" name="athlete_first_name" placeholder="John" required/>
+        </div>
+        <div class="form-group">
+          <label>Athlete Last Name *</label>
+          <input type="text" name="athlete_last_name" placeholder="Smith" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Age</label>
+          <input type="text" name="age" placeholder="e.g. 15"/>
+        </div>
+        <div class="form-group">
+          <label>Current Level</label>
+          <input type="text" name="level" placeholder="e.g. rep, domestic, school"/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Parent / Guardian Name *</label>
+          <input type="text" name="parent_name" placeholder="Parent name" required/>
+        </div>
+        <div class="form-group">
+          <label>Phone *</label>
+          <input type="tel" name="phone" placeholder="+61 4XX XXX XXX" required/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email *</label>
+        <input type="email" name="email" placeholder="you@email.com" required/>
+      </div>
+      <div class="form-group">
+        <label>What Do You Want To Work On? *</label>
+        <textarea name="message" placeholder="Goals, what you want to improve, preferred training times..." required></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Send Enquiry</button>
+    </form>
+    <div class="enq-note">Free to enquire · <strong>We'll confirm availability &amp; rates</strong> · Limited spots</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">FROM<span>ZERO</span></div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#resume">Résumé</a></li>
+    <li><a href="#about">The Coach</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#enquire">Enquire</a></li>
+  </ul>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/fromzerosc/" target="_blank" class="social-link">IG</a>
+    <a href="https://www.facebook.com/share/16LwrSru3E/" target="_blank" class="social-link">FB</a>
+    <a href="https://www.tiktok.com/@fromzerosc" target="_blank" class="social-link">TK</a>
+  </div>
+</footer>
+<div class="footer-copy">© 2026 From Zero Athletic Performance. All rights reserved. Keilor Park, Melbourne VIC.</div>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <span>Train With Coach Manny</span>
+  <a href="#enquire">Enquire →</a>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+</script>
+
+</body>
+</html>
