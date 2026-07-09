@@ -162,6 +162,9 @@
   .book-actions { display: flex; gap: 1.2rem; justify-content: center; align-items: center; flex-wrap: wrap; }
   .book-note { margin-top: 2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); }
   .book-note strong { color: var(--yellow); }
+  .booking-frame { background: rgba(10,10,10,0.7); border: 1px solid rgba(255,255,255,0.1); padding: 2rem; width: 100%; max-width: 900px; margin: 0 auto 2.5rem; display: block; }
+  .booking-placeholder { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey); margin-bottom: 1.5rem; }
+  .book-or { font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); margin: 0 0 1.5rem; }
   .book-form { text-align: left; margin: 0 auto 1.5rem; max-width: 640px; }
   .form-row { display: flex; gap: 1.2rem; }
   .form-row .form-field { flex: 1; }
@@ -538,6 +541,23 @@
     <div class="section-label" style="text-align:center;">Take The First Step</div>
     <h2 class="section-title">Book An Injury <span>Assessment</span></h2>
     <p>One assessment tells you exactly what's going on, how long it'll take, and what it takes to get back — stronger. Bring your injury, your goals and your season, and we'll map the path back to sport.</p>
+    <!-- Cliniko online booking (same system as the physio page) -->
+    <div class="booking-frame">
+      <div class="booking-placeholder">Online Booking — Powered by Cliniko</div>
+      <iframe id='cliniko-90038707' src='https://from-zero.au5.cliniko.com/bookings?embedded=true' frameborder='0' scrolling='auto' width='100%' height='1000' style='pointer-events: auto;'></iframe>
+      <script type='text/javascript'>
+        window.addEventListener('message', function handleIFrameMessage (e) {
+          var clinikoBookings = document.getElementById('cliniko-90038707');
+          if (typeof e.data !== 'string') return;
+          if (e.data.search('cliniko-bookings-resize') > -1) {
+            var height = Number(e.data.split(':')[1]);
+            clinikoBookings.style.height = height + 'px';
+          }
+          e.data.search('cliniko-bookings-page') > -1 && clinikoBookings.scrollIntoView();
+        });
+      </script>
+    </div>
+    <p class="book-or">Prefer to ask a question first? Send us a message and we'll be in touch.</p>
     <form class="book-form" action="https://formspree.io/f/mzdqwbqb" method="POST">
       <div class="form-row">
         <label class="form-field">
@@ -564,7 +584,7 @@
         <textarea name="message" rows="4" placeholder="What happened, how long ago, and what you're aiming to get back to..."></textarea>
       </label>
       <input type="hidden" name="_subject" value="New Injury Rehab Assessment Enquiry">
-      <button type="submit" class="btn-primary book-submit">Book An Injury Assessment</button>
+      <button type="submit" class="btn-primary book-submit">Send Message</button>
     </form>
     <div class="book-actions">
       <a href="mailto:contact@fromzero.com.au?subject=Injury%20Rehab%20Assessment" class="btn-ghost">Or Email Us Directly</a>
