@@ -147,6 +147,16 @@
   .proof-text { font-size: 0.92rem; font-weight: 300; line-height: 1.7; color: rgba(240,237,232,0.85); margin-bottom: 1.5rem; font-style: italic; }
   .proof-author { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--yellow); }
 
+  /* RATES */
+  #rates { background: var(--charcoal); }
+  .rate-card { max-width: 460px; margin: 0 auto; background: var(--dark); border: 1px solid var(--yellow); padding: 3rem 2.5rem; text-align: center; }
+  .rate-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--yellow); margin-bottom: 0.8rem; }
+  .rate-amount { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; line-height: 1; color: var(--off-white); margin-bottom: 1rem; }
+  .rate-amount small { font-size: 1.2rem; color: var(--grey); font-family: 'Barlow', sans-serif; font-weight: 300; }
+  .rate-desc { font-size: 0.95rem; font-weight: 300; line-height: 1.65; color: rgba(240,237,232,0.75); margin-bottom: 2rem; }
+  .rate-card .btn-primary { width: 100%; text-align: center; }
+  .rate-note { margin-top: 1.5rem; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); }
+
   /* ENQUIRE */
   #enquire { background: linear-gradient(135deg, var(--dark) 0%, var(--black) 100%); text-align: center; }
   .enq-inner { max-width: 700px; margin: 0 auto; }
@@ -210,6 +220,7 @@
   <a href="#about" onclick="closeMenu()">The Coach</a>
   <a href="#why" onclick="closeMenu()">Why 1-on-1</a>
   <a href="#how" onclick="closeMenu()">How It Works</a>
+  <a href="#rates" onclick="closeMenu()">Rates</a>
   <a href="#enquire" onclick="closeMenu()" style="color:var(--yellow)">Enquire</a>
 </div>
 
@@ -220,6 +231,7 @@
     <li><a href="#about">The Coach</a></li>
     <li><a href="#why">Why 1-on-1</a></li>
     <li><a href="#how">How It Works</a></li>
+    <li><a href="#rates">Rates</a></li>
     <li><a href="#enquire" class="nav-cta">Enquire Now</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -470,6 +482,22 @@
       <div class="proof-author">Joanne D</div>
     </div>
   </div>
+</section>
+
+<!-- RATES -->
+<section id="rates">
+  <div class="section-head">
+    <div class="section-label">Rates</div>
+    <h2 class="section-title">Straight-Up<br>Pricing</h2>
+    <p>No packages to decode, no fine print. Just elite coaching by the hour.</p>
+  </div>
+  <div class="rate-card">
+    <div class="rate-name">1-on-1 Private Session</div>
+    <div class="rate-amount">$120<small> / hour</small></div>
+    <div class="rate-desc">One full hour of individual coaching with Coach Manny — every rep, drill and correction built around your game and your goals.</div>
+    <a href="#enquire" class="btn-primary">Enquire Now</a>
+  </div>
+  <div class="rate-note">Book a one-off session or an ongoing block · Enquire for available times</div>
 </section>
 
 <!-- ENQUIRE -->
