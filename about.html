@@ -1,365 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-<meta charset="UTF-8"/>
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>About From Zero — Elite Coaches Melbourne North & West</title>
-  <!-- SEO -->
-  <meta name="description" content="From Zero is Melbourne's premier athletic performance centre. Serving Keilor Park, Taylors Lakes, Essendon, Tullamarine, Moonee Ponds and surrounding suburbs. No shortcuts, just results."/>
-  <meta name="keywords" content="athletic performance coaches Melbourne, basketball coaches Melbourne north west, strength conditioning coaches, From Zero Keilor Park, gym Keilor Park, Taylors Lakes, Tullamarine, Essendon, Moonee Ponds, Maribyrnong, Airport West, Derrimut, Parkville, Melton, Craigieburn, Melbourne North, Melbourne West"/>
-  <meta name="author" content="From Zero Athletic Performance"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://www.fromzero.com.au/about.html"/>
-  <!-- Open Graph -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="About From Zero — Elite Coaches Melbourne North & West"/>
-  <meta property="og:description" content="From Zero is Melbourne's premier athletic performance centre. Serving Keilor Park, Taylors Lakes, Essendon, Tullamarine, Moonee Ponds and surrounding suburbs. No shortcuts, just results."/>
-  <meta property="og:url" content="https://www.fromzero.com.au/about.html"/>
-  <meta property="og:site_name" content="From Zero Athletic Performance"/>
-  <meta property="og:image" content="https://www.fromzero.com.au/og-image.png"/>
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image" content="https://www.fromzero.com.au/og-image.png"/>
-  <!-- Local Business -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "From Zero Athletic Performance",
-    "description": "Elite athletic performance centre offering basketball training, strength and conditioning, sports physio and athletic testing in Melbourne.",
-    "url": "https://www.fromzero.com.au",
-    "telephone": "",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Warehouse 73/2 Thomsons Road",
-      "addressLocality": "Keilor Park",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -37.7271,
-      "longitude": 144.8761
-    },
-    "openingHours": "Mo-Fr 06:00-20:00",
-    "sameAs": [
-      "https://www.instagram.com/fromzerosc/",
-      "https://www.facebook.com/share/16LwrSru3E/"
-    ]
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '26501845182827396');
+  fbq('track', 'PageView');
   </script>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;1,300&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet"/>
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --black: #0a0a0a; --charcoal: #111111; --dark: #1a1a1a;
-    --yellow: #FFF700; --yellow-dark: #ccc200;
-    --off-white: #f0ede8; --grey: #888; --light-grey: #2a2a2a;
-  }
-  html { scroll-behavior: smooth; }
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=26501845182827396&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- End Meta Pixel Code -->
 
-  body {
-    color: var(--off-white);
-    font-family: 'Barlow', sans-serif;
-    overflow-x: hidden;
-    background: #0a0a0a;
-  }
-
-  #fixed-bg {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: url('about-bg.jpg') center/cover no-repeat;
-    z-index: 0;
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: rgba(10,10,10,0.78);
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  nav, .mobile-menu, .page-hero, .story-section, .stats-strip, .values-section, .team-section, .cta-section, footer, .footer-copy {
-    position: relative;
-    z-index: 2;
-  }
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: var(--black); }
-  ::-webkit-scrollbar-thumb { background: var(--yellow); }
-
-  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(10,10,10,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid #1a1a1a; }
-  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.08em; color: var(--off-white); text-decoration: none; }
-  .nav-logo span { color: var(--yellow); }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a { color: var(--off-white); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
-  .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--yellow); }
-  .nav-cta { background: var(--yellow); color: black !important; opacity: 1 !important; padding: 0.55rem 1.4rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); font-weight: 700; }
-
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 200; }
-  .hamburger span { display: block; width: 26px; height: 2px; background: var(--off-white); transition: all 0.3s ease; }
-  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.98); z-index: 150; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a { color: var(--off-white); text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 0.08em; transition: color 0.2s; }
-  .mobile-menu a:hover { color: var(--yellow); }
-  .mobile-menu .mobile-cta { color: var(--yellow); }
-
-  .page-hero { position: relative; background: transparent; padding: 6rem 3rem 4rem; border-bottom: 1px solid var(--light-grey); overflow: hidden; }
-  .page-hero::before { content: 'FROM ZERO'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Bebas Neue', sans-serif; font-size: 12rem; color: rgba(255,247,0,0.03); white-space: nowrap; pointer-events: none; }
-  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
-  .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 0.92; }
-  .page-subtitle { margin-top: 1.2rem; font-size: 1.05rem; font-weight: 300; color: rgba(240,237,232,0.7); max-width: 560px; line-height: 1.6; }
-
-  .story-section { padding: 6rem 3rem; background: rgba(10,10,10,0.7); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
-  .story-label { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 0.95; margin-bottom: 2rem; }
-  .story-label span { color: var(--yellow); }
-  .story-text p { font-size: 1rem; font-weight: 300; line-height: 1.85; color: rgba(240,237,232,0.8); margin-bottom: 1.3rem; }
-  .story-text p strong { color: var(--off-white); font-weight: 600; }
-  .story-pull { border-left: 2px solid var(--yellow); padding-left: 1.5rem; margin: 2.5rem 0; font-size: 1.15rem; font-style: italic; font-weight: 300; color: var(--off-white); line-height: 1.6; }
-  .btn-primary { background: var(--yellow); color: black; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); display: inline-block; transition: background 0.2s; margin-top: 1rem; }
-  .btn-primary:hover { background: var(--yellow-dark); }
-
-  .stats-strip { background: var(--yellow); padding: 3rem; display: grid; grid-template-columns: repeat(4, 1fr); }
-  .stat-item { text-align: center; padding: 1rem; }
-  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: black; line-height: 1; }
-  .stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(0,0,0,0.6); margin-top: 0.3rem; }
-
-  .values-section { padding: 6rem 3rem; background: rgba(17,17,17,0.7); }
-  .values-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 3rem; }
-  .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--light-grey); }
-  .value-card { background: rgba(26,26,26,0.7); backdrop-filter: blur(4px); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; }
-  .value-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--yellow); transition: width 0.4s; }
-  .value-card:hover { background: var(--black); }
-  .value-card:hover::after { width: 100%; }
-  .value-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--yellow); margin-bottom: 0.8rem; }
-  .value-desc { font-size: 0.9rem; font-weight: 300; line-height: 1.7; color: var(--grey); }
-
-  .team-section { padding: 6rem 3rem; background: rgba(10,10,10,0.7); }
-  .team-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 1rem; }
-  .team-sub { font-size: 1rem; font-weight: 300; color: rgba(240,237,232,0.7); max-width: 600px; line-height: 1.6; margin-bottom: 3.5rem; }
-  .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-  .team-card { background: rgba(17,17,17,0.8); backdrop-filter: blur(4px); overflow: hidden; transition: transform 0.3s; }
-  .team-card:hover { transform: translateY(-4px); }
-  .team-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; filter: grayscale(20%) contrast(1.05); display: block; }
-  .team-info { padding: 1.5rem; border-top: 2px solid var(--yellow); }
-  .team-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--off-white); }
-  .team-role { font-size: 0.85rem; font-weight: 300; color: var(--grey); margin-top: 0.3rem; }
-
-  .cta-section { padding: 5rem 3rem; background: rgba(17,17,17,0.7); text-align: center; }
-  .cta-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 1rem; }
-  .cta-sub { font-size: 1rem; font-weight: 300; color: rgba(240,237,232,0.7); margin-bottom: 2rem; }
-
-  footer { background: #0a0a0a; padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--light-grey); }
-  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--off-white); }
-  .footer-logo span { color: var(--yellow); }
-  .footer-links { display: flex; gap: 2rem; list-style: none; }
-  .footer-links a { color: var(--grey); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--yellow); }
-  .footer-copy { background: #0a0a0a; padding: 1rem 3rem; text-align: center; font-size: 0.78rem; color: rgba(136,136,136,0.5); border-top: 1px solid var(--light-grey); }
-
-  @media (max-width: 900px) {
-    nav { padding: 1rem 1.5rem; }
-    .page-hero, .story-section, .values-section, .team-section, .cta-section { padding: 4rem 1.5rem; }
-    .story-section { grid-template-columns: 1fr; gap: 3rem; }
-    .stats-strip { grid-template-columns: repeat(2, 1fr); padding: 2rem 1.5rem; }
-    .values-grid { grid-template-columns: 1fr; }
-    .team-grid { grid-template-columns: repeat(2, 1fr); }
-    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
-  }
-  @media (max-width: 600px) {
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-    .team-grid { grid-template-columns: 1fr; }
-  }
-</style>
+  <title>About From Zero | Basketball Performance Coaches | Keilor Park, Melbourne</title>
+  <meta name="description" content="From Zero is a basketball performance facility in Keilor Park, Melbourne, founded by Jimmy Mullins. Meet the coaches and physio who build scorers.">
+  <link rel="canonical" href="https://www.fromzero.com.au/about.html">
+  <meta property="og:title" content="About From Zero | We Build Scorers">
+  <meta property="og:description" content="Meet the coaches and physio behind From Zero, a basketball performance facility in Keilor Park, Melbourne.">
+  <meta property="og:url" content="https://www.fromzero.com.au/about.html">
+  <meta property="og:image" content="https://www.fromzero.com.au/og-image.png">
+  <style>
+    .story { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
+    .story .photo { aspect-ratio: 4 / 5; position: sticky; top: calc(var(--nav-h) + 2rem); }
+    .story p { margin: 0 0 1.3rem; color: rgba(243,241,234.8); font-size: 1.08rem; }
+    .story p.big { font-size: clamp(1.35rem, 2.4vw, 1.8rem); line-height: 1.35; color: var(--text); }
+    .story strong { color: var(--text); }
+    .founder { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+    .founder .photo { aspect-ratio: 4 / 5; }
+    .founder p { font-size: 1.1rem; margin: 0 0 1.2rem; }
+    .leaders { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 4vw, 3rem); }
+    .leader { display: grid; grid-template-columns: .85fr 1fr; gap: 1.6rem; align-items: start; }
+    .leader .photo { aspect-ratio: 3 / 4; }
+    .leader .photo img { object-position: 50% 20%; }
+    .big-num { display: block; font-stretch: 62%; font-weight: 900; font-size: clamp(5rem, 9vw, 7.5rem); line-height: .8; }
+    .unit { display: block; font-stretch: 125%; font-weight: 800; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; margin: .6rem 0 1.4rem; }
+    .leader h3 { font-size: 2.2rem; margin: 0 0 .2rem; }
+    .leader .role { font-size: .85rem; margin: 0 0 1rem; opacity: .75; }
+    .leader p { margin: 0 0 1rem; }
+    .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(11,11,11.2); border: 1px solid rgba(11,11,11.2); margin-top: 2rem; }
+    .creds div { background: var(--yellow); padding: 1.2rem; }
+    .creds b { display: block; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 1.5rem; line-height: 1; }
+    .creds span { font-size: .85rem; }
+    .team { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .member .photo { aspect-ratio: 3 / 4; margin-bottom: 1.1rem; }
+    .member .photo img { object-position: 50% 20%; }
+    .member h3 { font-size: 1.9rem; margin: 0 0 .2rem; }
+    .member p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .values div { background: var(--surface); padding: 2rem; }
+    .values h3 { font-size: 1.8rem; }
+    .values p { margin: 0; color: var(--muted); }
+    .cta-band { text-align: center; }
+    .cta-band h2 { font-size: clamp(3.5rem, 10vw, 8rem); }
+    .cta-band p { max-width: 44ch; margin: 1.5rem auto 2.2rem; font-size: 1.1rem; }
+    .cta-band .btn-row { justify-content: center; }
+    @media (max-width: 1000px) { .leaders { grid-template-columns: 1fr; } .team { grid-template-columns: 1fr 1fr; } .values { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 860px) {
+      .story.founder { grid-template-columns: 1fr; }
+      .story .photo { position: static; aspect-ratio: 16 / 11; }
+      .founder .photo { aspect-ratio: 4 / 4; }
+    }
+    @media (max-width: 560px) { .values.creds.leader { grid-template-columns: 1fr; } .leader .photo { aspect-ratio: 4 / 3; } .team { gap: 2rem 1rem; } .member h3 { font-size: 1.5rem; } }
+  </style>
 </head>
-<body>
-
-<div id="fixed-bg"></div>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="about.html" onclick="closeMenu()">About</a>
-  <a href="services.html" onclick="closeMenu()">Services</a>
-  <a href="athletes.html" onclick="closeMenu()">Athletes</a>
-  <a href="strength-conditioning.html" onclick="closeMenu()">S&amp;C</a>
-  <a href="college-pathway.html" onclick="closeMenu()">College</a>
-  <a href="physio.html" onclick="closeMenu()">Physio</a>
-  <a href="injury-rehab.html" onclick="closeMenu()">Injury Rehab</a>
-  <a href="testing.html" onclick="closeMenu()">Testing</a>
-  <a href="news.html" onclick="closeMenu()">News</a>
-  <a href="combine.html" onclick="closeMenu()" style="color:var(--yellow)">Combine</a>
-  <a href="index.html#contact" class="mobile-cta" onclick="closeMenu()">Get Started</a>
-</div>
-
-<nav>
-  <a href="index.html" class="nav-logo">FROM<span>ZERO</span></a>
-  <ul class="nav-links">
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="services.html">Services</a></li>
+<body class="fz">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo.svg" alt="From Zero" width="106" height="42"></a>
+    <div class="primary-nav" role="navigation" aria-label="Main">
+      <ul class="menu">
+        <li class="has-drop">
+          <button type="button" aria-haspopup="true">Training <i class="chev"></i></button>
+          <ul class="dropdown">
+            <li><a href="services.html#basketball">Basketball Training <small>Small-group skill sessions, max 6</small></a></li>
+            <li><a href="strength-conditioning.html">Strength &amp; Conditioning <small>Build the athlete under the player</small></a></li>
+            <li><a href="testing.html">Athletic Testing <small>VALD force plates &amp; strength testing</small></a></li>
+            <li><a href="physio.html">Sports Physio <small>In-house, works with your coaches</small></a></li>
+            <li><a href="injury-rehab.html">Injury Rehab <small>Rehab-to-performance program</small></a></li>
+            <li><a href="knee-program.html">Knee Program <small>12 weeks for jumper's knee</small></a></li>
+          </ul>
+        </li>
+        <li class="has-drop">
+          <button type="button" aria-haspopup="true">Pathways <i class="chev"></i></button>
+          <ul class="dropdown">
+            <li><a href="combine.html">From Zero Combine <small>Test, compete and be seen</small></a></li>
+            <li><a href="college-pathway.html">College Pathway <small>Aiming for US college basketball</small></a></li>
+          </ul>
+        </li>
+        <li><a href="athletes.html">Athletes</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a class="btn" href="index.html#contact">Book a session</a></li>
+      </ul>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li><a href="services.html">Training <small>All programs</small></a>
+      <ul class="sub">
+        <li><a href="services.html#basketball">Basketball</a></li>
+        <li><a href="strength-conditioning.html">Strength &amp; Conditioning</a></li>
+        <li><a href="testing.html">Athletic Testing</a></li>
+        <li><a href="physio.html">Sports Physio</a></li>
+        <li><a href="injury-rehab.html">Injury Rehab</a></li>
+        <li><a href="knee-program.html">Knee Program</a></li>
+      </ul>
+    </li>
+    <li><a href="combine.html">Combine</a></li>
+    <li><a href="college-pathway.html">College Pathway</a></li>
     <li><a href="athletes.html">Athletes</a></li>
-    <li><a href="strength-conditioning.html">S&amp;C</a></li>
-    <li><a href="physio.html">Physio</a></li>
-    <li><a href="injury-rehab.html">Injury Rehab</a></li>
-    <li><a href="testing.html">Testing</a></li>
-    <li><a href="college-pathway.html">College</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="combine.html" style="color:var(--yellow)!important;opacity:1!important;">Combine</a></li>
-    <li><a href="#cta" class="nav-cta">Get Started</a></li>
-  </ul>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
-
-<div class="page-hero">
-  <div class="section-label">Our Story</div>
-  <h1 class="page-title">The Quiet<br><span style="color:var(--yellow)">Revolution</span></h1>
-  <p class="page-subtitle">While others chase the spotlight, we choose the shadows of the gym at 5 AM. This is where champions are truly made.</p>
-</div>
-
-<div class="story-section">
-  <div>
-    <h2 class="story-label">From Zero<br><span>Isn't Just<br>Our Name</span></h2>
-    <div class="story-pull">"We see what others miss. That overlooked athlete with raw hunger in their eyes."</div>
-    <a href="index.html#contact" class="btn-primary">Start Your Journey</a>
-  </div>
-  <div class="story-text">
-    <p>While others chase the spotlight, we choose the shadows of the gym at 5 AM. While they perfect their highlight reels, we perfect our fundamentals. This is where champions are truly made — not in the flash of cameras, but in the grind of countless hours when nobody's watching.</p>
-    <p><strong>From Zero isn't just our name — it's our philosophy.</strong></p>
-    <p>We see the diamond in the rough, and we have the tools to make it shine. Everyone talks about reaching the top. But when the alarm goes off at dawn, when the muscles ache and the mind wants to quit — that's when we separate the dreamers from the doers.</p>
-    <p>This is about more than training. It's about transformation. Taking someone who the world has written off and proving that with the right guidance, relentless work ethic, and unwavering belief, <strong>anything is possible.</strong></p>
-    <p>No shortcuts. No excuses. No camera crews. Just you, us, and the work that matters.</p>
-  </div>
-</div>
-
-<div class="stats-strip">
-  <div class="stat-item">
-    <div class="stat-num">12+</div>
-    <div class="stat-label">Years Coaching</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">50+</div>
-    <div class="stat-label">Elite Athletes</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">6</div>
-    <div class="stat-label">Core Programs</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">VIC</div>
-    <div class="stat-label">Keilor Park, Melbourne</div>
-  </div>
-</div>
-
-<div class="values-section">
-  <div class="section-label">What We Stand For</div>
-  <h2 class="values-title">Our <span style="color:var(--yellow)">Values</span></h2>
-  <div class="values-grid">
-    <div class="value-card">
-      <div class="value-name">Relentless Work Ethic</div>
-      <p class="value-desc">Success isn't built in moments of inspiration — it's forged in the daily grind when no one's watching.</p>
-    </div>
-    <div class="value-card">
-      <div class="value-name">Authentic Grit</div>
-      <p class="value-desc">No shortcuts, no excuses, no fake motivation. We embrace the struggle because that's where real growth happens.</p>
-    </div>
-    <div class="value-card">
-      <div class="value-name">Untapped Potential</div>
-      <p class="value-desc">We see diamonds in the rough where others see nothing. Every person has greatness within them.</p>
-    </div>
-    <div class="value-card">
-      <div class="value-name">Transformative Growth</div>
-      <p class="value-desc">We don't just improve performance — we transform identity. The person who finishes isn't the same one who started.</p>
-    </div>
-    <div class="value-card">
-      <div class="value-name">Earned Results</div>
-      <p class="value-desc">Every breakthrough is earned through dedication, consistency, and pushing past perceived limits.</p>
-    </div>
-    <div class="value-card">
-      <div class="value-name">Quiet Confidence</div>
-      <p class="value-desc">We let our work speak louder than our words. True strength is demonstrated through action and results.</p>
-    </div>
-  </div>
-</div>
-
-<div class="team-section">
-  <div class="section-label">The People Behind It</div>
-  <h2 class="team-title">Meet The <span style="color:var(--yellow)">Team</span></h2>
-  <p class="team-sub">We're the coaches who see champions in the overlooked. Former athletes and dedicated coaches who've spent years transforming raw potential into unstoppable force.</p>
-  <div class="team-grid">
-    <div class="team-card">
-      <img class="team-img" src="https://static.wixstatic.com/media/f5f324_97c1cc17269445179a19bc699b4fc297~mv2.jpeg" alt="Emmanuel Malou" loading="lazy"/>
-      <div class="team-info">
-        <div class="team-name">Emmanuel Malou</div>
-        <div class="team-role">Head of Basketball Performance</div>
-      </div>
-    </div>
-    <div class="team-card">
-      <img class="team-img" src="https://static.wixstatic.com/media/f5f324_d461a81307dd48d483559d8edcaeeeac~mv2.jpg" alt="Raphael Hadfield" loading="lazy"/>
-      <div class="team-info">
-        <div class="team-name">Raphael Hadfield</div>
-        <div class="team-role">High Performance Coach</div>
-      </div>
-    </div>
-    <div class="team-card">
-      <img class="team-img" src="https://static.wixstatic.com/media/f5f324_2774bbc19d3b4435be3558c4cb100ead~mv2.jpg" alt="Jimmy Mullins" loading="lazy"/>
-      <div class="team-info">
-        <div class="team-name">Jimmy Mullins</div>
-        <div class="team-role">Director · High Performance Coach</div>
-      </div>
-    </div>
-    <div class="team-card">
-      <img class="team-img" src="IMG_3700.jpg" alt="Ashton Ahluwalia" loading="lazy"/>
-      <div class="team-info">
-        <div class="team-name">Ashton Ahluwalia</div>
-        <div class="team-role">Physiotherapist</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="cta-section">
-  <div class="section-label">Ready?</div>
-  <h2 class="cta-title">Stop Talking.<br><span style="color:var(--yellow)">Start Becoming.</span></h2>
-  <p class="cta-sub">If you're ready to stop dreaming and start doing, we're ready to show you the way.</p>
-  <a href="index.html#contact" class="btn-primary">I'm Ready</a>
-</div>
-
-<footer>
-  <div class="footer-logo">FROM<span>ZERO</span></div>
-  <ul class="footer-links">
     <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a>
-  </li>
-    <li><a href="athletes.html">Athletes</a></li>
-    <li><a href="physio.html">Physio</a></li>
-    <li><a href="injury-rehab.html">Injury Rehab</a></li>
-    <li><a href="testing.html">Testing</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="news.html">News</a></li>
   </ul>
-</footer>
-<div class="footer-copy">© 2025 From Zero Athletic Performance · Keilor Park, VIC · All rights reserved</div>
+  <a class="btn" href="index.html#contact">Book a session <span class="arrow">→</span></a>
+</div>
 
-<script>
-  function toggleMenu() {
-    document.getElementById('hamburger').classList.toggle('open');
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-  function closeMenu() {
-    document.getElementById('hamburger').classList.remove('open');
-    document.getElementById('mobileMenu').classList.remove('open');
-  }
-</script>
+
+<main>
+  <section class="page-hero-fz">
+    <div class="bg"><img src="img/focus.jpg" alt="" style="object-position: 50% 25%;"></div>
+    <div class="wrap">
+      <p class="eyebrow">About From Zero</p>
+      <h1>Built from <span class="y">zero.</span></h1>
+      <p class="lead">We're a basketball performance facility in Keilor Park, Melbourne. We develop complete players: skill on the court, strength in the gym, testing and physio, all under one roof.</p>
+      <div class="btn-row">
+        <a class="btn" href="index.html#contact">Book a session <span class="arrow">→</span></a>
+        <a class="btn btn--ghost" href="#team">Meet the team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap story">
+      <div class="photo reveal"><img src="img/coach-pass.jpg" alt="From Zero coach running a passing drill on court" loading="lazy" style="object-position: 50% 30%;"></div>
+      <div>
+        <p class="eyebrow">Our story</p>
+        <h2 class="reveal" style="margin-bottom: 2rem;">The name is<br>the <span class="y">philosophy.</span></h2>
+        <p class="big reveal">Scorers aren't born. They're built, one rep, one lift and one session at a time, usually when nobody is watching.</p>
+        <p class="reveal">From Zero started with a simple idea. Players shouldn't have to piece their development together from a skills coach in one suburb, a gym in another and a physio who has never spoken to either. <strong>Basketball players need all of it, working together, pointed at the same goal.</strong></p>
+        <p class="reveal">So we built it in one place. Our basketball sessions, strength and conditioning, athletic testing and sports physio all run out of our Keilor Park facility. Coaches and physio share the same information and the same plan for each athlete.</p>
+        <p class="reveal">Some athletes come to us starting from nothing. Some are already good, but good isn't enough anymore. Wherever you're starting from, we meet you there, measure it and build from it. No gimmicks and no shortcuts, just hard-earned progress and the compound effect of showing up.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--yellow">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Led by experience</p>
+          <h2 class="reveal">24 years of the game.</h2>
+        </div>
+        <p class="reveal" style="color: var(--ink);">One of us played it at the professional level for 12 years. The other has spent 12 years coaching athletes from their first session through to the pros. Between them, they know what it takes to become a scorer.</p>
+      </div>
+      <div class="leaders">
+        <article class="leader reveal">
+          <div class="photo photo--color"><img src="img/team-emmanuel.jpg" alt="Emmanuel Malou" loading="lazy"></div>
+          <div>
+            <span class="big-num">12</span>
+            <span class="unit">years as a pro</span>
+            <h3>Emmanuel Malou</h3>
+            <p class="role">Head of Basketball Performance</p>
+            <p>Emmanuel played professionally for 12 years, including the NBL and international basketball with Team South Sudan. He brings what he learned at that level to every court session: how scorers move, read the defence and get their shot off.</p>
+          </div>
+        </article>
+        <article class="leader reveal">
+          <div class="photo photo--color"><img src="img/team-jimmy.jpg" alt="Jimmy Mullins" loading="lazy"></div>
+          <div>
+            <span class="big-num">12</span>
+            <span class="unit">years coaching</span>
+            <h3>Jimmy Mullins</h3>
+            <p class="role">Founder · Director · High Performance Coach</p>
+            <p>Jimmy has spent 12 years coaching basketball athletes from grassroots through to NBL, NBA and CBA pros, in Australia and China. That experience shapes everything we do at From Zero: results first, everything tracked, and nothing in a program just because it looks good.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="team">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">The team</p>
+          <h2 class="reveal">Coaches &amp; <span class="y">physio.</span></h2>
+        </div>
+        <p class="reveal">Former athletes and specialist coaches who work side by side every day, so skill, strength and rehab never pull in different directions.</p>
+      </div>
+      <div class="team">
+        <article class="member reveal">
+          <div class="photo"><img src="img/team-emmanuel.jpg" alt="Emmanuel Malou" loading="lazy"></div>
+          <h3>Emmanuel Malou</h3>
+          <p>Head of Basketball Performance</p>
+        </article>
+        <article class="member reveal">
+          <div class="photo"><img src="img/team-jimmy.jpg" alt="Jimmy Mullins" loading="lazy"></div>
+          <h3>Jimmy Mullins</h3>
+          <p>Director · High Performance Coach</p>
+        </article>
+        <article class="member reveal">
+          <div class="photo"><img src="img/team-raphael.jpg" alt="Raphael Hadfield" loading="lazy"></div>
+          <h3>Raphael Hadfield</h3>
+          <p>High Performance Coach</p>
+        </article>
+        <article class="member reveal">
+          <div class="photo"><img src="img/team-ashton.jpg" alt="Ashton Ahluwalia" loading="lazy"></div>
+          <h3>Ashton Ahluwalia</h3>
+          <p>Sports Physiotherapist</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">What we stand for</p>
+          <h2 class="reveal">How we <span class="y">work.</span></h2>
+        </div>
+      </div>
+      <div class="values reveal">
+        <div><h3>Results first</h3><p>Athletes come to get better and our coaches expect to deliver it. That's the standard.</p></div>
+        <div><h3>Measure everything</h3><p>You can't improve what you don't measure. Sessions, lifts and tests are all tracked.</p></div>
+        <div><h3>Small groups</h3><p>Six athletes max on the court or in the gym, so everyone gets real coaching.</p></div>
+        <div><h3>One plan</h3><p>Coaches and physio share one plan for each athlete. Nothing works against anything else.</p></div>
+        <div><h3>Earned, not given</h3><p>No magic formulas or overnight transformations. Just the compound effect of showing up.</p></div>
+        <div><h3>See the potential</h3><p>We look for the overlooked athlete with hunger. Everyone starts from somewhere.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="wrap">
+      <p class="eyebrow" style="justify-content: center;">Ready?</p>
+      <h2 class="reveal">Start from <span class="y">zero.</span></h2>
+      <p>Come in, get tested and see what your game could look like with the right plan behind it.</p>
+      <div class="btn-row">
+        <a class="btn" href="index.html#contact">Book a session <span class="arrow">→</span></a>
+        <a class="btn btn--ghost" href="services.html">See our programs</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="img/logo.svg" alt="From Zero" width="161" height="64">
+        <p class="footer-tag">We build scorers.</p>
+        <p>Basketball performance in Keilor Park, Melbourne. Skill, strength, testing and physio under one roof.</p>
+      </div>
+      <div>
+        <h4>Training</h4>
+        <ul>
+          <li><a href="services.html#basketball">Basketball Training</a></li>
+          <li><a href="strength-conditioning.html">Strength &amp; Conditioning</a></li>
+          <li><a href="testing.html">Athletic Testing</a></li>
+          <li><a href="physio.html">Sports Physio</a></li>
+          <li><a href="injury-rehab.html">Injury Rehab</a></li>
+          <li><a href="knee-program.html">Knee Program</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>From Zero</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="athletes.html">Athletes</a></li>
+          <li><a href="combine.html">Combine</a></li>
+          <li><a href="college-pathway.html">College Pathway</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>Warehouse 73/2 Thomsons Road<br>Keilor Park VIC 3042</p>
+        <p>Open six days<br>Mon–Thu, Sat &amp; Sun</p>
+        <p><a href="mailto:contact@fromzero.com.au">contact@fromzero.com.au</a></p>
+        <p><a href="https://www.instagram.com/fromzerosc/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/share/16LwrSru3E/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.tiktok.com/@fromzerosc" target="_blank" rel="noopener">TikTok</a></p>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span data-year>2026</span> From Zero Athletic Performance. All rights reserved.</span>
+      <span>Keilor Park · Melbourne's north &amp; west</span>
+    </div>
+  </div>
+</div>
+<script src="js/site.js" defer></script>
 
 </body>
 </html>

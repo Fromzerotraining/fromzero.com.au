@@ -5,13 +5,16 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Injury Rehab Program — Recover, Rebuild &amp; Return Stronger | From Zero Athletic Performance Melbourne</title>
-<meta name="description" content="A rehab-to-performance program for injured athletes in Keilor Park, Melbourne. Physio + S&C under one roof with objective VALD testing. Timeline tailored to your injury — book an initial consult."/>
+<title>Injury Rehab Program | Recover, Rebuild &amp; Return Stronger | From Zero Athletic Performance Melbourne</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+<meta name="description" content="A rehab-to-performance program for injured athletes in Keilor Park, Melbourne. Physio + S&C under one roof with objective VALD testing. Timeline tailored to your injury, book an initial consult."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://www.fromzero.com.au/injury-rehab.html"/>
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="From Zero — Injury Rehab Program"/>
+<meta property="og:title" content="From Zero | Injury Rehab Program"/>
 <meta property="og:description" content="A rehab-to-performance program for injured athletes. Physio + S&C, objective VALD testing, a timeline built around your injury."/>
 <meta property="og:url" content="https://www.fromzero.com.au/injury-rehab.html"/>
 <meta property="og:site_name" content="From Zero Athletic Performance"/>
@@ -21,54 +24,54 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.fromzero.com.au/og-image.png"/>
 
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet"/>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --black: #0a0a0a; --charcoal: #111111; --dark: #1a1a1a;
-    --yellow: #FFF700; --yellow-dark: #ccc200;
+    --yellow: #FFF500; --yellow-dark: #d9d000;
     --off-white: #f0ede8; --grey: #888; --light-grey: #2a2a2a;
   }
   html { scroll-behavior: smooth; }
-  body { background: var(--black); color: var(--off-white); font-family: 'Barlow', sans-serif; overflow-x: hidden; margin: 0; }
+  body { background: var(--black); color: var(--off-white); font-family: 'Archivo', sans-serif; overflow-x: hidden; margin: 0; }
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--black); }
   ::-webkit-scrollbar-thumb { background: var(--yellow); }
 
   nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(10,10,10,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid #1a1a1a; }
-  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.08em; color: var(--off-white); text-decoration: none; }
+  .nav-logo { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 1.8rem; letter-spacing: 0.08em; color: var(--off-white); text-decoration: none; }
   .nav-logo span { color: var(--yellow); }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
-  .nav-links a { color: var(--off-white); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
+  .nav-links a { color: var(--off-white); text-decoration: none; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
   .nav-links a:hover { opacity: 1; color: var(--yellow); }
   .nav-cta { background: var(--yellow); color: black !important; opacity: 1 !important; padding: 0.55rem 1.4rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); font-weight: 700; }
   .nav-cta:hover { background: var(--yellow-dark) !important; }
 
   /* INFO BAR */
-  .info-bar { background: var(--yellow); color: black; text-align: center; padding: 0.6rem 1.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .info-bar { background: var(--yellow); color: black; text-align: center; padding: 0.6rem 1.5rem; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
   .info-bar strong { font-weight: 900; }
 
   /* HERO */
   #hero { position: relative; min-height: 88vh; display: flex; flex-direction: column; justify-content: center; padding: 5rem 3rem; overflow: hidden; }
-  /* Hero image: save your rehab photo as 'rehab-hero.jpg' in the same folder as this file.
+  /* Hero image: save your rehab photo as 'img/physio-knee.jpg' in the same folder as this file.
      Full-bleed background, extra height for the parallax drift, darkened on the left so the headline stays readable. */
-  .hero-bg { position: absolute; top: -15%; left: 0; right: 0; height: 130%; background: url('rehab-hero.jpg') 58% center/cover no-repeat; z-index: 0; }
+  .hero-bg { position: absolute; top: -15%; left: 0; right: 0; height: 130%; background: url('img/physio-knee.jpg') 58% center/cover no-repeat; z-index: 0; }
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,10,10,0.95) 26%, rgba(10,10,10,0.66) 58%, rgba(10,10,10,0.42) 100%); z-index: 1; pointer-events: none; }
   .hero-inner { position: relative; z-index: 2; max-width: 760px; }
-  .hero-eyebrow { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: black; background: var(--yellow); padding: 0.4rem 1rem; margin-bottom: 1.5rem; font-weight: 700; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); }
-  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 10vw, 8rem); line-height: 0.9; color: var(--off-white); }
+  .hero-eyebrow { display: inline-block; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: black; background: var(--yellow); padding: 0.4rem 1rem; margin-bottom: 1.5rem; font-weight: 700; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); }
+  .hero-title { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: clamp(3.5rem, 10vw, 8rem); line-height: 0.9; color: var(--off-white); }
   .hero-title .accent { color: var(--yellow); }
   .hero-sub { margin-top: 1.5rem; font-size: 1.15rem; font-weight: 300; line-height: 1.6; max-width: 560px; color: rgba(240,237,232,0.85); }
   .hero-actions { margin-top: 2.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
   .hero-meta { margin-top: 2.5rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
   .hero-meta-item { border-left: 2px solid var(--yellow); padding-left: 1rem; }
-  .hero-meta-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; line-height: 1; color: var(--off-white); }
-  .hero-meta-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); font-family: 'Barlow Condensed', sans-serif; margin-top: 0.2rem; }
+  .hero-meta-num { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 1.8rem; line-height: 1; color: var(--off-white); }
+  .hero-meta-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); font-family: 'Archivo', sans-serif; font-stretch: 112%; margin-top: 0.2rem; }
 
   /* BUTTONS */
-  .btn-primary { background: var(--yellow); color: black; text-decoration: none; display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1.1rem 2.6rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; }
+  .btn-primary { background: var(--yellow); color: black; text-decoration: none; display: inline-block; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 1rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 1.1rem 2.6rem; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; }
   .btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); }
-  .btn-ghost { color: var(--off-white); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid rgba(240,237,232,0.3); padding-bottom: 2px; transition: border-color 0.2s, color 0.2s; }
+  .btn-ghost { color: var(--off-white); text-decoration: none; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid rgba(240,237,232,0.3); padding-bottom: 2px; transition: border-color 0.2s, color 0.2s; }
   .btn-ghost:hover { border-color: var(--yellow); color: var(--yellow); }
 
   /* HAMBURGER / MOBILE */
@@ -79,19 +82,19 @@
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.98); z-index: 150; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
   .mobile-menu.open { display: flex; }
-  .mobile-menu a { color: var(--off-white); text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; letter-spacing: 0.08em; transition: color 0.2s; }
+  .mobile-menu a { color: var(--off-white); text-decoration: none; font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 2.6rem; letter-spacing: 0.08em; transition: color 0.2s; }
   .mobile-menu a:hover { color: var(--yellow); }
 
   /* MARQUEE */
   .marquee-wrap { background: var(--yellow); overflow: hidden; padding: 0.75rem 0; white-space: nowrap; }
   .marquee-track { display: inline-block; animation: marquee 24s linear infinite; }
-  .marquee-track span { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; color: black; margin: 0 2.5rem; font-weight: 700; }
+  .marquee-track span { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; color: black; margin: 0 2.5rem; font-weight: 700; }
   .marquee-track span.dot { color: rgba(0,0,0,0.4); margin: 0 1rem; }
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
   section { padding: 7rem 3rem; }
-  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
-  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 0.95; }
+  .section-label { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
+  .section-title { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 0.95; }
   .section-head { max-width: 720px; margin: 0 auto 4rem; text-align: center; }
   .section-head .section-label { margin-bottom: 0.8rem; }
   .section-head p { margin-top: 1.2rem; font-size: 1.05rem; font-weight: 300; line-height: 1.7; color: rgba(240,237,232,0.7); }
@@ -101,13 +104,13 @@
   .phases { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
   .phase { display: grid; grid-template-columns: 150px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--light-grey); align-items: start; }
   .phase:last-child { border-bottom: none; }
-  .phase-weeks { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--yellow); line-height: 1; }
-  .phase-weeks small { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey); margin-top: 0.3rem; }
-  .phase-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
+  .phase-weeks { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 1.6rem; color: var(--yellow); line-height: 1; }
+  .phase-weeks small { display: block; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey); margin-top: 0.3rem; }
+  .phase-title { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
   .phase-desc { font-size: 0.95rem; font-weight: 300; line-height: 1.7; color: rgba(240,237,232,0.7); }
   .how-notes { max-width: 900px; margin: 3rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .how-note { background: var(--dark); border-left: 2px solid var(--yellow); padding: 1.4rem 1.6rem; }
-  .how-note strong { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--off-white); margin-bottom: 0.3rem; }
+  .how-note strong { display: block; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 1.05rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--off-white); margin-bottom: 0.3rem; }
   .how-note span { font-size: 0.9rem; font-weight: 300; color: var(--grey); line-height: 1.6; }
 
   /* PRICING / PROGRAMS */
@@ -116,14 +119,14 @@
   .price-card { background: var(--charcoal); border: 1px solid var(--light-grey); padding: 2.5rem 2rem; display: flex; flex-direction: column; transition: transform 0.25s, border-color 0.25s; }
   .price-card:hover { transform: translateY(-6px); border-color: var(--yellow); }
   .price-card.featured { border: 2px solid var(--yellow); background: var(--dark); position: relative; }
-  .price-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--yellow); color: black; font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.3rem 1rem; white-space: nowrap; }
-  .price-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1rem; }
-  .price-weekly { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; line-height: 0.9; color: var(--off-white); }
-  .price-weekly small { display: block; font-size: 0.95rem; color: var(--grey); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 0.3rem; }
-  .price-total { font-size: 0.85rem; color: var(--grey); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem; }
+  .price-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--yellow); color: black; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.7rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.3rem 1rem; white-space: nowrap; }
+  .price-name { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1rem; }
+  .price-weekly { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 4rem; line-height: 0.9; color: var(--off-white); }
+  .price-weekly small { display: block; font-size: 0.95rem; color: var(--grey); font-family: 'Archivo', sans-serif; font-stretch: 112%; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 0.3rem; }
+  .price-total { font-size: 0.85rem; color: var(--grey); font-family: 'Archivo', sans-serif; font-stretch: 112%; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem; }
   .afterpay-msg { margin: 0.6rem 0 0.2rem; min-height: 1.1rem; }
   .price-claim { font-size: 0.78rem; font-weight: 300; color: rgba(240,237,232,0.55); margin: 0.8rem 0 1.5rem; line-height: 1.5; border-top: 1px solid rgba(42,42,42,0.8); padding-top: 0.8rem; }
-  .price-sessions { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--off-white); margin-bottom: 1rem; }
+  .price-sessions { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--off-white); margin-bottom: 1rem; }
   .price-features { list-style: none; margin-bottom: 2rem; flex-grow: 1; }
   .price-features li { font-size: 0.9rem; font-weight: 300; color: rgba(240,237,232,0.8); padding: 0.5rem 0; border-bottom: 1px solid rgba(42,42,42,0.6); display: flex; gap: 0.6rem; }
   .price-features li::before { content: '\2726'; color: var(--yellow); flex-shrink: 0; }
@@ -138,17 +141,17 @@
   .why-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--yellow); transition: width 0.4s ease; }
   .why-card:hover { background: var(--dark); }
   .why-card:hover::before { width: 100%; }
-  .why-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: rgba(255,247,0,0.12); line-height: 1; margin-bottom: 1rem; }
-  .why-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.8rem; color: var(--off-white); }
+  .why-num { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 3.5rem; color: rgba(255,247,0,0.12); line-height: 1; margin-bottom: 1rem; }
+  .why-name { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.8rem; color: var(--off-white); }
   .why-desc { font-size: 0.92rem; font-weight: 300; line-height: 1.65; color: var(--grey); }
 
   /* FAQ */
   #faq { background: var(--black); }
   .faq-wrap { max-width: 760px; margin: 0 auto; }
   .faq-item { border-bottom: 1px solid var(--light-grey); }
-  .faq-q { width: 100%; background: none; border: none; color: var(--off-white); font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; text-align: left; padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .faq-q { width: 100%; background: none; border: none; color: var(--off-white); font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; text-align: left; padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
   .faq-q:hover { color: var(--yellow); }
-  .faq-q .icon { color: var(--yellow); font-size: 1.5rem; flex-shrink: 0; transition: transform 0.3s; font-family: 'Bebas Neue', sans-serif; }
+  .faq-q .icon { color: var(--yellow); font-size: 1.5rem; flex-shrink: 0; transition: transform 0.3s; font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; }
   .faq-item.open .faq-q .icon { transform: rotate(45deg); }
   .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
   .faq-item.open .faq-a { max-height: 360px; }
@@ -160,39 +163,39 @@
   .book-inner .section-title span { color: var(--yellow); }
   .book-inner p { font-size: 1.1rem; font-weight: 300; line-height: 1.7; color: rgba(240,237,232,0.8); margin: 1.5rem 0 2.5rem; }
   .book-actions { display: flex; gap: 1.2rem; justify-content: center; align-items: center; flex-wrap: wrap; }
-  .book-note { margin-top: 2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); }
+  .book-note { margin-top: 2rem; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); }
   .book-note strong { color: var(--yellow); }
   .booking-frame { background: rgba(10,10,10,0.7); border: 1px solid rgba(255,255,255,0.1); padding: 2rem; width: 100%; max-width: 900px; margin: 0 auto 2.5rem; display: block; }
-  .booking-placeholder { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey); margin-bottom: 1.5rem; }
-  .book-or { font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); margin: 0 0 1.5rem; }
+  .booking-placeholder { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey); margin-bottom: 1.5rem; }
+  .book-or { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); margin: 0 0 1.5rem; }
   .book-form { text-align: left; margin: 0 auto 1.5rem; max-width: 640px; }
   .form-row { display: flex; gap: 1.2rem; }
   .form-row .form-field { flex: 1; }
   .form-field { display: block; margin-bottom: 1.2rem; }
-  .form-field span { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(240,237,232,0.7); margin-bottom: 0.5rem; }
-  .form-field input, .form-field textarea { width: 100%; box-sizing: border-box; background: var(--charcoal); border: 1px solid var(--light-grey); border-radius: 4px; color: var(--off-white); font-family: 'Barlow', sans-serif; font-size: 1rem; padding: 0.85rem 1rem; transition: border-color 0.2s ease; }
-  .form-field input::placeholder, .form-field textarea::placeholder { color: var(--grey); }
-  .form-field input:focus, .form-field textarea:focus { outline: none; border-color: var(--yellow); }
+  .form-field span { display: block; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(240,237,232,0.7); margin-bottom: 0.5rem; }
+  .form-field input.form-field textarea { width: 100%; box-sizing: border-box; background: var(--charcoal); border: 1px solid var(--light-grey); border-radius: 4px; color: var(--off-white); font-family: 'Archivo', sans-serif; font-size: 1rem; padding: 0.85rem 1rem; transition: border-color 0.2s ease; }
+  .form-field input::placeholder.form-field textarea::placeholder { color: var(--grey); }
+  .form-field input:focus.form-field textarea:focus { outline: none; border-color: var(--yellow); }
   .form-field textarea { resize: vertical; min-height: 100px; }
   .book-submit { width: 100%; border: none; cursor: pointer; font-size: 1.05rem; margin-top: 0.5rem; }
   @media (max-width: 600px) { .form-row { flex-direction: column; gap: 0; } }
 
   /* FOOTER */
   footer { background: var(--charcoal); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--light-grey); flex-wrap: wrap; gap: 1.5rem; }
-  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--off-white); }
+  .footer-logo { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 1.5rem; color: var(--off-white); }
   .footer-logo span { color: var(--yellow); }
   .footer-links { display: flex; gap: 2rem; list-style: none; }
-  .footer-links a { color: var(--grey); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+  .footer-links a { color: var(--grey); text-decoration: none; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
   .footer-links a:hover { color: var(--yellow); }
   .footer-social { display: flex; gap: 1rem; }
-  .social-link { width: 36px; height: 36px; border: 1px solid var(--light-grey); display: flex; align-items: center; justify-content: center; color: var(--grey); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; transition: border-color 0.2s, color 0.2s; }
+  .social-link { width: 36px; height: 36px; border: 1px solid var(--light-grey); display: flex; align-items: center; justify-content: center; color: var(--grey); text-decoration: none; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.8rem; transition: border-color 0.2s, color 0.2s; }
   .social-link:hover { border-color: var(--yellow); color: var(--yellow); }
   .footer-copy { background: var(--charcoal); padding: 1rem 3rem; text-align: center; font-size: 0.78rem; color: rgba(136,136,136,0.5); letter-spacing: 0.1em; border-top: 1px solid var(--light-grey); }
 
   /* STICKY MOBILE CTA */
   .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 120; background: var(--yellow); padding: 0.9rem 1.5rem; align-items: center; justify-content: space-between; gap: 1rem; }
-  .sticky-cta span { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: black; font-size: 0.85rem; }
-  .sticky-cta a { background: black; color: var(--yellow); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.8rem; padding: 0.6rem 1.2rem; white-space: nowrap; }
+  .sticky-cta span { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: black; font-size: 0.85rem; }
+  .sticky-cta a { background: black; color: var(--yellow); text-decoration: none; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.8rem; padding: 0.6rem 1.2rem; white-space: nowrap; }
 
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
@@ -218,40 +221,62 @@
 </head>
 <body>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="about.html" onclick="closeMenu()">About</a>
-  <a href="services.html" onclick="closeMenu()">Services</a>
-  <a href="athletes.html" onclick="closeMenu()">Athletes</a>
-  <a href="strength-conditioning.html" onclick="closeMenu()">S&amp;C</a>
-  <a href="college-pathway.html" onclick="closeMenu()">College</a>
-  <a href="physio.html" onclick="closeMenu()">Physio</a>
-  <a href="injury-rehab.html" onclick="closeMenu()">Injury Rehab</a>
-  <a href="testing.html" onclick="closeMenu()">Testing</a>
-  <a href="news.html" onclick="closeMenu()">News</a>
-  <a href="combine.html" onclick="closeMenu()" style="color:var(--yellow)">Combine</a>
-  <a href="#book" onclick="closeMenu()" style="color:var(--yellow)">Book Initial Consult</a>
+
+
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo.svg" alt="From Zero" width="106" height="42"></a>
+    <div class="primary-nav" role="navigation" aria-label="Main">
+      <ul class="menu">
+        <li class="has-drop">
+          <button type="button" aria-haspopup="true">Training <i class="chev"></i></button>
+          <ul class="dropdown">
+            <li><a href="services.html#basketball">Basketball Training <small>Small-group skill sessions, max 6</small></a></li>
+            <li><a href="strength-conditioning.html">Strength &amp; Conditioning <small>Build the athlete under the player</small></a></li>
+            <li><a href="testing.html">Athletic Testing <small>VALD force plates &amp; strength testing</small></a></li>
+            <li><a href="physio.html">Sports Physio <small>In-house, works with your coaches</small></a></li>
+            <li><a href="injury-rehab.html" aria-current="page">Injury Rehab <small>Rehab-to-performance program</small></a></li>
+            <li><a href="knee-program.html">Knee Program <small>12 weeks for jumper's knee</small></a></li>
+          </ul>
+        </li>
+        <li class="has-drop">
+          <button type="button" aria-haspopup="true">Pathways <i class="chev"></i></button>
+          <ul class="dropdown">
+            <li><a href="combine.html">From Zero Combine <small>Test, compete and be seen</small></a></li>
+            <li><a href="college-pathway.html">College Pathway <small>Aiming for US college basketball</small></a></li>
+          </ul>
+        </li>
+        <li><a href="athletes.html">Athletes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a class="btn" href="index.html#contact">Book a session</a></li>
+      </ul>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li><a href="services.html">Training <small>All programs</small></a>
+      <ul class="sub">
+        <li><a href="services.html#basketball">Basketball</a></li>
+        <li><a href="strength-conditioning.html">Strength &amp; Conditioning</a></li>
+        <li><a href="testing.html">Athletic Testing</a></li>
+        <li><a href="physio.html">Sports Physio</a></li>
+        <li><a href="injury-rehab.html">Injury Rehab</a></li>
+        <li><a href="knee-program.html">Knee Program</a></li>
+      </ul>
+    </li>
+    <li><a href="combine.html">Combine</a></li>
+    <li><a href="college-pathway.html">College Pathway</a></li>
+    <li><a href="athletes.html">Athletes</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="news.html">News</a></li>
+  </ul>
+  <a class="btn" href="index.html#contact">Book a session <span class="arrow">→</span></a>
 </div>
 
-<nav aria-label="Primary">
-  <a href="index.html" class="nav-logo">FROM<span>ZERO</span></a>
-  <ul class="nav-links">
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="athletes.html">Athletes</a></li>
-    <li><a href="strength-conditioning.html">S&amp;C</a></li>
-    <li><a href="physio.html">Physio</a></li>
-    <li><a href="injury-rehab.html" class="active">Injury Rehab</a></li>
-    <li><a href="testing.html">Testing</a></li>
-    <li><a href="college-pathway.html">College</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="combine.html" style="color:var(--yellow)!important;opacity:1!important;">Combine</a></li>
-    <li><a href="#book" class="nav-cta">Book Consult</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
 
 <!-- INFO BAR -->
 <div class="info-bar">
@@ -260,13 +285,13 @@
 
 <!-- HERO -->
 <section id="hero">
-  <!-- Hero image: save your rehab photo as 'rehab-hero.jpg' in this folder -->
+  <!-- Hero image: save your rehab photo as 'img/physio-knee.jpg' in this folder -->
   <div class="hero-bg" role="img" aria-label="Sports physiotherapist assessing an athlete's knee on a treatment table in a rehab gym"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <span class="hero-eyebrow">Injury Rehab Program</span>
     <h1 class="hero-title">Recover Right.<br>Return <span class="accent">Stronger</span></h1>
-    <p class="hero-sub">Ankle, knee, shoulder, hamstring, back — whatever's keeping you off the court, we take you from injured to back-in-the-game stronger than before. Physio and S&amp;C under one roof, a timeline built around <strong>your</strong> injury, and objective <strong>VALD force-plate proof</strong> you're ready. No guesswork.</p>
+    <p class="hero-sub">Ankle, knee, shoulder, hamstring, back, whatever's keeping you off the court, we take you from injured to back-in-the-game stronger than before. Physio and S&amp;C under one roof, a timeline built around <strong>your</strong> injury, and objective <strong>VALD force-plate proof</strong> you're ready. No guesswork.</p>
     <div class="hero-actions">
       <a href="#book" class="btn-primary">Book Initial Consult</a>
       <a href="#how" class="btn-ghost">See How It Works</a>
@@ -313,42 +338,42 @@
   <div class="section-head">
     <div class="section-label">The Structure</div>
     <h2 class="section-title">4 Phases,<br>One Path Back</h2>
-    <p>Every injury follows the same logic back to sport — protect, rebuild, reload, return. The phases stay the same; the timeline flexes to your injury. Most programs run around 12 weeks, while more severe or post-surgical injuries (like ACL reconstructions) run longer. Your physio reviews you at every phase gate, so you only progress when the tissue is ready.</p>
+    <p>Every injury follows the same logic back to sport, protect, rebuild, reload, return. The phases stay the same; the timeline flexes to your injury. Most programs run around 12 weeks, while more severe or post-surgical injuries (like ACL reconstructions) run longer. Your physio reviews you at every phase gate, so you only progress when the tissue is ready.</p>
   </div>
   <div class="phases">
     <div class="phase">
       <div class="phase-weeks">Phase 1<small>Protect &amp; Restore</small></div>
       <div>
         <div class="phase-title">Settle &amp; Restore</div>
-        <p class="phase-desc">Calm pain and swelling, restore range of motion and basic control, and offload the injured tissue. We establish your baseline VALD numbers and a full movement screen — so every decision from here is measured, not guessed.</p>
+        <p class="phase-desc">Calm pain and swelling, restore range of motion and basic control, and offload the injured tissue. We establish your baseline VALD numbers and a full movement screen, so every decision from here is measured, not guessed.</p>
       </div>
     </div>
     <div class="phase">
       <div class="phase-weeks">Phase 2<small>Rebuild Strength</small></div>
       <div>
         <div class="phase-title">Rebuild Capacity</div>
-        <p class="phase-desc">Progressive, structured loading rebuilds strength in the injured area and everything around it — addressing why the injury happened, not just the symptom. This is where the tissue regains its capacity to handle real demand.</p>
+        <p class="phase-desc">Progressive, structured loading rebuilds strength in the injured area and everything around it, addressing why the injury happened, not just the symptom. This is where the tissue regains its capacity to handle real demand.</p>
       </div>
     </div>
     <div class="phase">
       <div class="phase-weeks">Phase 3<small>Power &amp; Load</small></div>
       <div>
         <div class="phase-title">Power &amp; Resilience</div>
-        <p class="phase-desc">Reintroduce speed, power and load tolerance. Plyometrics, change of direction and sport-relevant intensity teach the body to absorb and produce force again — the exact demands your sport puts on it.</p>
+        <p class="phase-desc">Reintroduce speed, power and load tolerance. Plyometrics, change of direction and sport-relevant intensity teach the body to absorb and produce force again, the exact demands your sport puts on it.</p>
       </div>
     </div>
     <div class="phase">
       <div class="phase-weeks">Phase 4<small>Return To Sport</small></div>
       <div>
         <div class="phase-title">Return To Sport</div>
-        <p class="phase-desc">Sport-specific volume, conditioning and on-court integration. Final VALD testing confirms you've closed the gap and meet return-to-play standards. We also work on the mental side — rebuilding confidence and managing any fear of re-injury — so you walk back on cleared, confident and stronger than before.</p>
+        <p class="phase-desc">Sport-specific volume, conditioning and on-court integration. Final VALD testing confirms you've closed the gap and meet return-to-play standards. We also work on the mental side, rebuilding confidence and managing any fear of re-injury, so you walk back on cleared, confident and stronger than before.</p>
       </div>
     </div>
   </div>
   <div class="how-notes">
     <div class="how-note">
       <strong>Physio Gate At Every Phase</strong>
-      <span>Our sports physio reviews you before each phase change. You only progress when the injury is ready — no rushing, no guessing, no re-injury.</span>
+      <span>Our sports physio reviews you before each phase change. You only progress when the injury is ready, no rushing, no guessing, no re-injury.</span>
     </div>
     <div class="how-note">
       <strong>VALD At Baseline, Mid &amp; Final</strong>
@@ -381,7 +406,7 @@
           data-is-eligible="true">
         </square-placement>
       </div>
-      <div class="price-claim">Includes your physio pathway — physio sessions billed separately so they're claimable on private health.</div>
+      <div class="price-claim">Includes your physio pathway, physio sessions billed separately so they're claimable on private health.</div>
       <div class="price-sessions">1 Supervised S&amp;C Session / Week</div>
       <ul class="price-features">
         <li>Full physio pathway with phase-gate reviews</li>
@@ -393,7 +418,7 @@
       </ul>
       <a href="#book" class="btn-primary">Get Started</a>
     </div>
-    <!-- CARD 2 — MOST POPULAR -->
+    <!-- CARD 2, MOST POPULAR -->
     <div class="price-card featured">
       <div class="price-badge">Most Popular</div>
       <div class="price-name">Guided Rehab</div>
@@ -410,7 +435,7 @@
           data-is-eligible="true">
         </square-placement>
       </div>
-      <div class="price-claim">Includes your physio pathway — physio sessions billed separately so they're claimable on private health.</div>
+      <div class="price-claim">Includes your physio pathway, physio sessions billed separately so they're claimable on private health.</div>
       <div class="price-sessions">2 Supervised S&amp;C Sessions / Week</div>
       <ul class="price-features">
         <li>Full physio pathway with phase-gate reviews</li>
@@ -438,7 +463,7 @@
           data-is-eligible="true">
         </square-placement>
       </div>
-      <div class="price-claim">Includes your physio pathway — physio sessions billed separately so they're claimable on private health.</div>
+      <div class="price-claim">Includes your physio pathway, physio sessions billed separately so they're claimable on private health.</div>
       <div class="price-sessions">3 Supervised S&amp;C Sessions / Week</div>
       <ul class="price-features">
         <li>Everything in Guided Rehab</li>
@@ -450,7 +475,7 @@
       <a href="#book" class="btn-primary">Get Started</a>
     </div>
   </div>
-  <p class="pricing-note">Programs run as long as your recovery needs — most are around 12 weeks, while severe or post-surgical injuries may run longer at the same rate. Pay upfront or split it across three instalments, and you're <strong>backed by our money-back guarantee.</strong><br>Just want a diagnosis and a plan? Ask about our <strong>Assess &amp; Plan option from $640.</strong></p>
+  <p class="pricing-note">Programs run as long as your recovery needs, most are around 12 weeks, while severe or post-surgical injuries may run longer at the same rate. Pay upfront or split it across three instalments, and you're <strong>backed by our money-back guarantee.</strong><br>Just want a diagnosis and a plan? Ask about our <strong>Assess &amp; Plan option from $640.</strong></p>
 </section>
 
 <!-- WHY THIS WORKS -->
@@ -463,32 +488,32 @@
     <div class="why-card">
       <div class="why-num">01</div>
       <div class="why-name">One Roof, One Team</div>
-      <p class="why-desc">Your physio and your S&amp;C coach work in the same building, off the same plan. No conflicting advice, no message lost between a clinic and a gym — rehab and performance handled as one continuous process.</p>
+      <p class="why-desc">Your physio and your S&amp;C coach work in the same building, off the same plan. No conflicting advice, no message lost between a clinic and a gym, rehab and performance handled as one continuous process.</p>
     </div>
     <div class="why-card">
       <div class="why-num">02</div>
       <div class="why-name">Objective VALD Data</div>
-      <p class="why-desc">Force-plate testing measures strength, symmetry and explosiveness in hard numbers. You see the gap close and we make the return-to-play call on data — not on how the injury happens to feel that day.</p>
+      <p class="why-desc">Force-plate testing measures strength, symmetry and explosiveness in hard numbers. You see the gap close and we make the return-to-play call on data, not on how the injury happens to feel that day.</p>
     </div>
     <div class="why-card">
       <div class="why-num">03</div>
       <div class="why-name">Understand Your Injury</div>
-      <p class="why-desc">We don't just hand you exercises — we explain what's actually going on. You'll understand the mechanism behind your injury, why it happened, how it heals and what to avoid, so you're an informed partner in your own recovery and far less likely to repeat it.</p>
+      <p class="why-desc">We don't just hand you exercises, we explain what's actually going on. You'll understand the mechanism behind your injury, why it happened, how it heals and what to avoid, so you're an informed partner in your own recovery and far less likely to repeat it.</p>
     </div>
     <div class="why-card">
       <div class="why-num">04</div>
       <div class="why-name">Confidence To Return</div>
-      <p class="why-desc">Coming back after injury is as much mental as physical — plenty of athletes are scared to fully commit again. We build return-to-play psychology into the program: rebuilding trust in your body, managing the fear of re-injury, and getting you back mentally ready, not just cleared.</p>
+      <p class="why-desc">Coming back after injury is as much mental as physical, plenty of athletes are scared to fully commit again. We build return-to-play psychology into the program: rebuilding trust in your body, managing the fear of re-injury, and getting you back mentally ready, not just cleared.</p>
     </div>
     <div class="why-card">
       <div class="why-num">05</div>
       <div class="why-name">Built To Stay Healthy</div>
-      <p class="why-desc">Returning isn't the finish line — staying on the court is. We address the root cause and leave you stronger and more resilient than before, with the habits and capacity to keep the same injury from coming back.</p>
+      <p class="why-desc">Returning isn't the finish line, staying on the court is. We address the root cause and leave you stronger and more resilient than before, with the habits and capacity to keep the same injury from coming back.</p>
     </div>
     <div class="why-card">
       <div class="why-num">06</div>
       <div class="why-name">A Plan With A Finish Line</div>
-      <p class="why-desc">This is a defined rehab-to-performance pathway, not an open-ended membership that drags on. A clear start, clear phases, and a measurable return — stronger and more resilient than before the injury.</p>
+      <p class="why-desc">This is a defined rehab-to-performance pathway, not an open-ended membership that drags on. A clear start, clear phases, and a measurable return, stronger and more resilient than before the injury.</p>
     </div>
   </div>
 </section>
@@ -502,11 +527,11 @@
   <div class="faq-wrap">
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How long until I'm better? <span class="icon" aria-hidden="true">+</span></button>
-      <div class="faq-a"><p>It depends on the injury. Most programs run around 12 weeks — simpler strains and sprains can be quicker, while severe or post-surgical injuries (like an ACL reconstruction) run longer. We'll give you a realistic timeline at your initial consult, and your VALD numbers track the progress the whole way.</p></div>
+      <div class="faq-a"><p>It depends on the injury. Most programs run around 12 weeks, simpler strains and sprains can be quicker, while severe or post-surgical injuries (like an ACL reconstruction) run longer. We'll give you a realistic timeline at your initial consult, and your VALD numbers track the progress the whole way.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What injuries do you work with? <span class="icon" aria-hidden="true">+</span></button>
-      <div class="faq-a"><p>Ankle sprains, knee and tendon pain, hamstring and calf strains, shoulder injuries, lower back, and post-surgical return-to-sport (including ACL). If you're not sure we can help, book an initial consult and we'll tell you honestly — and refer on if it's outside our scope.</p></div>
+      <div class="faq-a"><p>Ankle sprains, knee and tendon pain, hamstring and calf strains, shoulder injuries, lower back, and post-surgical return-to-sport (including ACL). If you're not sure we can help, book an initial consult and we'll tell you honestly, and refer on if it's outside our scope.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I claim physio on private health? <span class="icon" aria-hidden="true">+</span></button>
@@ -514,11 +539,11 @@
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do I need a referral? <span class="icon" aria-hidden="true">+</span></button>
-      <div class="faq-a"><p>No referral needed to get started — just book an initial consult. If you have a GP referral, surgeon's protocol or an EPC/Chronic Disease Management plan, bring it along and we'll work it in.</p></div>
+      <div class="faq-a"><p>No referral needed to get started, just book an initial consult. If you have a GP referral, surgeon's protocol or an EPC/Chronic Disease Management plan, bring it along and we'll work it in.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What if it flares up between sessions? <span class="icon" aria-hidden="true">+</span></button>
-      <div class="faq-a"><p>Flares are normal in rehab and we plan for them. You'll have a symptom-monitoring protocol to follow, app access to your program, and direct contact with your coach and physio so we can adjust load quickly — rather than you stopping and losing progress.</p></div>
+      <div class="faq-a"><p>Flares are normal in rehab and we plan for them. You'll have a symptom-monitoring protocol to follow, app access to your program, and direct contact with your coach and physio so we can adjust load quickly, rather than you stopping and losing progress.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I pay in instalments? <span class="icon" aria-hidden="true">+</span></button>
@@ -526,11 +551,11 @@
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What if it doesn't work for me? <span class="icon" aria-hidden="true">+</span></button>
-      <div class="faq-a"><p>We back our work with a money-back guarantee. Show up, do the program as prescribed, and if you're not seeing progress we'll make it right or refund you — we'll confirm the exact terms with you when you book. We're confident in the process because the data doesn't lie.</p></div>
+      <div class="faq-a"><p>We back our work with a money-back guarantee. Show up, do the program as prescribed, and if you're not seeing progress we'll make it right or refund you, we'll confirm the exact terms with you when you book. We're confident in the process because the data doesn't lie.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Where are you located? <span class="icon" aria-hidden="true">+</span></button>
-      <div class="faq-a"><p>Warehouse 73/2 Thomsons Road, Keilor Park VIC 3042 — serving Melbourne's north and west including Taylors Lakes, Tullamarine, Essendon, Moonee Ponds and surrounds.</p></div>
+      <div class="faq-a"><p>Warehouse 73/2 Thomsons Road, Keilor Park VIC 3042, serving Melbourne's north and west including Taylors Lakes, Tullamarine, Essendon, Moonee Ponds and surrounds.</p></div>
     </div>
   </div>
 </section>
@@ -540,10 +565,10 @@
   <div class="book-inner">
     <div class="section-label" style="text-align:center;">Take The First Step</div>
     <h2 class="section-title">Book <span>Initial Consult</span></h2>
-    <p>One consult tells you exactly what's going on, how long it'll take, and what it takes to get back — stronger. Bring your injury, your goals and your season, and we'll map the path back to sport.</p>
+    <p>One consult tells you exactly what's going on, how long it'll take, and what it takes to get back, stronger. Bring your injury, your goals and your season, and we'll map the path back to sport.</p>
     <!-- Cliniko online booking (same system as the physio page) -->
     <div class="booking-frame">
-      <div class="booking-placeholder">Online Booking — Powered by Cliniko</div>
+      <div class="booking-placeholder">Online Booking, Powered by Cliniko</div>
       <iframe id='cliniko-90038707' src='https://from-zero.au5.cliniko.com/bookings?embedded=true&amp;business_id=1851015252800450292&amp;practitioner_id=1851015248102829966&amp;appointment_type_id=1851015252347465273' frameborder='0' scrolling='auto' width='100%' height='1000' style='pointer-events: auto;'></iframe>
       <script type='text/javascript'>
         window.addEventListener('message', function handleIFrameMessage (e) {
@@ -593,28 +618,56 @@
   </div>
 </section>
 
-<footer>
-  <div class="footer-logo">FROM<span>ZERO</span></div>
-  <ul class="footer-links">
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="athletes.html">Athletes</a></li>
-    <li><a href="physio.html">Physio</a></li>
-    <li><a href="injury-rehab.html">Injury Rehab</a></li>
-    <li><a href="testing.html">Testing</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-  <div class="footer-social">
-    <a href="https://www.instagram.com/fromzerosc/" target="_blank" rel="noopener" class="social-link" aria-label="From Zero on Instagram">IG</a>
-    <a href="https://www.facebook.com/share/16LwrSru3E/" target="_blank" rel="noopener" class="social-link" aria-label="From Zero on Facebook">FB</a>
-    <a href="https://www.tiktok.com/@fromzerosc" target="_blank" rel="noopener" class="social-link" aria-label="From Zero on TikTok">TK</a>
+<div class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="img/logo.svg" alt="From Zero" width="161" height="64">
+        <p class="footer-tag">We build scorers.</p>
+        <p>Basketball performance in Keilor Park, Melbourne. Skill, strength, testing and physio under one roof.</p>
+      </div>
+      <div>
+        <h4>Training</h4>
+        <ul>
+          <li><a href="services.html#basketball">Basketball Training</a></li>
+          <li><a href="strength-conditioning.html">Strength &amp; Conditioning</a></li>
+          <li><a href="testing.html">Athletic Testing</a></li>
+          <li><a href="physio.html">Sports Physio</a></li>
+          <li><a href="injury-rehab.html">Injury Rehab</a></li>
+          <li><a href="knee-program.html">Knee Program</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>From Zero</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="athletes.html">Athletes</a></li>
+          <li><a href="combine.html">Combine</a></li>
+          <li><a href="college-pathway.html">College Pathway</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>Warehouse 73/2 Thomsons Road<br>Keilor Park VIC 3042</p>
+        <p>Open six days<br>Mon–Thu, Sat &amp; Sun</p>
+        <p><a href="mailto:contact@fromzero.com.au">contact@fromzero.com.au</a></p>
+        <p><a href="https://www.instagram.com/fromzerosc/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/share/16LwrSru3E/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.tiktok.com/@fromzerosc" target="_blank" rel="noopener">TikTok</a></p>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span data-year>2026</span> From Zero Athletic Performance. All rights reserved.</span>
+      <span>Keilor Park · Melbourne's north &amp; west</span>
+    </div>
   </div>
-</footer>
-<div class="footer-copy">© 2026 From Zero Athletic Performance. All rights reserved. Keilor Park, Melbourne VIC.</div>
+</div>
+<script src="js/site.js" defer></script>
+
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta">
-  <span>Rehab Program — Tailored Timeline</span>
+  <span>Rehab Program, Tailored Timeline</span>
   <a href="#book">Book Consult →</a>
 </div>
 
@@ -658,7 +711,7 @@
   })();
 </script>
 
-<!-- Afterpay on-site messaging (served via Square CDN — Afterpay is owned by Block) -->
+<!-- Afterpay on-site messaging (served via Square CDN, Afterpay is owned by Block) -->
 <script src="https://js.squarecdn.com/square-marketplace.js" async></script>
 
 </body>
