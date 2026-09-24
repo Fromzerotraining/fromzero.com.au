@@ -34,6 +34,12 @@
   <meta property="og:url" content="https://www.fromzero.com.au/about.html">
   <meta property="og:image" content="https://www.fromzero.com.au/og-image.png">
   <style>
+    @media (min-width: 861px) {
+      .page-hero-fz .bg { left: 28%; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%); mask-image: linear-gradient(90deg, transparent 0%, #000 30%); }
+      .page-hero-fz .bg img { filter: brightness(.95); }
+      .page-hero-fz h1 .y { display: block; }
+      .page-hero-fz::after { background: linear-gradient(90deg, rgba(11,11,11,.95) 0%, rgba(11,11,11,.8) 35%, rgba(11,11,11,.2) 70%, rgba(11,11,11,.05) 100%), linear-gradient(0deg, rgba(11,11,11,.85), transparent 40%); }
+    }
     .story { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
     .story .photo { aspect-ratio: 4 / 5; position: sticky; top: calc(var(--nav-h) + 2rem); }
     .story p { margin: 0 0 1.3rem; color: rgba(243,241,234,.8); font-size: 1.08rem; }
@@ -134,7 +140,7 @@
 
 <main>
   <section class="page-hero-fz">
-    <div class="bg"><img src="img/focus.jpg" alt="" style="object-position: 50% 25%;"></div>
+    <div class="bg"><img src="img/about-hero.jpg" alt="" style="object-position: 60% 28%;"></div>
     <div class="wrap">
       <p class="eyebrow">About From Zero</p>
       <h1>Built from <span class="y">zero.</span></h1>
