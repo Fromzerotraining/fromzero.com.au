@@ -89,7 +89,9 @@
 
   /* PAGE HERO */
   .page-hero { position: relative; padding: 8rem 3rem 6rem; background: var(--charcoal); overflow: hidden; }
-  .page-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('img/shot-release.jpg') center/cover no-repeat; opacity: 0.08; z-index: 0; }
+  .page-hero::before { content: ''; position: absolute; inset: 0; background: url('img/sc-hero.jpg') 62% 40%/cover no-repeat; filter: grayscale(100%) contrast(1.1) brightness(.85); z-index: 0; }
+  .page-hero::after { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: linear-gradient(90deg, rgba(11,11,11,.95) 0%, rgba(11,11,11,.82) 40%, rgba(11,11,11,.3) 75%, rgba(11,11,11,.15) 100%), linear-gradient(0deg, rgba(11,11,11,.8) 0%, transparent 35%); }
+  @media (max-width: 860px) { .page-hero::after { background: linear-gradient(0deg, rgba(11,11,11,.95) 0%, rgba(11,11,11,.8) 45%, rgba(11,11,11,.45) 100%); } }
   .page-hero-inner { position: relative; z-index: 1; max-width: 760px; }
   .breadcrumb { font-family: 'Archivo', sans-serif; font-stretch: 100%; font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--grey); margin-bottom: 1.5rem; }
   .breadcrumb a { color: var(--grey); text-decoration: none; transition: color 0.2s; }
