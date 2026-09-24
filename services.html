@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site.css?v=6694ed20">
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -35,7 +35,7 @@
   <meta property="og:image" content="https://www.fromzero.com.au/og-image.png">
   <style>
     .jump { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2.2rem; }
-    .jump a { text-decoration: none; font-size: .85rem; border: 1px solid rgba(243,241,234.25); padding: .5rem .85rem; background: rgba(11,11,11.4); }
+    .jump a { text-decoration: none; font-size: .85rem; border: 1px solid rgba(243,241,234,.25); padding: .5rem .85rem; background: rgba(11,11,11,.4); }
     .jump a:hover { border-color: var(--yellow); color: var(--yellow); }
     .program { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; scroll-margin-top: calc(var(--nav-h) + 1rem); }
     .program + .program { margin-top: clamp(5rem, 10vw, 8rem); }
@@ -47,7 +47,7 @@
     .program .media.single .photo { aspect-ratio: 4 / 5; transform: none; }
     .program .n { font-stretch: 125%; font-weight: 700; font-size: .7rem; letter-spacing: .2em; color: var(--yellow); display: block; margin-bottom: .8rem; }
     .program h2 { font-size: clamp(2.8rem, 6vw, 5rem); margin-bottom: 1.4rem; }
-    .program p { color: rgba(243,241,234.8); margin: 0 0 1.1rem; }
+    .program p { color: rgba(243,241,234,.8); margin: 0 0 1.1rem; }
     .facts { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 1.8rem 0; }
     .facts div { padding: 1rem 0; }
     .facts div + div { padding-left: 1rem; border-left: 1px solid var(--line); }
@@ -64,7 +64,7 @@
     .not-sure h2 { font-size: clamp(3rem, 7vw, 6rem); }
     .not-sure p { font-size: 1.1rem; margin: 0 0 1.6rem; }
     @media (max-width: 860px) {
-      .program.not-sure.extra { grid-template-columns: 1fr; }
+      .program, .not-sure, .extra { grid-template-columns: 1fr; }
       .program.flip .media { order: 0; }
       .program .media .photo:first-child { transform: none; }
     }
@@ -296,7 +296,7 @@
     </div>
   </div>
 </div>
-<script src="js/site.js" defer></script>
+<script src="js/site.js?v=34787c67" defer></script>
 
 </body>
 </html>

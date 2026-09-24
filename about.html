@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site.css?v=6694ed20">
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -36,7 +36,7 @@
   <style>
     .story { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
     .story .photo { aspect-ratio: 4 / 5; position: sticky; top: calc(var(--nav-h) + 2rem); }
-    .story p { margin: 0 0 1.3rem; color: rgba(243,241,234.8); font-size: 1.08rem; }
+    .story p { margin: 0 0 1.3rem; color: rgba(243,241,234,.8); font-size: 1.08rem; }
     .story p.big { font-size: clamp(1.35rem, 2.4vw, 1.8rem); line-height: 1.35; color: var(--text); }
     .story strong { color: var(--text); }
     .founder { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
@@ -51,7 +51,7 @@
     .leader h3 { font-size: 2.2rem; margin: 0 0 .2rem; }
     .leader .role { font-size: .85rem; margin: 0 0 1rem; opacity: .75; }
     .leader p { margin: 0 0 1rem; }
-    .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(11,11,11.2); border: 1px solid rgba(11,11,11.2); margin-top: 2rem; }
+    .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(11,11,11,.2); border: 1px solid rgba(11,11,11,.2); margin-top: 2rem; }
     .creds div { background: var(--yellow); padding: 1.2rem; }
     .creds b { display: block; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 1.5rem; line-height: 1; }
     .creds span { font-size: .85rem; }
@@ -70,11 +70,11 @@
     .cta-band .btn-row { justify-content: center; }
     @media (max-width: 1000px) { .leaders { grid-template-columns: 1fr; } .team { grid-template-columns: 1fr 1fr; } .values { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 860px) {
-      .story.founder { grid-template-columns: 1fr; }
+      .story, .founder { grid-template-columns: 1fr; }
       .story .photo { position: static; aspect-ratio: 16 / 11; }
       .founder .photo { aspect-ratio: 4 / 4; }
     }
-    @media (max-width: 560px) { .values.creds.leader { grid-template-columns: 1fr; } .leader .photo { aspect-ratio: 4 / 3; } .team { gap: 2rem 1rem; } .member h3 { font-size: 1.5rem; } }
+    @media (max-width: 560px) { .values, .creds, .leader { grid-template-columns: 1fr; } .leader .photo { aspect-ratio: 4 / 3; } .team { gap: 2rem 1rem; } .member h3 { font-size: 1.5rem; } }
   </style>
 </head>
 <body class="fz">
@@ -304,7 +304,7 @@
     </div>
   </div>
 </div>
-<script src="js/site.js" defer></script>
+<script src="js/site.js?v=34787c67" defer></script>
 
 </body>
 </html>

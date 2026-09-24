@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site.css?v=6694ed20">
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -64,7 +64,7 @@
     .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; width: 100%; }
     .hero h1 { font-size: clamp(5rem, 13.5vw, 12.5rem); }
     .hero h1 .y { display: block; }
-    .hero .lead { margin: 2rem 0 2.4rem; max-width: 52ch; color: rgba(243,241,234.82); font-size: clamp(1.02rem, 1.4vw, 1.15rem); }
+    .hero .lead { margin: 2rem 0 2.4rem; max-width: 52ch; color: rgba(243,241,234,.82); font-size: clamp(1.02rem, 1.4vw, 1.15rem); }
     .roof { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2.4rem; align-items: center; }
     .roof b { font-stretch: 125%; font-weight: 700; font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-right: .4rem; }
     .roof a { text-decoration: none; font-size: .85rem; border: 1px solid var(--line); padding: .45rem .8rem; transition: border-color .2s, color .2s; }
@@ -75,13 +75,13 @@
     .collage .photo:nth-child(1) img { object-position: 50% 30%; }
     .shotclock {
       position: absolute; left: -2.2rem; bottom: 2.2rem; z-index: 3; background: var(--ink); border: 2px solid var(--yellow);
-      padding: .7rem 1rem .6rem; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0.5);
+      padding: .7rem 1rem .6rem; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,.5);
     }
     .shotclock b { display: block; font-stretch: 62%; font-weight: 900; font-size: 3.4rem; line-height: .9; color: var(--yellow); font-variant-numeric: tabular-nums; }
     .shotclock span { font-stretch: 125%; font-weight: 700; font-size: .55rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
 
     /* what we do */
-    .section-head .answer.answer { color: var(--text); font-stretch: 100%; font-weight: 400; font-size: clamp(1.45rem, 2.9vw, 2.35rem); line-height: 1.28; max-width: 30ch; margin: 0; }
+    .section-head .answer, .answer { color: var(--text); font-stretch: 100%; font-weight: 400; font-size: clamp(1.45rem, 2.9vw, 2.35rem); line-height: 1.28; max-width: 30ch; margin: 0; }
     .answer strong { font-weight: 700; color: var(--yellow); }
     .pillars { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); margin-top: clamp(3rem, 6vw, 4.5rem); }
     .pillar { padding: 2rem 1.6rem 2.2rem 0; border-right: 1px solid var(--line); text-decoration: none; display: flex; flex-direction: column; gap: .8rem; transition: background .2s; }
@@ -112,7 +112,7 @@
     .panel .photo img { object-position: 50% 35%; }
     .panel .body { padding: clamp(1.6rem, 3vw, 2.6rem); display: flex; flex-direction: column; gap: 1rem; }
     .panel h3 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin: 0; }
-    .panel p { margin: 0; color: rgba(243,241,234.78); }
+    .panel p { margin: 0; color: rgba(243,241,234,.78); }
     .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: auto; padding-top: .6rem; }
     .chips span { font-stretch: 125%; font-weight: 700; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; background: var(--surface-2); padding: .5rem .7rem; }
     .chips span.hl { background: var(--yellow); color: var(--ink); }
@@ -140,8 +140,8 @@
 
     /* why */
     .why { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(2rem, 6vw, 6rem); }
-    .why-list { display: grid; gap: 0; border-top: 1px solid rgba(11,11,11.2); }
-    .why-list > div { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; padding: 1.6rem 0; border-bottom: 1px solid rgba(11,11,11.2); }
+    .why-list { display: grid; gap: 0; border-top: 1px solid rgba(11,11,11,.2); }
+    .why-list > div { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; padding: 1.6rem 0; border-bottom: 1px solid rgba(11,11,11,.2); }
     .why-list .n { font-stretch: 62%; font-weight: 900; font-size: 2.2rem; line-height: 1; }
     .why-list h3 { font-size: 1.8rem; margin-bottom: .4rem; }
     .why-list p { margin: 0; }
@@ -152,10 +152,10 @@
     .pathway .bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; filter: grayscale(100%) brightness(.45) contrast(1.1); }
     .pathway .wrap { position: relative; z-index: 1; }
     .pathway-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
-    .pathway-cards a { display: block; text-decoration: none; background: rgba(11,11,11.78); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255.12); padding: 2rem; transition: border-color .2s; }
+    .pathway-cards a { display: block; text-decoration: none; background: rgba(11,11,11,.78); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,.12); padding: 2rem; transition: border-color .2s; }
     .pathway-cards a:hover { border-color: var(--yellow); }
     .pathway-cards h3 { font-size: 2.4rem; }
-    .pathway-cards p { color: rgba(243,241,234.78); margin: 0 0 1.2rem; }
+    .pathway-cards p { color: rgba(243,241,234,.78); margin: 0 0 1.2rem; }
 
     /* contact */
     .visit { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2.5rem, 6vw, 6rem); }
@@ -177,19 +177,19 @@
     }
     @media (max-width: 860px) {
       .hero { min-height: 0; }
-      .hero .wrap.bucket.why.visit.duo.split.pathway-cards { grid-template-columns: 1fr; }
+      .hero .wrap, .bucket, .why, .visit, .duo, .split, .pathway-cards { grid-template-columns: 1fr; }
       .collage { height: 340px; grid-template-columns: 1.3fr 1fr 1fr; grid-template-rows: 1fr; }
       .collage .photo:nth-child(1) { grid-row: auto; }
       .shotclock { left: auto; right: .8rem; bottom: .8rem; padding: .5rem .8rem .45rem; }
       .shotclock b { font-size: 2.4rem; }
       .traits { grid-template-columns: 1fr 1fr; gap: 2.5rem 1rem; }
       .trait h3 { font-size: 1.8rem; }
-      .roster.quotes { grid-template-columns: 1fr; }
+      .roster, .quotes { grid-template-columns: 1fr; }
       .roster div:nth-child(n) { padding: 1rem 0; border-left: 0; }
     }
     @media (max-width: 560px) {
       .pillars { grid-template-columns: 1fr; }
-      .pillar.pillar + .pillar { padding: 1.6rem 0; border-right: 0; border-top: 1px solid var(--line); }
+      .pillar, .pillar + .pillar { padding: 1.6rem 0; border-right: 0; border-top: 1px solid var(--line); }
       .pillar:first-child { border-top: 0; }
       .traits { grid-template-columns: 1fr; }
       .collage { height: 260px; }
@@ -634,7 +634,7 @@
     </div>
   </div>
 </div>
-<script src="js/site.js" defer></script>
+<script src="js/site.js?v=34787c67" defer></script>
 
 </body>
 </html>

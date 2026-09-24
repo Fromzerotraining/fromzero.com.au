@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site.css?v=6694ed20">
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -39,7 +39,7 @@
     .city span { font-stretch: 125%; font-weight: 700; font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--yellow); }
     .city b { display: block; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1; margin-top: .6rem; }
     .tour { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
-    .tour p { color: rgba(243,241,234.8); margin: 0 0 1.2rem; font-size: 1.08rem; }
+    .tour p { color: rgba(243,241,234,.8); margin: 0 0 1.2rem; font-size: 1.08rem; }
     .tests { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
     .test { border-top: 3px solid var(--yellow); padding-top: 1.4rem; }
     .test .n { font-stretch: 125%; font-weight: 700; font-size: .7rem; letter-spacing: .2em; color: var(--yellow); }
@@ -49,8 +49,8 @@
     .next h2 { font-size: clamp(3rem, 7vw, 6rem); }
     .next p { font-size: 1.1rem; margin: 0 0 1.6rem; }
     @media (max-width: 1000px) { .tests { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 860px) { .tour.next { grid-template-columns: 1fr; } }
-    @media (max-width: 560px) { .cities.tests { grid-template-columns: 1fr; } }
+    @media (max-width: 860px) { .tour, .next { grid-template-columns: 1fr; } }
+    @media (max-width: 560px) { .cities, .tests { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body class="fz">
@@ -218,7 +218,7 @@
     </div>
   </div>
 </div>
-<script src="js/site.js" defer></script>
+<script src="js/site.js?v=34787c67" defer></script>
 
 </body>
 </html>

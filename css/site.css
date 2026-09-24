@@ -143,7 +143,7 @@ a { color: inherit; }
 .mobile-nav .btn { width: 100%; justify-content: center; margin-top: 2rem; font-size: .85rem; }
 
 /* ---------- footer ---------- */
-.site-footer { background: #050505; border-top: 1px solid var(--line); padding: 5rem 0 2rem; font-size: .92rem; }
+.site-footer { position: relative; z-index: 2; background: #050505; border-top: 1px solid var(--line); padding: 5rem 0 2rem; font-size: .92rem; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 3rem; }
 .footer-grid img { height: 64px; width: auto; margin-bottom: 1.4rem; }
 .footer-grid h4 { font-stretch: 125%; font-weight: 700; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--yellow); margin: 0 0 1.1rem; }
@@ -235,5 +235,11 @@ a { color: inherit; }
   .brand img { height: 34px; }
   .footer-grid { grid-template-columns: 1fr; }
   .stat b { font-size: 2.8rem; }
-  .btn-row .btn { flex: 1 1 auto; justify-content: center; }
+  .btn-row .btn { flex: 1 1 auto; justify-content: center; text-align: center; }
+}
+
+/* ---------- older pages: let grid/flex children shrink instead of overflowing on small screens ---------- */
+@media (max-width: 860px) {
+  section > *, [class*="grid"] > *, [class*="-row"] > * { min-width: 0; }
+  section p, section h1, section h2, section h3, section h4 { overflow-wrap: break-word; }
 }

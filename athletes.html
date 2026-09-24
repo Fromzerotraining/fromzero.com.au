@@ -8,7 +8,7 @@
 <title>Our Athletes | From Zero | NBA, NBL & Olympic Athletes Melbourne</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site.css?v=6694ed20">
   <!-- SEO -->
   <meta name="description" content="From Zero has trained NBA, NBL, Olympic and international pro athletes. Melbourne's most elite athletic performance centre serving Keilor Park, Essendon, Tullamarine and Melbourne's north and west."/>
   <meta name="keywords" content="NBL athletes Melbourne, NBA training Melbourne, elite basketball players Melbourne, Olympic athletes Melbourne, basketball performance Melbourne north west, Keilor Park, Taylors Lakes, Tullamarine, Essendon, Moonee Ponds, Maribyrnong, Airport West, Derrimut, Parkville, Melton, Craigieburn, Melbourne North, Melbourne West"/>
@@ -87,7 +87,7 @@
   }
 
   /* All content sits above overlay */
-  nav.mobile-menu.page-hero.athletes-section.physio-about.physio-services.booking-section, footer.footer-copy {
+  nav, .mobile-menu, .page-hero, .athletes-section, .physio-about, .physio-services, .booking-section, footer, .footer-copy {
     position: relative;
     z-index: 2;
   }
@@ -99,8 +99,8 @@
   .nav-logo { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 1.8rem; letter-spacing: 0.08em; color: var(--off-white); text-decoration: none; }
   .nav-logo span { color: var(--yellow); }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a { color: var(--off-white); text-decoration: none; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
-  .nav-links a:hover.nav-links a.active { opacity: 1; color: var(--yellow); }
+  .nav-links a { color: var(--off-white); text-decoration: none; font-family: 'Archivo', sans-serif; font-stretch: 100%; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--yellow); }
   .nav-cta { background: var(--yellow); color: black !important; opacity: 1 !important; padding: 0.55rem 1.4rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); font-weight: 700; }
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 200; }
   .hamburger span { display: block; width: 26px; height: 2px; background: var(--off-white); transition: all 0.3s ease; }
@@ -114,7 +114,7 @@
   .mobile-menu .mobile-cta { color: var(--yellow); }
 
   .page-hero { background: none; padding: 6rem 3rem 4rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .section-label { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
+  .section-label { font-family: 'Archivo', sans-serif; font-stretch: 100%; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
   .page-title { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 0.92; }
   .page-subtitle { margin-top: 1.2rem; font-size: 1.05rem; font-weight: 300; color: rgba(240,237,232,0.7); max-width: 500px; line-height: 1.6; }
 
@@ -125,20 +125,20 @@
   .athlete-card:hover { background: rgba(10,10,10,0.88); }
   .athlete-card:hover::before { height: 100%; }
   .athlete-initial { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 3rem; color: rgba(255,247,0,0.12); line-height: 1; margin-bottom: 1rem; }
-  .athlete-name { font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--off-white); margin-bottom: 0.4rem; }
+  .athlete-name { font-family: 'Archivo', sans-serif; font-stretch: 100%; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--off-white); margin-bottom: 0.4rem; }
   .athlete-clubs { font-size: 0.85rem; font-weight: 300; color: var(--grey); line-height: 1.5; }
 
   footer { background: #0a0a0a; padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--light-grey); }
   .footer-logo { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: 1.5rem; color: var(--off-white); }
   .footer-logo span { color: var(--yellow); }
   .footer-links { display: flex; gap: 2rem; list-style: none; }
-  .footer-links a { color: var(--grey); text-decoration: none; font-family: 'Archivo', sans-serif; font-stretch: 112%; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+  .footer-links a { color: var(--grey); text-decoration: none; font-family: 'Archivo', sans-serif; font-stretch: 100%; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
   .footer-links a:hover { color: var(--yellow); }
   .footer-copy { background: #0a0a0a; padding: 1rem 3rem; text-align: center; font-size: 0.78rem; color: rgba(136,136,136,0.5); border-top: 1px solid var(--light-grey); }
 
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
-    .page-hero.athletes-section { padding: 4rem 1.5rem; }
+    .page-hero, .athletes-section { padding: 4rem 1.5rem; }
     .athletes-grid { grid-template-columns: repeat(2, 1fr); }
     footer { flex-direction: column; gap: 1.5rem; text-align: center; }
   }
@@ -283,7 +283,7 @@
     </div>
   </div>
 </div>
-<script src="js/site.js" defer></script>
+<script src="js/site.js?v=34787c67" defer></script>
 
 
 <script>
