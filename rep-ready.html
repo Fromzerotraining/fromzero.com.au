@@ -79,6 +79,22 @@
       .time span { grid-column: 1 / -1; }
       .time b { font-size: 2.6rem; margin: .3rem 0 0; }
     }
+
+    .how { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+    .how-photo { position: relative; aspect-ratio: 4 / 5; background: var(--bg); }
+    .how-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+    .how-intro { color: rgba(243,241,234,.8); font-size: 1.08rem; margin: 1.6rem 0 0; max-width: 52ch; }
+    .pillars-rr { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.6rem; }
+    .pillar-rr { border-top: 3px solid var(--yellow); padding-top: 1.4rem; }
+    .pillar-rr .n { font-stretch: 125%; font-weight: 700; font-size: .7rem; letter-spacing: .2em; color: var(--yellow); }
+    .pillar-rr h3 { font-size: 2.2rem; margin: .6rem 0; }
+    .pillar-rr p { margin: 0; color: var(--muted); }
+    .pillar-rr .checklist { margin: 1.2rem 0 0; font-size: .98rem; }
+    .gains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: clamp(3rem, 6vw, 4.5rem); }
+    .gains div { background: var(--bg); padding: 1.6rem; font-stretch: 62%; font-weight: 900; text-transform: uppercase; font-size: clamp(2.2rem, 4.5vw, 3.6rem); line-height: 1; }
+    .gains div:nth-child(2) { color: var(--yellow); }
+    @media (max-width: 1000px) { .how { grid-template-columns: 1fr; } .how-photo { aspect-ratio: 16 / 11; } }
+    @media (max-width: 640px) { .pillars-rr, .gains { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body class="fz">
@@ -146,7 +162,7 @@
       <div>
         <span class="rr-tag">Friday nights · U12 to U18</span>
         <h1>Rep<br><span class="y">Ready.</span></h1>
-        <p class="lead">Missed out on a rep team? Rep Ready is where you put in the work to make the team next time, every Friday night with the coaches who build scorers.</p>
+        <p class="lead">Missed out on a rep team? Rep Ready is where you put in the work to make the team next time, every Friday night. Basketball skills on court, plus strength and movement training to get faster, stronger and more explosive.</p>
         <div class="btn-row">
           <a class="btn" href="#book">Book a spot <span class="arrow">→</span></a>
           <a class="btn btn--ghost" href="#times">Session times</a>
@@ -176,7 +192,49 @@
     </div>
   </section>
 
-  <section class="section section--surface" id="times" style="scroll-margin-top: var(--nav-h);">
+  <section class="section section--surface" id="how" style="scroll-margin-top: var(--nav-h);">
+    <div class="wrap">
+      <div class="how">
+        <div class="how-photo reveal">
+          <img src="img/plate-load.jpg" alt="Junior player loading a weight plate in the From Zero gym" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2 class="reveal">Court <span class="y">+</span> gym.</h2>
+          <p class="how-intro reveal">Skills get you noticed, but selectors also pick the players who are quicker to the ball, stronger through contact and first off the floor. Every Rep Ready session pairs basketball work on court with strength and movement training, so players get faster, stronger and more explosive.</p>
+          <div class="pillars-rr">
+            <div class="pillar-rr reveal">
+              <span class="n">01</span>
+              <h3>Strength training</h3>
+              <p>Age-appropriate strength work in our gym, coached technique first.</p>
+              <ul class="checklist">
+                <li>Stronger legs, hips and core</li>
+                <li>Hold your ground and finish through contact</li>
+                <li>More power behind every jump and first step</li>
+              </ul>
+            </div>
+            <div class="pillar-rr reveal">
+              <span class="n">02</span>
+              <h3>Movement training</h3>
+              <p>Speed, agility and jumping, taught the way basketball is played.</p>
+              <ul class="checklist">
+                <li>Acceleration and a quicker first step</li>
+                <li>Stopping, cutting and changing direction</li>
+                <li>Jumping higher and landing safely</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gains reveal">
+        <div>Faster</div>
+        <div>Stronger</div>
+        <div>More explosive</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="times" style="scroll-margin-top: var(--nav-h);">
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -195,7 +253,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section--surface">
     <div class="wrap why">
       <div>
         <p class="eyebrow">Missed out on a rep team?</p>
@@ -207,12 +265,13 @@
         <ul class="checklist">
           <li>Structured sessions every Friday night</li>
           <li>Coaching on the skills selectors look for</li>
+          <li>Strength and movement training in our gym</li>
           <li>Competitive reps against players your age</li>
         </ul>
       </div>
     </div>
   </section>
-  <section class="section section--surface" id="book" style="scroll-margin-top: var(--nav-h);">
+  <section class="section" id="book" style="scroll-margin-top: var(--nav-h);">
     <div class="wrap visit">
       <div>
         <p class="eyebrow">Book a spot</p>
